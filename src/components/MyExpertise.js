@@ -1,7 +1,8 @@
 import React from 'react'
 import Title from "./universal/Title.js"
 import Code from './expertise/Code.js'
-import { tools, paradigms, codeContent } from "../data/expertise.js"
+import { tools, paradigms } from "./expertise/mentions.js"
+import { codeContent } from "../data/expertise.js"
 import arrow from "../assets/down-arrow.png"
 import '../css/myExpertise.css';
 

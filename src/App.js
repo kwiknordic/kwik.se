@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <header id="header" className='skewed-container'>
-        < Header />
-        < HeroSection />
+        <Header />
+        <HeroSection />
       </header>
 
       <main>

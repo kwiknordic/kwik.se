@@ -15,17 +15,13 @@ const Portfolio = () => {
   return (
     <div id="portfolio-container" className="sub-main">
       <div className="title-section">
-        <Title 
-          title="Portfolio" 
-          subTitle={[<Triangle />, <Circle />, <Square />]} 
-          priority="subtitle"
-        />
+        <Title title="Portfolio" subTitle={[<Triangle />, <Circle />, <Square />]} priority="subtitle" />
       </div>
 
       <div className="slider-grid">
         <i class="arrows fa-solid fa-chevron-left" onClick={moveSliderLeft}></i>
         <div className="sub-main-grid">
-          {projects.map( (entry) => <Project project={entry} />)}
+          {projects.map((project) => <Project project={project} />)}
         </div>
         <i class="arrows fa-solid fa-chevron-right" onClick={moveSliderRight}></i>
       </div>

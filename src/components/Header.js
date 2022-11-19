@@ -1,13 +1,13 @@
 import React from 'react'
-import { listMenu } from '../data/nav-links'
+import Navlinks from "./universal/Navlinks"
 
 const Header = () => {
   return (
     <div className='container min-height'>
       <div className='content unskewed-content'>
-        <span className='logo'>kwik</span>
+        <a href="/"><span className='logo'>kwik</span></a>
         <nav>
-          <ul>{listMenu}</ul>
+          <ul><Navlinks /></ul>
         </nav>    
       </div>
     </div>

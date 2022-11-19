@@ -10,8 +10,6 @@ const menu = [
   },
 ]
 
-const listMenu = menu.map(link => <li><a href={link.url}>{link.name}</a></li>)
-
 export {
-  listMenu
+  menu
 }

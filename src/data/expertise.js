@@ -1,3 +1,50 @@
+const paradigms = ["Funktionell programmering", "Minimalism", "Komposition", "Iterativ utveckling"]
+
+const tools = [
+  { name: "Github",
+    icon: "fa-brands fa-github"
+  },
+  { name: "VS Code",
+    icon: "fa-solid fa-code"
+  },
+  { name: "npm",
+    icon: "fa-brands fa-npm"
+  },
+  { name: "cPanel",
+    icon: "fa-brands fa-cpanel"
+  },
+  { name: "Bootstrap",
+    icon: "fa-brands fa-bootstrap"
+  },
+  { name: "Canvas",
+    icon: "fa-brands fa-js"
+  },
+  { name: "CRUD & RESTful API",
+    icon: null,
+  },
+  { name: "Swagger",
+  icon: null
+  },
+  { name: "Wordpress",
+  icon: "fa-brands fa-wordpress"
+  },
+  { name: "Linux",
+  icon: "fa-brands fa-linux"
+  },
+  { name: "Apache",
+  icon: null
+  },
+  { name: "nginx",
+  icon: null
+  },
+  { name: "mySQL",
+  icon: null
+  },
+  { name: "DNS & Domänhantering",
+  icon: null
+  },
+]
+
 function codeContent() {
   const less = "\u003C"
   const greater = "\u003E"
@@ -146,62 +193,6 @@ function codeContent() {
   }
 
 }
-
-let tools = [
-  { name: "Github",
-    icon: "fa-brands fa-github"
-  },
-  { name: "VS Code",
-    icon: "fa-solid fa-code"
-  },
-  { name: "npm",
-    icon: "fa-brands fa-npm"
-  },
-  { name: "cPanel",
-    icon: "fa-brands fa-cpanel"
-  },
-  { name: "Bootstrap",
-    icon: "fa-brands fa-bootstrap"
-  },
-  { name: "Canvas",
-    icon: "fa-brands fa-js"
-  },
-  { name: "CRUD & RESTful API",
-    icon: null,
-  },
-  { name: "Swagger",
-  icon: null
-  },
-  { name: "Wordpress",
-  icon: "fa-brands fa-wordpress"
-  },
-  { name: "Linux",
-  icon: "fa-brands fa-linux"
-  },
-  { name: "Apache",
-  icon: null
-  },
-  { name: "nginx",
-  icon: null
-  },
-  { name: "mySQL",
-  icon: null
-  },
-  { name: "DNS & Domänhantering",
-  icon: null
-  },
-]
-
-let paradigms = ["Funktionell programmering", "Minimalism", "Komposition", "Iterativ utveckling"]
-
-tools = tools.map(tool => {
-  const { icon, name } = tool
-
-  if (icon) return <li key={name}><span><i class={icon} />{name}</span></li>
-  return <li key={name}><span>{name}</span></li>
-})
-
-paradigms = paradigms.map(paradigm => <li key={paradigm}><span>{paradigm}</span></li>)
 
 export {
   tools,

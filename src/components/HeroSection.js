@@ -1,9 +1,9 @@
 import React from 'react'
 import portrait from '../assets/hero-portrait.png';
 
-function HeroSection() {
-  const synopsis = `En självlärd webbutvecklare med praktisk erfarenhet och stor passion i att bygga projekt med branschbeprövad teknologi som likväl med det allra senaste.`
+const synopsis = `En självlärd webbutvecklare med praktisk erfarenhet och stor passion i att bygga projekt med branschbeprövad teknologi som likväl med det allra senaste.`
 
+function HeroSection() {
   return (
     <div id="hero-container">
       <div className='hero-grid'>

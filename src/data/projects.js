@@ -12,7 +12,7 @@ let projects = [
     demo: `${process.env.PUBLIC_URL}/assets/CV-Mervin-Bratic.pdf`,
     github: "https://github.com/kwiknordic/html-to-pdf",
     tools: ["HTML", "CSS", "JavaScript", "React"],
-    image: "",
+    image: `${process.env.PUBLIC_URL}/assets/CV-Mervin-Bratic.pdf`,
   },
   {
     name: "kwik.se",
@@ -22,7 +22,7 @@ let projects = [
     demo: "https://kwik.se",
     github: "https://github.com/kwiknordic/",
     tools: ["HTML", "CSS", "JavaScript", "React"],
-    image: "",
+    image: "kwik.png",
   },
   {
     name: "Kwikflix",
@@ -47,7 +47,7 @@ let projects = [
   }
 ]
 
-// Make tools into string with punctuations
+// Make tools-array into string with punctuations
 projects = projects.map(project => {
   project.tools = formatter.format(project.tools)
   return project
