@@ -1,0 +1,179 @@
+@media (min-width: 31.5rem) {
+
+  #hero-container {
+    padding-top: 4rem;
+  }
+
+  #hero-container .title {
+    font-size: xxx-large;
+  }
+
+  #hero-section .title-section .sub-title {
+    font-size: unset;
+  }
+
+  .call-to-action {
+    gap: 1rem;
+  }
+  
+  .btn {
+    font-size: unset;
+  }
+
+  .title-section .arrow {
+    display: unset;
+    padding-top: 0.6rem;
+    rotate: 20deg;
+    width: 100px;
+  }
+  
+  .list-items-inline li {
+    list-style-type: none;
+    display: inline;
+  }
+  
+  #about-me .sub-title {
+    color: purple;
+  }
+  
+  #about-me p {
+    font-family: 'Patrick Hand';
+    font-size: 1.3rem;
+    color: var(--dark-bg);
+    position: relative;
+    margin-top: 0;
+  }
+  
+  .title-section .sub-title svg {
+    padding-left: 2px;
+    padding-right: 4px;
+  }
+  
+}
+
+@media (min-width: 44.5rem) {
+  :root {
+    --spacing: 3rem;
+  }
+
+  .hero-grid {
+    gap: var(--spacing);
+  }
+
+  .grid {
+    grid-template-rows: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 56rem) {
+
+  .hero-grid {
+    flex-direction: row;
+    max-width: 1080px;
+  }
+
+  #hero-section p {
+    width: initial;
+  }
+
+  .portrait {
+    display: initial;
+    align-self: flex-end;
+  }
+
+  .sub-main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--spacing);
+    text-align: justify;
+  }
+
+  .hamburger-svg {
+    visibility: visible;
+  }
+
+  .call-to-action {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 66rem) {
+
+  header nav {
+    justify-self: end;
+    order: unset;
+    grid-column-start: unset;
+    border: unset;
+  }
+
+  header .nav-invisible {
+    height: unset;
+    border: unset;
+    margin: unset;
+  }
+
+  nav li:hover {
+    color: rgb(33, 48, 81);;
+  }
+
+  header .mobile-nav {
+    display: none;
+  }
+
+  .align-container-center {
+    max-width: 1080px;
+    margin: var(--spacing) auto;
+  }
+
+  #portfolio-container .sub-main-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .call-to-action {
+    width: unset;
+    margin-bottom: unset;
+    justify-content: unset;
+    gap: 1rem;
+  }
+
+  .portrait {
+    width: initial;
+  }
+}
+
+@media (min-width: 73rem) {
+  #hero-container {
+    justify-content: center;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .list-items-block {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: unset;
+  }
+
+  .telephone-svg {
+    width: 200px;
+    height: 200px;
+    bottom: 30%;
+    left: -10rem;
+    fill: #486b41;
+  }
+}
+
+@media (min-width: 96.5rem) {
+  #portfolio-container .sub-main-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 127rem) {
+  #portfolio-container .sub-main-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

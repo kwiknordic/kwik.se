@@ -12,7 +12,7 @@ let projects = [
     demo: `${process.env.PUBLIC_URL}/assets/CV-Mervin-Bratic.pdf`,
     github: "https://github.com/kwiknordic/html-to-pdf",
     tools: ["HTML", "CSS", "JavaScript", "React"],
-    image: `${process.env.PUBLIC_URL}/assets/CV-Mervin-Bratic.pdf`,
+    screenshot: `${process.env.PUBLIC_URL}/assets/CV-Mervin-Bratic.pdf`,
   },
   {
     name: "kwik.se",
@@ -22,7 +22,7 @@ let projects = [
     demo: "https://kwik.se",
     github: "https://github.com/kwiknordic/",
     tools: ["HTML", "CSS", "JavaScript", "React"],
-    image: "kwik.png",
+    screenshot: images["kwik.jpg"],
   },
   {
     name: "Kwikflix",
@@ -33,7 +33,7 @@ let projects = [
     demo: "https://flix.kwik.se",
     github: "https://github.com/kwiknordic/Kwikflix",
     tools: ["HTML", "CSS", "JavaScript"],
-    image: images["kwikflix.jpg"],
+    screenshot: images["kwikflix.jpg"],
   },
   {
     name: "Become a frontend-developer",
@@ -43,7 +43,7 @@ let projects = [
     demo: "https://astounding-cajeta-a7c578.netlify.app/",
     github: "https://github.com/kwiknordic/frontend-developer-game",
     tools: ["HTML", "CSS", "JavaScript", "Canvas"],
-    image: images["frontend-game.jpg"],
+    screenshot: images["frontend-game.jpg"],
   }
 ]
 

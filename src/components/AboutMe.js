@@ -3,10 +3,9 @@ import { synopsis, interests, languages, softSkills } from "../data/about.js"
 import Title from "./universal/Title.js"
 import Tags from "./about_me/Tags.js"
 import Infobox from './about_me/Infobox.js'
-import { ReactComponent as Telephone } from "../assets/about/telephone.svg"
-import { ReactComponent as Heart } from "../assets/about/heart.svg"
-import { ReactComponent as Flower } from "../assets/about/flower.svg"
 import { ReactComponent as Hamburger } from "../assets/about/hamburger.svg"
+/* import { ReactComponent as Heart } from "../assets/about/heart.svg"
+import { ReactComponent as Flower } from "../assets/about/flower.svg" */
 
 function AboutMe() {
   return (
@@ -20,17 +19,16 @@ function AboutMe() {
           {synopsis.map(paragraph => <p>{paragraph}</p>)}
           <Infobox />
         </div>
-        <div>
+        <div className='tags-container'>
           <Tags title="Språkkunskaper" data={languages} structure={"array"} />
           <Tags title="Mjuka kompetenser" data={softSkills} structure={"array"} />
           <Tags title="Intressen" data={interests} structure={"object"} />
+          <Hamburger className="hamburger-svg" />
         </div>
       </div>
 
-      <Telephone className="telephone-svg" />
-      <Heart className="heart-svg" />
-      <Flower className="flower-svg" />
-      <Hamburger className="hamburger-svg" />
+{/*       <Heart className="heart-svg" />
+      <Flower className="flower-svg" /> */}
     </div>
   )
 }

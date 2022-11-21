@@ -19,7 +19,7 @@ function App() {
         <AboutMe />
       </main>
 
-      <footer>
+      <footer id="footer">
         <Footer />
       </footer>
     </>

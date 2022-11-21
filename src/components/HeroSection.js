@@ -17,15 +17,14 @@ function HeroSection() {
 
           <p>{synopsis}</p>
 
-          <a href={`${process.env.PUBLIC_URL}/assets/CV-Mervin-Bratic.pdf`} target="_blank" rel="noreferrer">
-            <button className="btn btn-primary">Ladda ned mitt CV</button>
-          </a>
-          <a href="#about-me">
-            <button className="btn btn-secondary">Kontakta mig</button>
-          </a>
+          <div className='call-to-action'>
+            <a href={`${process.env.PUBLIC_URL}/assets/CV-Mervin-Bratic.pdf`} target="_blank" rel="noreferrer" className="btn btn-primary">Ladda ned mitt CV</a>
+            <a href="#about-me" className="btn btn-secondary">Kontakta mig
+            </a>
+          </div>
           
         </div>
-        <img src={portrait} alt="" />
+        <img className='portrait' src={portrait} alt="" />
       </div>
     </div>
   )

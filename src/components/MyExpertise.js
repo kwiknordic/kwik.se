@@ -4,7 +4,6 @@ import Code from './expertise/Code.js'
 import { tools, paradigms } from "./expertise/mentions.js"
 import { codeContent } from "../data/expertise.js"
 import arrow from "../assets/down-arrow.png"
-import '../css/myExpertise.css';
 
 const MyExpertise = () => {
   return (
@@ -32,7 +31,7 @@ const MyExpertise = () => {
         </div>
 
         <div class="mentions">
-          <h3>Graviterar mot</h3>
+          <h3>Optimal paradigm</h3>
           <ul className='list-items-inline list-padding'>
             {paradigms}
           </ul>
