@@ -18,7 +18,7 @@ const contact = contactInfo.map( (contact, index) => {
 
 function Infobox() {
   return (
-    <div className='info-box'>
+    <div id="info-box" className='info-box'>
       <h3>Kontaktuppgifter</h3>
       <ul className='list-items-block'>
         {contact}

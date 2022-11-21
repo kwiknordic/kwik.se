@@ -19,7 +19,7 @@ function HeroSection() {
 
           <div className='call-to-action'>
             <a href={`${process.env.PUBLIC_URL}/assets/CV-Mervin-Bratic.pdf`} target="_blank" rel="noreferrer" className="btn btn-primary">Ladda ned mitt CV</a>
-            <a href="#about-me" className="btn btn-secondary">Kontakta mig
+            <a href="#info-box" className="btn btn-secondary">Kontakta mig
             </a>
           </div>
           
