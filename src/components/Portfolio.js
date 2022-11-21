@@ -8,14 +8,19 @@ import { ReactComponent as Square } from "../assets/portfolio/square.svg"
 
 const Portfolio = () => {
   const [projects, setProjects] = useState(initialProjects)
-  let startingCoord;
+  let coord;
 
   const moveSliderLeft = () => setProjects([...projects.slice(1), projects.at(0)])
   const moveSliderRight = () => setProjects([projects.at(-1), ...projects.slice(0,-1)])
-  const dragStart = (e) => startingCoord = e.clientX
-  const dragEnd = (e) => {
-    const endingCoord = e.clientX
-    startingCoord > endingCoord ? moveSliderLeft() : moveSliderRight()
+
+  const dragStart = (start) => {
+    if (start.target.id === "lightbox-li") return;
+    coord = start.clientX
+  }
+  const dragEnd = (end) => {
+    if (end.target.id === "lightbox-li") return;
+    if (coord === end.clientX) return;
+    coord > end.clientX ? moveSliderLeft() : moveSliderRight()
   }
 
   return (

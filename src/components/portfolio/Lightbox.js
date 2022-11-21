@@ -16,7 +16,7 @@ const LightBox = ({ src, alt = "Skärmbild"}) => {
 
 	return (
     <>
-      <li onClick={toggleModal}>
+      <li onClick={toggleModal} id="lightbox-li">
         <i class="fa-solid fa-image"></i> Skärmbild
       </li>
 
