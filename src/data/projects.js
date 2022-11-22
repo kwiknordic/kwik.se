@@ -20,7 +20,7 @@ let projects = [
       "Personlig hemsida för att visa upp mig själv, min kompetens och mina projekt."
     ],
     demo: "https://kwik.se",
-    github: "https://github.com/kwiknordic/",
+    github: "https://github.com/kwiknordic/kwik.se",
     tools: ["HTML", "CSS", "JavaScript", "React"],
     screenshot: images["kwik.jpg"],
   },
