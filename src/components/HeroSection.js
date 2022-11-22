@@ -1,7 +1,7 @@
 import React from 'react'
 import portrait from '../assets/hero-portrait.png';
 
-const synopsis = `En självlärd webbutvecklare med praktisk erfarenhet och stor passion i att bygga projekt med branschbeprövad teknologi som likväl med det allra senaste.`
+const synopsis = `En självlärd webbutvecklare med praktisk erfarenhet och stor passion i att bygga projekt med branschbeprövad teknologi likväl som med det allra senaste.`
 
 function HeroSection() {
   return (

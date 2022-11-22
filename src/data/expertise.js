@@ -162,7 +162,7 @@ function codeContent() {
 
   const mongo = [
     {
-      string: `const`,
+      string: `const Mervin`,
       css: "c-b",
     },
     {
