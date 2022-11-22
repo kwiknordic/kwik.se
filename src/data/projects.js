@@ -40,7 +40,7 @@ let projects = [
     summary: [
       "Använd pilarna för att navigera till närmaste delmål. Delmålen ändrar regelbundet position och spelaren har vunnit när alla delmål är tagna."
     ],
-    demo: "https://astounding-cajeta-a7c578.netlify.app/",
+    demo: "https://frontend-dev-game.netlify.app/",
     github: "https://github.com/kwiknordic/frontend-developer-game",
     tools: ["HTML", "CSS", "JavaScript", "Canvas"],
     screenshot: images["frontend-game.jpg"],
