@@ -15,7 +15,7 @@
   --long-transition: 0.5s;
 }
 
-.sub-main-grid {
+.slider-grid {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -245,7 +245,7 @@ h2 {
   color: white;
 }
 
-main {
+main, .project-summary {
   flex-grow: 1;
 }
 
@@ -379,10 +379,6 @@ li span i {
   color: var(--grey-color);
 }
 
-.portfolio-content p {
-  flex-grow: 1;
-}
-
 .portfolio-content .list-items-inline {
   cursor: pointer;
   color: #e8a15a;
@@ -473,10 +469,6 @@ li span i {
 a, a:visited {
   color: unset;
   text-decoration: none;
-}
-
-.justify-text {
-  text-align: justify;
 }
 
 .indent-space::before {

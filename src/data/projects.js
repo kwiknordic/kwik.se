@@ -7,7 +7,7 @@ let projects = [
   {
     name: "HTML till PDF",
     summary: [
-      "Jag behövde ett CV vid jobbansökan och ansåg att ville då skapa hela CV:et med kod."
+      "Jag behövde ett aktuellt CV för framtida jobbansökan och kom till insikt att jag ville skapa layouten med CSS, och fylla innehållet med HTML. Lösningen är byggd med Node.js och använder npm-paketet Puppeteer för konverteringen till PDF."
     ],
     demo: `${process.env.PUBLIC_URL}/assets/CV-Mervin-Bratic.pdf`,
     github: "https://github.com/kwiknordic/html-to-pdf",
@@ -17,7 +17,8 @@ let projects = [
   {
     name: "kwik.se",
     summary: [
-      "Personlig hemsida för att visa upp mig själv, min kompetens och mina projekt."
+      "Personlig hemsida för uppvisning av portfolio, kompetensområden och kontaktinformation.",
+      "Innehållet är lagrat i egna datastrukturer som React renderar genom självständiga komponenter."
     ],
     demo: "https://kwik.se",
     github: "https://github.com/kwiknordic/kwik.se",

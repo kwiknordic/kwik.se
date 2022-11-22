@@ -82,7 +82,7 @@
     align-self: flex-end;
   }
 
-  .sub-main-grid {
+  #about-me .sub-main-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: var(--spacing);
