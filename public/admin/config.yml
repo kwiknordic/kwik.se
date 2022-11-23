@@ -11,7 +11,7 @@ public_folder: "/public/uploads"
 collections:
   - label: "Blogg"
     name: "blogg"
-    folder: "/src/cms/_posts/blog"
+    folder: "/src/cms/_posts/"
     create: true
     slug: "{{slug}}-{{year}}-{{month}}-{{day}}"
     extension: "json"
