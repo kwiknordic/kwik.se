@@ -26,7 +26,7 @@ collections:
       - {label: "Ämne", name: "title", widget: "string"}
       - {label: "Publiceringsdag", name: "date", widget: "datetime"}
       - {label: "Innehåll", name: "body", widget: "text"}
-        - name: "blogg" # Used in routes, e.g., /admin/collections/blog
+    - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "/src/cms/_posts/blog" # The path to the folder where the documents are stored
     create: true
