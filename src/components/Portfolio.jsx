@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Title from "./universal/Title.js"
+import Title from "./universal/Title"
 import Project from './portfolio/Project'
 import { projects as initialProjects } from '../data/projects.js'
 import { ReactComponent as Triangle } from "../assets/portfolio/triangle.svg"

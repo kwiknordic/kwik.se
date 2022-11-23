@@ -1,5 +1,5 @@
 import React from 'react'
-import { contactInfo }from "../../data/about.js"
+import { contactInfo } from "../../data/about.js"
 import { ReactComponent as Telephone } from "../../assets/about/telephone.svg"
 
 const contact = contactInfo.map( (contact, index) => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import Lightbox from "./Lightbox.js"
+import Lightbox from "./Lightbox"
 
 function readMore({screenshot, demo, github, tools}) {
   

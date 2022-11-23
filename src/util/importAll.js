@@ -1,9 +1,7 @@
-function importAll(r) {
-  let images = {};
-  r.keys().forEach(item => { images[item.replace('./', '')] = r(item); });
-  return images
+function getImageUrl(name) {
+  return new URL(`../assets/portfolio/${name}`, import.meta.url).href
 }
 
 export {
-  importAll
+  getImageUrl
 }

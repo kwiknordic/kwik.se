@@ -1,8 +1,8 @@
 import React from 'react'
 import { synopsis, interests, languages, softSkills } from "../data/about.js"
-import Title from "./universal/Title.js"
-import Tags from "./about_me/Tags.js"
-import Infobox from './about_me/Infobox.js'
+import Title from "./universal/Title"
+import Tags from "./about_me/Tags"
+import Infobox from './about_me/Infobox'
 import { ReactComponent as Hamburger } from "../assets/about/hamburger.svg"
 /* import { ReactComponent as Heart } from "../assets/about/heart.svg"
 import { ReactComponent as Flower } from "../assets/about/flower.svg" */
