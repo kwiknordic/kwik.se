@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "date": "2022-11-23T11:19:46.349Z",
+  "body": "```javascript\nfunction getImageUrl(name) {\n  const dir = \"./uploads/images/\"\n  return new URL(`${dir}${name}`, import.meta.url).href\n}\n\n// exempel på användning\ngetImageUrl(\"bild.jpg\")\n```",
+  "language": "sv",
+  "title": "Skapa en relativ sökväg av enbart filnamnet"
+}
