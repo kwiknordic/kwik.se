@@ -12,8 +12,8 @@ media_folder: "/src/cms/uploads/"
 public_folder: "/public/uploads"
 
 collections:
-  - name: "blogg" # Used in routes, e.g., /admin/collections/blog
-    label: "Blogg" # Used in the UI
+  - label: "Blogg" # Used in the UI
+    name: "blogg" # Used in routes, e.g., /admin/collections/blog
     folder: "/src/cms/_posts/blog" # The path to the folder where the documents are stored
     create: true
     slug: "{{slug}}-{{year}}-{{month}}-{{day}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -26,8 +26,8 @@ collections:
       - {label: "Ämne", name: "title", widget: "string"}
       - {label: "Publiceringsdag", name: "date", widget: "datetime"}
       - {label: "Innehåll", name: "body", widget: "text"}
-    - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
+    - label: "Blog" # Used in the UI
+    name: "blog" # Used in routes, e.g., /admin/collections/blog
     folder: "/src/cms/_posts/blog" # The path to the folder where the documents are stored
     create: true
     slug: "{{slug}}-{{year}}-{{month}}-{{day}}" # Filename template, e.g., YYYY-MM-DD-title.md
