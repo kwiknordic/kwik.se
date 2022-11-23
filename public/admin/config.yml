@@ -1,27 +1,23 @@
-site_url: https://kwik.se
-display_url: https://kwik.se
+site_url: https://kwikapp.netlify.app/
 locale: 'sv'
 
 backend:
   name: git-gateway
   branch: main
 
-publish_mode: editorial_workflow
-
 media_folder: "/src/cms/uploads/"
 public_folder: "/public/uploads"
 
 collections:
-  - label: "Blogg" # Used in the UI
-    name: "blogg" # Used in routes, e.g., /admin/collections/blog
-    folder: "/src/cms/_posts/blog" # The path to the folder where the documents are stored
+  - label: "Blogg"
+    name: "blogg"
+    folder: "/src/cms/_posts/blog"
     create: true
-    slug: "{{slug}}-{{year}}-{{month}}-{{day}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: "html"
-    format: "json"
-    fields: # The fields for each document, usually in front matter
-      - {label: "Språk", name: "language", widget: "select", options: ["sv", "en"]}
+    slug: "{{slug}}-{{year}}-{{month}}-{{day}}"
+    extension: "json"
+    fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Publicering", name: "date", widget: "datetime"}
       - {label: "Ämne", name: "title", widget: "string"}
-      - {label: "Publiceringsdag", name: "date", widget: "datetime"}
-      - {label: "Innehåll", name: "body", widget: "text"}
+      - {label: "Innehåll", name: "body", widget: "markdown"}
+      - {label: "Språk", name: "language", widget: "select", options: ["sv", "en"]}
