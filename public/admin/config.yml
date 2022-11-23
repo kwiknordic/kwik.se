@@ -19,24 +19,9 @@ collections:
     slug: "{{slug}}-{{year}}-{{month}}-{{day}}" # Filename template, e.g., YYYY-MM-DD-title.md
     extension: "html"
     format: "json"
-    filter: {field: "language", value: "sv"}
     fields: # The fields for each document, usually in front matter
       - {label: "Språk", name: "language", widget: "select", options: ["sv", "en"]}
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Ämne", name: "title", widget: "string"}
       - {label: "Publiceringsdag", name: "date", widget: "datetime"}
       - {label: "Innehåll", name: "body", widget: "text"}
-    - label: "Blog" # Used in the UI
-    name: "blog" # Used in routes, e.g., /admin/collections/blog
-    folder: "/src/cms/_posts/blog" # The path to the folder where the documents are stored
-    create: true
-    slug: "{{slug}}-{{year}}-{{month}}-{{day}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: "html"
-    format: "json"
-    filter: {field: "language", value: "en"}
-    fields: # The fields for each document, usually in front matter
-      - {label: "Language", name: "language", widget: "select", options: ["sv", "en"]}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish", name: "date", widget: "datetime"}
-      - {label: "Content", name: "body", widget: "text"}
