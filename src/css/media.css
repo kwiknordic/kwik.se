@@ -177,3 +177,13 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+@media (min-width: 204rem) {
+  .skewed-container {
+    transform: unset;
+  }
+
+  .unskewed-content {
+    transform: unset;
+  }
+}
