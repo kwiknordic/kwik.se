@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "language": "en",
+  "date": "2022-11-24T15:42:32.521Z",
+  "title": "Show Unicode-pairs as icon by using fromCodePoint",
+  "body": "Keep in mind that Unicode has to be changed into a combination that JavaScript is able to read.\n\nA unicode of **U+1F1EC** becomes **0x1F1EC**. In other words, the front-two characters are replaced from **U+** to **0x**.\n\nThe rest is quite straightforward as seen below:\n\n```\n// original unicodes: U+1F3F3 U+FE0F U+200D U+1F308\n\nconst icon = String.fromCodePoint(0x1F3F3, 0xFE0F, 0x200D, 0x1F308)\nconsole.log(icon) // 🏳️‍🌈\n```"
+}
