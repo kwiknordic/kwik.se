@@ -11,6 +11,7 @@ Personlig hemsida för uppvisning av portfolio, kompetensområden och kontaktinf
 - Eget koncept, design och kompotenter, byggda med React (JSX) och CSS
 - Använt npm-paketet "create react app" för att skapa en strukturmall
 - Uppdaterat: migrerat från CRA till Vite
+- Använder Netlify CMS som Blogg
 - Alla synliga element är skapade som funktionella React-komponenter
 - Generella hjälpfunktioner under "utils" (mass-import av bilder, strängomvandlare)
 - Personlig information finns under samma tak i "data"-mappen
