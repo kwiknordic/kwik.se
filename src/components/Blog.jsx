@@ -1,16 +1,30 @@
-import React from 'react'
-const modules = import.meta.glob('../cms/_posts/*.json')
+import React, { useState } from 'react'
+import Header from './universal/Header';
+import Title from './universal/Title';
+import Posts from './blog/Posts';
+import { ReactComponent as Triangle } from "../assets/portfolio/triangle.svg"
+import { ReactComponent as Circle } from "../assets/portfolio/circle.svg"
+import { ReactComponent as Square } from "../assets/portfolio/square.svg"
 
-for (const path in modules) {
-  modules[path]().then((mod) => {
-    console.log(mod.title)
-  })
-}
+const modules = import.meta.glob('../cms/_posts/*.json', { eager: true })
 
 function Blog() {
+  const [posts, setPosts] = useState(Object.values(modules))
+
   return (
-    <div>Blog</div>
-  
+    <>
+      <header id="header">
+        <Header />
+      </header>
+
+      <main id="blog" className='sub-main align-container-center'>
+        <div className="title-section">
+          <Title title="Artiklar" subTitle={[<Circle />, <Square />, <Triangle />]} />
+        </div>
+
+        <Posts posts={posts} setPosts={setPosts} />
+      </main>
+    </>
   )
 }
 

@@ -11,7 +11,7 @@ function Tags(props) {
       return (
         <li key={tag.name}>
           <span>
-            <i class={tag.icon} />
+            <i className={tag.icon} />
             {tag.name}
           </span>
         </li>

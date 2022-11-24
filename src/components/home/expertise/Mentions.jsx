@@ -1,9 +1,9 @@
-import * as data from "../../data/expertise.js"
+import * as data from "../../../data/expertise.js"
 
 const tools = data.tools.map(tool => {
   const { icon, name } = tool
 
-  if (icon) return <li key={name}><span><i class={icon} />{name}</span></li>
+  if (icon) return <li key={name}><span><i className={icon} />{name}</span></li>
   return <li key={name}><span>{name}</span></li>
 })
 

@@ -67,7 +67,7 @@ body {
   align-content: start;
   justify-content: space-between;
   padding-inline: var(--spacing);
-  padding-top: 1rem;
+  padding-block: 1rem;
   margin: auto;
   overflow: hidden;
 }
@@ -121,7 +121,7 @@ nav li:hover {
 }
 
 #hero-container {
-  padding-top: 3rem;
+  padding-top: 2rem;
   position: relative;
   display: flex;
 }

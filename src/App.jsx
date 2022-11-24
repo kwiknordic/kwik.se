@@ -1,30 +1,19 @@
-import Header from './components/Header';
-import AboutMe from './components/AboutMe'
-import MyExpertise from './components/MyExpertise'
-import Portfolio from './components/Portfolio'
-import Footer from './components/Footer';
-import HeroSection from './components/HeroSection';
+import Layout from './components/Layout';
+import Home from './components/Home';
+import PageNotFound from './components/PageNotFound';
 import Blog from './components/Blog';
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
     <>
-      <header id="header" className='skewed-container'>
-        <Header />
-        <HeroSection />
-      </header>
-
-      <main>
-        <MyExpertise />
-        <Portfolio />
-        <AboutMe />
-      </main>
-
-{/*       <Blog /> */}
-
-      <footer id="footer">
-        <Footer />
-      </footer>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="blog" element={<Blog />}/>
+          <Route path="*" element={<PageNotFound />} />
+        </Route>
+      </Routes>
     </>
   );
 }

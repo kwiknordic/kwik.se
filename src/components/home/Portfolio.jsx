@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import Title from "./universal/Title"
+import Title from "../universal/Title"
 import Project from './portfolio/Project'
-import { projects as initialProjects } from '../data/projects.js'
-import { ReactComponent as Triangle } from "../assets/portfolio/triangle.svg"
-import { ReactComponent as Circle } from "../assets/portfolio/circle.svg"
-import { ReactComponent as Square } from "../assets/portfolio/square.svg"
+import { projects as initialProjects } from '../../data/projects.js'
+import { ReactComponent as Triangle } from "../../assets/portfolio/triangle.svg"
+import { ReactComponent as Circle } from "../../assets/portfolio/circle.svg"
+import { ReactComponent as Square } from "../../assets/portfolio/square.svg"
 
 const Portfolio = () => {
   const [projects, setProjects] = useState(initialProjects)
@@ -30,11 +30,11 @@ const Portfolio = () => {
       </div>
 
       <div className="slider-grid" onPointerDown={dragStart} onPointerUp={dragEnd}>
-        <i class="arrows fa-solid fa-chevron-left" onClick={moveSliderLeft}></i>
+        <i className="arrows fa-solid fa-chevron-left" onClick={moveSliderLeft}></i>
         <div className="sub-main-grid">
           {projects.map((project) => <Project project={project} />)}
         </div>
-        <i class="arrows fa-solid fa-chevron-right" onClick={moveSliderRight}></i>
+        <i className="arrows fa-solid fa-chevron-right" onClick={moveSliderRight}></i>
       </div>
     </div>
   )

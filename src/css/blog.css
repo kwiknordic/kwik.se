@@ -1,0 +1,33 @@
+.blog-overview-subheader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--secondary-accent);
+  padding-block: 0.5rem;
+}
+
+.blog-overview-post {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background: var(--dark-bg);
+  color: var(--grey-color);
+}
+
+.blog-overview h2 {
+  font-size: 1.3rem;
+}
+
+.blog-overview-subheader span:nth-child(2)::before {
+  padding-inline: 0.5rem;
+  content: "";
+}
+
+.blog-overview-post pre {
+  background-color: rgb(199, 199, 199);
+  color: var(--dark-bg);
+  padding: 2rem;
+  border-radius: 5px;
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Title(props) {
-  const { title, subTitle, priority } = props
+  const { title, subTitle, priority = "subtitle" } = props
   let template;
 
   if (priority === "subtitle") {

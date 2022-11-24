@@ -10,11 +10,11 @@ function readMore({screenshot, demo, github, tools}) {
         <Lightbox src={screenshot} />
         <span className='divider'>|</span>
         <li><a href={demo} target="_blank" rel="noreferrer">
-          <i class="fa-solid fa-arrow-up-right-from-square"></i> Live-demo
+          <i className="fa-solid fa-arrow-up-right-from-square"></i> Live-demo
         </a></li>
         <span className='divider'>|</span>
         <li><a href={github} target="_blank" rel="noreferrer">
-          <i class="fa-brands fa-github"></i> GitHub
+          <i className="fa-brands fa-github"></i> GitHub
         </a></li>
       </ul>
       <em>Byggd med {tools}.</em>

@@ -1,9 +1,9 @@
 import React from 'react'
-import Title from "./universal/Title"
+import Title from "../universal/Title"
 import Code from './expertise/Code'
 import { tools, paradigms } from "./expertise/Mentions"
-import { codeContent } from "../data/expertise.js"
-import arrow from "../assets/down-arrow.png"
+import { codeContent } from "../../data/expertise.js"
+import arrow from "../../assets/down-arrow.png"
 
 const MyExpertise = () => {
   return (
@@ -23,14 +23,14 @@ const MyExpertise = () => {
           <Code title="MongoDB" code={codeContent().mongo} />
         </div>
 
-        <div class="mentions">
+        <div className="mentions">
           <h3>Övriga verktygslådan</h3>
           <ul className='list-items-inline list-padding'>
             {tools}
           </ul>
         </div>
 
-        <div class="mentions">
+        <div className="mentions">
           <h3>Optimal paradigm</h3>
           <ul className='list-items-inline list-padding'>
             {paradigms}

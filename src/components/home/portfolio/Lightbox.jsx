@@ -17,7 +17,7 @@ const LightBox = ({ src, alt = "Skärmbild"}) => {
 	return (
     <>
       <li onClick={toggleModal} id="lightbox-li">
-        <i class="fa-solid fa-image"></i> Skärmbild
+        <i className="fa-solid fa-image"></i> Skärmbild
       </li>
 
       {isOpen ?

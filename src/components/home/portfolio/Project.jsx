@@ -1,5 +1,5 @@
 import React from 'react'
-import ReadMore from "../../components/portfolio/ReadMore"
+import ReadMore from "./ReadMore"
 
 function Project(props) {
   const { name, summary, screenshot, demo, github, tools } = props.project;
