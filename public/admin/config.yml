@@ -21,3 +21,4 @@ collections:
       - {label: "Ämne", name: "title", widget: "string"}
       - {label: "Innehåll", name: "body", widget: "markdown"}
       - {label: "Språk", name: "language", widget: "select", options: ["sv", "en"], default: ["sv"]}
+      - {label: "Slug", name: "slug", widget: "hidden", default: "{{slug}}-{{year}}-{{month}}-{{day}}"}

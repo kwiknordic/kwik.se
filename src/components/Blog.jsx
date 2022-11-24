@@ -17,7 +17,7 @@ function Blog() {
         <Header />
       </header>
 
-      <main id="blog" className='sub-main align-container-center'>
+      <main id="blog" className='align-container-center'>
         <div className="title-section">
           <Title title="Artiklar" subTitle={[<Circle />, <Square />, <Triangle />]} />
         </div>

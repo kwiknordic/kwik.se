@@ -2,6 +2,7 @@ import Layout from './components/Layout';
 import Home from './components/Home';
 import PageNotFound from './components/PageNotFound';
 import Blog from './components/Blog';
+import Post from './components/blog/Post';
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
@@ -10,8 +11,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="blog" element={<Blog />}/>
-          <Route path="*" element={<PageNotFound />} />
+          <Route path="blog">
+            <Route index element={<Blog />} />
+            <Route path=":slug" element={<Post />} />
+{/*             <Route path="*" element={<PageNotFound status={404} />} /> */}
+          </Route>
+          <Route path="*" element={<PageNotFound status={404} />} />
         </Route>
       </Routes>
     </>
