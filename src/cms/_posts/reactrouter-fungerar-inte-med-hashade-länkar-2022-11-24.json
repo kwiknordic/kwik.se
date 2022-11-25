@@ -1,0 +1,8 @@
+{
+  "layout": "blog",
+  "language": "sv",
+  "slug": "{{slug}}-{{year}}-{{month}}-{{day}}",
+  "date": "2022-11-24T23:42:08.235Z",
+  "title": "ReactRouter fungerar inte med hashade länkar",
+  "body": "Det finns ett bra npm-paket som smidigt löser problemet.\n\n```\nimport { HashLink } from 'react-router-hash-link';\n<HashLink to=\"/#part-of-page\">Part of page</HashLink>\n```"
+}
