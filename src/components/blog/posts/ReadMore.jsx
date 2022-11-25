@@ -4,11 +4,11 @@ import { Link } from "react-router-dom"
 function ReadMore({icon, slug, date}) {
   return (
     <div className="read-more">
-      <ul className='list-items-inline'>
-        <li>{icon}</li>
+      <div className='rm-left'>
+        <span>{icon}</span>
         <span className='divider'>|</span>
-        <li>{date}</li>
-      </ul>
+        <span>{date}</span>
+      </div>
       <Link to={slug}>Läs mer</Link>
     </div>
   )
