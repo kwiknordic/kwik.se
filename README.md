@@ -12,6 +12,8 @@ Personlig hemsida för uppvisning av portfolio, kompetensområden och kontaktinf
 - Använt npm-paketet "create react app" för att skapa en strukturmall
 - Uppdaterat: migrerat från CRA till Vite
 - Använder Netlify CMS som Blogg
+- React Router v6+ för laddning av undersidor
+- ReactMarkdown för att rendera innehåll skrivet i .md
 - Alla synliga element är skapade som funktionella React-komponenter
 - Generella hjälpfunktioner under "utils" (mass-import av bilder, strängomvandlare)
 - Personlig information finns under samma tak i "data"-mappen
