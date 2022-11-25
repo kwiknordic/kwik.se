@@ -12,7 +12,7 @@ function ReadMore({language, slug, date}) {
         <span className='divider'>|</span>
         <li>{new Date(date).toLocaleString('sv-SE', { dateStyle: "long"})}</li>
       </ul>
-      <Link to={`blog/${slug}`}>Läs mer</Link>
+      <Link to={slug}>Läs mer</Link>
     </div>
   )
 }

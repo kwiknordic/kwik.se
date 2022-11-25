@@ -20,5 +20,4 @@ collections:
       - {label: "Publicering", name: "date", widget: "datetime"}
       - {label: "Ämne", name: "title", widget: "string"}
       - {label: "Innehåll", name: "body", widget: "markdown"}
-      - {label: "Språk", name: "language", widget: "select", options: ["sv", "en"], default: ["sv"]}
-      - {label: "Slug", name: "slug", widget: "hidden", default: "{{slug}}-{{year}}-{{month}}-{{day}}"}
+      - {label: "Språk", name: "language", widget: "select", options: ["sv", "en"], default: "sv"}

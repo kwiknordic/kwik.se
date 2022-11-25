@@ -6,10 +6,19 @@ import { ReactComponent as Triangle } from "../assets/portfolio/triangle.svg"
 import { ReactComponent as Circle } from "../assets/portfolio/circle.svg"
 import { ReactComponent as Square } from "../assets/portfolio/square.svg"
 
-const modules = import.meta.glob('../cms/_posts/*.json', { eager: true })
+const blogStorage = import.meta.glob('../cms/_posts/*.json', { eager: true })
+const structuredPosts = Object.entries(blogStorage)
+  .map(entry => {
+    const fileName = entry[0]
+    let file = fileName.slice(
+      fileName.lastIndexOf("/") +1, 
+      fileName.lastIndexOf("."))
+    return { slug: file, ...entry[1] }
+  })
 
 function Blog() {
-  const [posts, setPosts] = useState(Object.values(modules))
+  const [posts, setPosts] = useState(structuredPosts)
+
 
   return (
     <>
