@@ -43,9 +43,9 @@
   content: "|";
 }
 
-.blog-overview-post pre {
-  background-color: rgb(233, 233, 233);
-  color: var(--dark-bg);
+.blog-overview-post pre, .blog-single-entry pre {
+  background-color: var(--dark-bg);
+  color: var(--grey-color);
   padding: 1rem;
   border-radius: 5px;
   display: block;
@@ -58,4 +58,16 @@
   align-items: center;
   justify-content: space-between;
   color: var(--secondary-accent);
+}
+
+.blog-single-entry h1 {
+  font-size: 2rem;
+}
+
+.blog-single-entry ul {
+  list-style-type: disc;
+}
+
+.blog-single-entry a {
+  color: var(--primary-accent)
 }

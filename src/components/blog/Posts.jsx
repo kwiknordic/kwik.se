@@ -6,19 +6,16 @@ import ReadMore from './posts/ReadMore';
 import '../../css/blog.css';
 
 function Posts({posts, setPosts}) {
-  const swedish = String.fromCodePoint(0x1F1F8, 0x1F1EA)
-  const english = String.fromCodePoint(0x1F1EC, 0x1F1E7)
-
   return (
     <div className='blog-overview'>
       {posts.map(post => {
-        const { title, body, language, date, slug} = post
+        const { title, body, langIcon, date, slug} = post
         return (
           <>
             <div className='blog-overview-post'>
               <h2>{title}</h2>
               <ReactMarkdown className='text-area'>{body}</ReactMarkdown>
-              <ReadMore language={language} slug={slug} date={date}></ReadMore>
+              <ReadMore icon={langIcon} date={date} slug={slug}></ReadMore>
             </div>
           </>
         )}

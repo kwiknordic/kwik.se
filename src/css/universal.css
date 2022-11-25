@@ -103,11 +103,12 @@ header nav {
 .logo, .mobile-nav, .mobile-scroll-up {
   font-size: 2.3rem;
   cursor: pointer;
+  align-self: center;
 }
   
 nav li {
   display: inline;
-  padding: 0.5rem;
+  padding-block: 0.5rem;
   list-style: none;
   font-weight: bold;
   color: var(--primary-accent);

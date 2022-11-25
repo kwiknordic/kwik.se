@@ -1,31 +1,31 @@
+import Header from "../universal/Header";
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { useParams } from "react-router-dom"
-
-const blogStorage = import.meta.glob('../../cms/_posts/*.json', { eager: true })
+import { blogPosts, replaceSwedishCharacters } from "../../util/postsFormatter.js"
 
 function Post() {
-  const { slug } = useParams()
+  let { slug } = useParams()
+  slug = replaceSwedishCharacters(slug)
 
-  const postFound = Object.entries(blogStorage)
-    .filter(entry => entry[0].includes(slug))
-    .pop()
+  let post = blogPosts.filter(post => post.slug === slug).at(0)
+  if (!post) return
+
+  const { title, body, langIcon, date } = post
 
   return (
-    <div className='blog-single-entry'>
-    {postFound.map(post => {
-      console.log(post)
-      const { title, body, language, date, slug} = post
-      return (
-        <>
-          <div className=''>
-            <h1>{title}</h1>
-            <ReactMarkdown>{body}</ReactMarkdown>
-          </div>
-        </>
-      )}
-    )}
-  </div>
+    <>
+      <header id="header">
+        <Header />
+      </header>
+
+      <main id="post" className='align-container-center blog-single-entry'>
+        <div className=''>
+          <h1>{title}</h1>
+          <ReactMarkdown>{body}</ReactMarkdown>
+        </div>
+      </main>
+    </>
   )
 }
 

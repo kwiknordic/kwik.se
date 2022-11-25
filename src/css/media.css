@@ -113,6 +113,10 @@
     margin: unset;
   }
 
+  nav li {
+    padding-inline: 0.5rem;
+  }
+
   nav li:hover {
     color: rgb(33, 48, 81);;
   }

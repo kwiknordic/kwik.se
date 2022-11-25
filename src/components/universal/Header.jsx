@@ -10,8 +10,8 @@ const Header = ({skewed}) => {
     <div className='container'>
       <div className={skewed ? skewedClass : "content"}>
 
-        <div>
-          <Link to="/"><span className='logo'>kwik</span></Link>
+        <div className="logo">
+          <Link to="/"><span>kwik</span></Link>
         </div>
 
         <nav className={isOpen ? "nav-visible" : "nav-invisible" }>
