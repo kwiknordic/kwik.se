@@ -3,5 +3,5 @@
   "language": "en",
   "date": "2022-11-26T09:11:00.000Z",
   "title": "Vue: share data between child and parent",
-  "body": "To prop drill from parent into child; parent should add an \"attribute\" to the child's component-element.\n\n```\n// Child component\nprops: [ \"title\" ]\n\n// Parent component\n<Child title=\"this is a static string\" />\n<Child :title=\"this-is-a-variable\" />\n```\n\nTo bubble a value up from a child into parent; child should emit (signal out) it's value to the parent.\n\n```\n// Parent component\n<Child @name_of_this_signal=\"(arg_from_child) => { return arg_from_child }\"\n\n// Child component wants to send an input's value\n<input @click=\"$emit('name_of_this_signal', $event.target.value)\" />\n```"
+  "body": "To prop drill from parent into child; parent should add an \"attribute\" to the child's component-element.\n\n```\n// Child component\nprops: [ \"title\" ]\n\n// Parent component\n<Child title=\"this is a static string\" />\n...or...\n<Child :title=\"this-is-a-variable\" />\n```\n\nTo bubble a value up from a child into parent; child should emit (signal out) it's value to the parent.\n\n```\n// Parent component\n<Child @name_of_this_signal=\"(arg_from_child) => { return arg_from_child }\"\n\n// Child component wants to send an input's value\n<input @click=\"$emit('name_of_this_signal', $event.target.value)\" />\n```"
 }
