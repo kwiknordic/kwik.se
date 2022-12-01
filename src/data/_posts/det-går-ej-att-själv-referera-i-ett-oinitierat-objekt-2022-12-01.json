@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "language": "sv",
+  "date": "2022-12-01T22:30:52.798Z",
+  "title": "Det går ej att själv-referera i ett oinitierat objekt",
+  "body": "En påminnelse om att man inte kan själv-referera till en prop (property/key) i ett objekt som ej är skapat/initierat.\n\n```\n// Detta fungerar ej\n\nobj = {\n  a: 2,\n  b: 3,\n  c: this.a + this.b\n }\n```\n\nMan ska istället skapa en \"getter\" (funktion) som kommer åt referenserna (genom att utnyttja konceptet; closure).\n\n```\n// Detta fungerar\n\nobj = {\n  a: 2,\n  b: 3,\n  get c() { return this.a + this.b }\n }\n```"
+}
