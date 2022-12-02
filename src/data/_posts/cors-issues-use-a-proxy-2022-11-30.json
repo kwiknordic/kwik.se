@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "language": "en",
+  "date": "2022-11-30T15:23:21.785Z",
+  "title": "CORS-issues? Use a proxy",
+  "body": "CORS is a safety-guard only applied on browsers. There are no CORS-errors if requesting from a server.\n\nFor serious projects, create your own proxy (by using Express, as example).\\\nFor testing, use a remote proxy.\n\nList of a few remote proxies:\n\n* [allOrigins](https://github.com/gnuns/allorigins)\n* [corsAnywhere](https://github.com/Rob--W/cors-anywhere/)\n\nJust wrap your request with their proxy."
+}

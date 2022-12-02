@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "language": "sv",
+  "date": "2022-11-27T17:06:14.685Z",
+  "title": "SCSS är ett bättre CSS",
+  "body": "SCSS är, och skrivs som, CSS men bidrar med extra nyttiga funktioner.\n\n```\n// OBS! För att kunna använda .scss-filer i projekt, behöver man installera Sass (som processerar och konverterar .scss-filer till vanligt .css åt webbläsaren).\n\nnpm i sass\n```\n\n1. SCSS skrivs med likadan syntax som CSS\n2. SCSS accepterar **//** kommentarer i sina filer, likt JavaScript\n3. S.k. \"nesting\" av barn är tillåtet vilket sparar på duplicering av kodblock\n\n   ```\n   // CSS \n\n   .parent {\n     color: red;\n     }\n     \n   .parent .child {\n     color: blue;\n     }\n     \n   // SCSS\n\n   .parent {\n     color: red;\n     \n     .child {\n       color: blue\n     }\n   }\n   ```\n4. Barn som delar namn med sina föräldrar kan skrivas ut med ett &-tecken \n\n   ```\n   // CSS \n\n   .parent {\n     color: red;\n     }\n     \n   .parent .parent-child {\n     color: blue;\n     }\n\n   .parent .parent-child:hover {\n     color: green;\n   }\n     \n   // SCSS\n\n   .parent {\n     color: red;\n     \n     &-child {\n       color: blue;\n     }\n     \n     &:hover {\n       color: green;\n   }\n   ```"
+}

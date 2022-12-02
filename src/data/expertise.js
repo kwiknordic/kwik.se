@@ -1,6 +1,9 @@
 const paradigms = ["Funktionell programmering", "Minimalism", "Komposition", "Iterativ utveckling"]
 
 const tools = [
+  { name: "SCSS",
+  icon: "fa-brands fa-sass"
+  },
   { name: "Github",
     icon: "fa-brands fa-github"
   },
