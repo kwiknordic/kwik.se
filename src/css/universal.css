@@ -80,24 +80,42 @@ body {
 header nav {
   order: 3;
   grid-column-start: span 2;
+  animation: showMenu 0.5s ease-in-out forwards;
 }
 
 header nav ul {
   display: flex;
   padding-left: 0;
   justify-content: space-around;
+  animation: showMenu 0.5s ease-in-out forwards;
 }
 
 header .nav-invisible {
   height: 0;
   border: 0;
   margin: 0;
+  animation: showMenu 0.5s ease-in-out forwards;
+}
+
+@keyframes showMenu {
+  0% {
+      transform: scaleY(0);
+  }
+
+  80% {
+      transform: scaleY(1.2);
+  }
+
+  100% {
+      transform: scaleY(1);
+  }
 }
 
 header nav {
   border: 5px solid var(--dark-bg);
   border-radius: 5px;
   margin-bottom: 1rem;
+  animation: showMenu 0.5s ease-in-out forwards;
 }
 
 .logo, .mobile-nav, .mobile-scroll-up {

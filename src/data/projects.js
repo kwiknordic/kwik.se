@@ -9,7 +9,7 @@ let projects = [
     ],
     demo: `/assets/CV-Mervin-Bratic.pdf`,
     github: "https://github.com/kwiknordic/html-to-pdf",
-    tools: ["HTML", "CSS", "JavaScript", "React"],
+    tools: ["HTML", "CSS", "JavaScript", "Node.js"],
     screenshot: `/assets/CV-Mervin-Bratic.pdf`,
   },
   {
