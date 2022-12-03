@@ -3,6 +3,17 @@ import { getImageUrl } from "../util/getImageUrl.js"
 
 let projects = [
   {
+    name: "Localize (work in progress)",
+    summary: [
+      "En mobile-first aggregator utav lokala händelser.",
+      "Missa inte ett event, nyhet eller uppmaning i din omgivning (enbart Stockholm just nu) med Localize. Localize samlar allt det roliga och intressanta på ett och samma ställe!"
+    ],
+    demo: `https://localize.kwik.se`,
+    github: "https://github.com/kwiknordic/localize",
+    tools: ["HTML", "SCSS", "JavaScript", "React"],
+    screenshot: null,
+  },
+  {
     name: "HTML till PDF",
     summary: [
       "Jag behövde ett aktuellt CV för framtida jobbansökan och kom till insikt att jag ville skapa layouten med CSS, och fylla innehållet med HTML. Lösningen är byggd med Node.js och använder npm-paketet Puppeteer för konverteringen till PDF."
@@ -16,7 +27,7 @@ let projects = [
     name: "kwik.se",
     summary: [
       "Personlig hemsida för uppvisning av portfolio, kompetensområden och kontaktinformation.",
-      "Innehållet är lagrat i egna datastrukturer som React renderar genom självständiga komponenter."
+      "Innehållet är lagrat i egna datastrukturer som React renderar genom självständiga komponenter. Bloggen är gjord på Netlify's huvudlösa CMS."
     ],
     demo: "https://kwik.se",
     github: "https://github.com/kwiknordic/kwik.se",
