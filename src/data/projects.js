@@ -11,7 +11,7 @@ let projects = [
     demo: `https://localize.kwik.se`,
     github: "https://github.com/kwiknordic/localize",
     tools: ["HTML", "SCSS", "JavaScript", "React"],
-    screenshot: null,
+    screenshot: "",
   },
   {
     name: "HTML till PDF",
