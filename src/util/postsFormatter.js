@@ -1,5 +1,7 @@
 const getJsonFiles = import.meta.glob('../data/_posts/*.json', { eager: true })
 
+/* console.log(getJsonFiles) */
+
 function replaceSwedishCharacters(string) {
   return string      
     .replaceAll(/[ä-å]/g, "a")
@@ -9,7 +11,7 @@ function replaceSwedishCharacters(string) {
 const createStructuredPosts = Object.entries(getJsonFiles)
   .map(entry => {
     const file = entry[0]
-    const data = entry[1]
+    const data = entry[1].default
 
     let slug;
     slug = file.slice(
@@ -28,7 +30,7 @@ const createStructuredPosts = Object.entries(getJsonFiles)
       date: new Date(data.date).toLocaleString('sv-SE', { dateStyle: "long"}),
       }
   })
-  .sort((a,b) => a.date < b.date ? 1 : -1)
+  .sort((a,b) => new Date(a.date) < new Date(b.date) ? 1 : -1)
 
   export {
     createStructuredPosts as blogPosts,

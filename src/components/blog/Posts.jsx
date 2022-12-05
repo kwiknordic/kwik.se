@@ -6,6 +6,7 @@ import ReadMore from './posts/ReadMore';
 import '../../css/blog.css';
 
 function Posts({posts, setPosts}) {
+
   return (
     <div className='blog-overview'>
       {posts.map(post => {
