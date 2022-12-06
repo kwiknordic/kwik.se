@@ -5,7 +5,7 @@ const tools = [
   icon: "fa-brands fa-sass"
   },
   { name: "Tailwind CSS",
-  icon: "null"
+  icon: null
   },
   { name: "Github",
     icon: "fa-brands fa-github"
