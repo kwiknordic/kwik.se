@@ -19,8 +19,7 @@ function HeroSection() {
 
           <div className='call-to-action'>
             <a href={`/assets/CV-Mervin-Bratic.pdf`} target="_blank" rel="noreferrer" className="btn btn-primary">Ladda ned mitt CV</a>
-            <a href="#info-box" className="btn btn-secondary">Kontakta mig
-            </a>
+            <a href="#info-box" className="btn btn-secondary">Kontakta mig</a>
           </div>
           
         </div>

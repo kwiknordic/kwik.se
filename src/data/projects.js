@@ -3,15 +3,15 @@ import { getImageUrl } from "../util/getImageUrl.js"
 
 let projects = [
   {
-    name: "Localize (work in progress)",
+    name: "Localize (under utveckling)",
     summary: [
       "En mobile-first aggregator utav lokala händelser.",
       "Missa inte ett event, nyhet eller uppmaning i din omgivning (enbart Stockholm just nu) med Localize. Localize samlar allt det roliga och intressanta på ett och samma ställe!"
     ],
-    demo: `https://localize.kwik.se`,
+    demo: null,
     github: "https://github.com/kwiknordic/localize",
-    tools: ["HTML", "SCSS", "JavaScript", "React"],
-    screenshot: "",
+    tools: ["HTML", "SCSS", "Tailwind CSS", "JavaScript", "React"],
+    screenshot: null,
   },
   {
     name: "HTML till PDF",
@@ -21,7 +21,7 @@ let projects = [
     demo: `/assets/CV-Mervin-Bratic.pdf`,
     github: "https://github.com/kwiknordic/html-to-pdf",
     tools: ["HTML", "CSS", "JavaScript", "Node.js"],
-    screenshot: `/assets/CV-Mervin-Bratic.pdf`,
+    screenshot: null,
   },
   {
     name: "kwik.se",
