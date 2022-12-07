@@ -56,6 +56,11 @@
     --spacing: 3rem;
   }
 
+  header nav ul {
+    flex-direction: unset;
+    align-items: unset;
+  }
+
   .hero-grid {
     gap: var(--spacing);
   }
@@ -96,6 +101,7 @@
   .call-to-action {
     margin-bottom: 3rem;
   }
+  
 }
 
 @media (min-width: 66rem) {

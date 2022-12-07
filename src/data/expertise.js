@@ -4,6 +4,9 @@ const tools = [
   { name: "SCSS",
   icon: "fa-brands fa-sass"
   },
+  { name: "Tailwind CSS",
+  icon: null
+  },
   { name: "Github",
     icon: "fa-brands fa-github"
   },
