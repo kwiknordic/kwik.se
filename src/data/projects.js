@@ -9,7 +9,7 @@ let projects = [
       "Missa inte ett event, nyhet eller uppmaning i din omgivning (enbart Stockholm just nu) med Localize. Localize samlar allt det roliga och intressanta på ett och samma ställe!"
     ],
     demo: null,
-    github: "https://github.com/kwiknordic/localize",
+    github: "https://github.com/kwiknordic/localize-prototype1",
     tools: ["HTML", "SCSS", "Tailwind CSS", "JavaScript", "React"],
     screenshot: null,
   },
