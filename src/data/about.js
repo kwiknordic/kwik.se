@@ -24,6 +24,8 @@ const interests = [
   icon: "fa-solid fa-futbol" },
   { name: "Right to Repair",
   icon: "fa-solid fa-screwdriver-wrench" },
+  { name: "Motown",
+  icon: "fa-solid fa-music-note" },
 ]
 
 const contactInfo = [
