@@ -413,6 +413,7 @@ li span i {
 }
 
 .sub-main-grid em {
+  color: var(--secondary-accent);
   font-style: unset;
   font-size: 0.9rem;
 }
