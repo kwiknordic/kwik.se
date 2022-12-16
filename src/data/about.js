@@ -25,7 +25,7 @@ const interests = [
   { name: "Right to Repair",
   icon: "fa-solid fa-screwdriver-wrench" },
   { name: "Motown",
-  icon: "fa-solid fa-music-note" },
+  icon: "fa-solid fa-music" },
 ]
 
 const contactInfo = [
