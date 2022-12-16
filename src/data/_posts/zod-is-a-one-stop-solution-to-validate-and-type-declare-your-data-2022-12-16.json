@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "language": "en",
+  "date": "2022-12-16T09:37:38.763Z",
+  "title": "Zod is a one-stop solution to validate and type declare your data",
+  "body": "Build a validation-template for your specific data and Zod can use that template/schema to create a typescript Type.\n\nReason why it is good practice to have your data funneled through a type-check AND a validator is because:\n\n* Typescript can catch mistakes straight in your editor based on your **description** of the data.\n* Validator can catch mistakes when your program runs and the **actual data** is different than what you are expecting.\n\nAn example of a simple work flow using Zod:\n\n* Create a validation template/schema to be used on your specific data\n\n```\nconst validation = z.object({\n  name: z.string(),\n  id: z.number().positive(),\n  job: z.string().optional()\n})\n```\n\n* Create a typescript **Type** based on the schema you declared above\n\n```\ntype useTypeFromValidation = z.infer<typeof validation>\n```\n\n* Add type-checking ability for your data\n\n```\n// our data with assigned Type based on (infered from) our schema\nconst data: useTypeFromValidation = { name: \"Mervin\", id: 1 }\n```\n\n* Check if the actual data follows the outlined schema before working on it\n\n```\nconst result = validation.safeParse(data);\nif (!result.success) {\n  // handle error then return\n  result.error;\n} else {\n  // do something\n  result.data;\n}\n```"
+}
