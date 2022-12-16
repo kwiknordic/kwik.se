@@ -7,12 +7,12 @@ function Project(props) {
   return (
       <div className="portfolio-content">
         <h3 className='title'>{name}</h3>
+        <em>Byggd med {tools}.</em>
         <div className='project-summary'>{summary.map(paragraph => <p>{paragraph}</p>)}</div>
         <ReadMore 
           screenshot={screenshot}
           demo={demo}
           github={github}
-          tools={tools}
         />
       </div>
   )

@@ -23,7 +23,6 @@ function readMore({screenshot, demo, github, tools}) {
           <i className="fa-brands fa-github"></i> GitHub
         </a></li>
       </ul>
-      <em>Byggd med {tools}.</em>
     </div>
   )
 }

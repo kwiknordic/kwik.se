@@ -404,6 +404,7 @@ li span i {
   cursor: pointer;
   color: #e8a15a;
   transition: var(--short-transition);
+  margin-bottom: unset;
 }
 
 .portfolio-content .list-items-inline li:hover {
