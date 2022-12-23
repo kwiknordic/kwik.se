@@ -1,6 +1,9 @@
 const paradigms = ["Funktionell programmering", "Minimalism", "Komposition", "Iterativ utveckling"]
 
 const tools = [
+  { name: "JavaScript",
+  icon: "fa-brands fa-js"
+  },
   { name: "SCSS",
   icon: "fa-brands fa-sass"
   },
@@ -28,9 +31,6 @@ const tools = [
   { name: "CRUD & RESTful API",
     icon: null,
   },
-  { name: "Swagger",
-  icon: null
-  },
   { name: "Wordpress",
   icon: "fa-brands fa-wordpress"
   },
@@ -41,9 +41,6 @@ const tools = [
   icon: null
   },
   { name: "nginx",
-  icon: null
-  },
-  { name: "mySQL",
   icon: null
   },
   { name: "DNS & Domänhantering",
@@ -101,10 +98,14 @@ function codeContent() {
     },
   ]
 
-  const js = [
+  const ts = [
     {
       string: `const expertise`,
       css: "c-b"
+    },
+    {
+      string: `: string[]`,
+      css: "c-g"
     },
     {
       string: ` = `,
@@ -192,7 +193,7 @@ function codeContent() {
   return {
     html,
     css,
-    js,
+    ts,
     node,
     react,
     mongo

@@ -17,7 +17,7 @@ const MyExpertise = () => {
         <div className='grid'>
           <Code title="HTML" code={codeContent().html} />
           <Code title="CSS" code={codeContent().css} />
-          <Code title="JavaScript" code={codeContent().js} />
+          <Code title="TypeScript" code={codeContent().ts} />
           <Code title="Node.js" code={codeContent().node} />
           <Code title="React" code={codeContent().react} />
           <Code title="MongoDB" code={codeContent().mongo} />
