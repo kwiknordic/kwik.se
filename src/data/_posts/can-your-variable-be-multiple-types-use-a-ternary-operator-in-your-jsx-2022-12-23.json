@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "language": "en",
+  "date": "2022-12-23T08:59:48.370Z",
+  "title": "Can your variable be multiple types? Use a ternary operator in your JSX",
+  "body": "Typescript will warn you if a variable has the potential to return more than one option and require that you extend your codebase to cover all potential cases. A ternary operator is a great solution for this.\n\nIn this example, our return is either a **string** or **undefined**.\n\n```javascript\ntype AcceptedReturn = string | undefined\nconst data: AcceptedReturn = getUnknownData()\n```\n\nA good and acceptable approach would be to have separate if-statements:\n\n```javascript\nif (!data) return <span>There is no data.</span>\nreturn <span>Here is your data: {data}<span>\n```\n\nA better approach would be to use a ternary operator:\n\n```javascript\ndata \n  ? <span>Here is your data: {data}<span>\n  : <span>There is no data.</span>\n```\n\nIt is also common to use an &&-operator if there is no need for a fallback return, but there are some potential bugs with this approach:\n\n```javascript\ndata && <span>Here is your data: {data}<span>\n  \n// There is a possibility of a bug with this approach.\n// Example of a bug can be read about at: https://kentcdodds.com/blog/use-ternaries-rather-than-and-and-in-jsx\n```"
+}
