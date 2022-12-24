@@ -11,8 +11,3 @@
 
 [[redirects]]
   https://https://kwikapp.netlify.app/* https://www.kwik.se/:splat 301!
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-  Link = "<https://www.kwik.se>; rel='canonical'"
