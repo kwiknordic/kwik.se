@@ -1,4 +1,4 @@
-site_url: https://kwik.se/
+site_url: https://www.kwik.se/
 locale: 'sv'
 
 backend:
@@ -17,7 +17,7 @@ collections:
     extension: "json"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Publicering", name: "date", widget: "datetime"}
+      - {label: "Publiceringdatum", name: "date", widget: "datetime"}
       - {label: "Ämne", name: "title", widget: "string"}
       - {label: "Innehåll", name: "body", widget: "markdown"}
       - {label: "Språk", name: "language", widget: "select", options: ["sv", "en"], default: "sv"}

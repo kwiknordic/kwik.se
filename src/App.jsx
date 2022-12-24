@@ -14,7 +14,6 @@ function App() {
           <Route path="blog">
             <Route index element={<Blog />} />
             <Route path=":slug" element={<Post />} />
-{/*             <Route path="*" element={<PageNotFound status={404} />} /> */}
           </Route>
           <Route path="*" element={<PageNotFound status={404} />} />
         </Route>

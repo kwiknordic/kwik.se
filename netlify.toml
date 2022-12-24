@@ -2,3 +2,9 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+  [[redirects]]
+  from = "https://kwikapp.netlify.app"
+  to = "https://www.kwik.se/"
+  status = 301
+  force = true
