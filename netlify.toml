@@ -10,4 +10,7 @@
   force = true
 
 [[redirects]]
-  https://https://kwikapp.netlify.app/* https://www.kwik.se/:splat 301!
+  from = "https://kwikapp.netlify.app/*"
+  to = "https://www.kwik.se/:splat"
+  status = 301
+  force = true
