@@ -3,5 +3,5 @@
   "language": "en",
   "date": "2022-12-15T08:04:53.727Z",
   "title": "Importing dotenv the ES6-modules way",
-  "body": "The dotenv documentation state that importing dotenv should be done as following:\n\n```\nimport * as dotenv from 'dotenv'\ndotenv.config()\n```\n\n* The first line above imports node_modules/dotenv.\n* The second line would fetch your custom .env-file into that specific module.\n\nThere is another way loading your custom .env-file into your project immediately:\n\n```\nimport 'dotenv/config`\n```\n\nFor easier use; destructure your dotenv.config\n\n```\n// define it as a variable\nconst { env } = process\n\n// call your specific env. variables\nenv.mySecretVariable\n...\nenv.API_KEY\n```"
+  "body": "The dotenv documentation state that importing dotenv should be done as following:\n\n```\nimport * as dotenv from 'dotenv'\ndotenv.config()\n```\n\n* The first line above imports node_modules/dotenv.\n* The second line would fetch your custom .env-file into that specific module.\n\nThere is another way loading your custom .env-file into your project immediately:\n\n```\nimport 'dotenv/config`\n```\n\nUsing dotenv-variables after importing the dotenv/config:\n\n```\n// Destructure process.env object\nconst { env } = process\n\n// Call your specific .env-variables\nenv.mySecretVariable\n...\nenv.API_KEY\n```"
 }
