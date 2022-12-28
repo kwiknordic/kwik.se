@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "language": "en",
+  "date": "2022-12-28T14:53:34.826Z",
+  "title": "Share variables between middlewares in Express",
+  "body": "Express has object which can be used to store and access properties, either globally, or within a single request-response cycle.\n\n* Read and write to `app.locals`-object to share data globally, between middleware, from the start of the application until the end.\n\n```\n// Write\napp.locals.title = 'My App'\napp.locals.email = 'me@myapp.com'\n\n// Read\napp.locals.title // 'My App'\napp.locals.email // 'me@myapp.com'\n```\n\n* Read and write to `res.locals`-object to share data within a HTTP-request method.\n\n```\n// Write\nres.locals.title = 'My App'\nres.locals.email = 'me@myapp.com'\n\n// Read\nres.locals.title // 'My App'\nres.locals.email // 'me@myapp.com'\n```"
+}
