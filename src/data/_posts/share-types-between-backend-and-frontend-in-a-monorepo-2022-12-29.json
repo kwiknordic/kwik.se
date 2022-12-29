@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "language": "en",
+  "date": "2022-12-30T06:30:54.691Z",
+  "title": "Share Types between backend and frontend in a monorepo",
+  "body": "To avoid creating duplicate Interfaces and Types in your backend and frontend for DTO´s, parameters and you name it; we can share those types with TypeScripts: Path mapping.\n\nAdd a custom path in your frontend/client-side tsconfig.json:\n\n```\n{\n  \"compilerOptions\": {\n    \"baseUrl\": \".\",\n    \"paths\": { \"@backend/*\": [\"../server/src/types/*\"], },\n  }\n}\n```\n\n1. The path is going up a directory from your `baseUrl` and then going to `server/src/types`-directory. \n2. We add * as a wildcard to mean that everything in that directory is to be accessible.\n3. We call our path `@backend`. This will be used as an alias when using ES6-imports.\n\nTypes are now available to be imported from the server-side with ES6-imports:\n\n```\nimport { ItemDTO } from \"@backend/itemDTO.js\"\n// the relative server-side path: ./src/types/itemDTO.js\n```"
+}
