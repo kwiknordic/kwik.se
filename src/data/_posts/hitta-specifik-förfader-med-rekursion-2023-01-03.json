@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "language": "sv",
+  "date": "2023-01-03T18:00:49.986Z",
+  "title": "Hitta specifik förfader med rekursion",
+  "body": "Om man är i behov att manipulera ett element som är flera led ovanför elementet man har tillgång till så kan man använda sig utav en rekursiv funktion för att hitta rätt.\n\n```\ntype FuncType = (element: HTMLElement, parentClass: string) => HTMLElement | null\n\nconst findParentByClass: FuncType = (element, parentClass) => {\n  const parent = element.parentElement\n  if (!parent || parent.tagName === \"Body\") return null\n  if (parent.className.includes(parentClass)) return parent\n  return findParentByClass(parent, parentClass)\n}\n\n// Exempel\nconst startingPoint = document.querySelector(\"#item1\")\nfindParentsByClass(startingPoint, \"gallery\")\n```\n\n* Som svar får man ett HTMLElement som innehåller del av klassnamnet - eller - null.\n* Den stannar av sökandet om den känner av Body-elementet.\n* Fungerar även med SCSS som döper om till unika klasser, eftersom kärnan av klassnamnet ändå är kvar."
+}
