@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "language": "en",
+  "date": "2023-01-03T23:30:09.283Z",
+  "title": "Snap a user-scroll smoothly to specific points with CSS",
+  "body": "Guide the scroll to continiously stop at your HTML-element(s) upon users scroll och finger-swipes. Works horizontally as vertically.\n\nThe container-element needs `scroll-snap-type` inserted into it's style. Children need `scroll-snap-align` inserted into their style.\n\n```\n// HTML\n\n<div class=\"container\">\n  <div class=\"child\">First</div>\n  <div class=\"child\">Second</div>\n</div>\n\n// CSS\n\n.container {\n  scroll-snap-type: y mandatory;\n}\n\n.child {\n  scroll-snap-align: start;\n}\n```\n\n* Container has multiple scroll-snap types/properties to choose from. They are divided as:\n\n  * Behaviour: `Mandatory` *or* `proximity`\n  * Direction: `x`, `y`, `block`, `inline` *or* `both`\n* Example above wants the scroll-snap to be for vertical *(y)* scrolling and align at childs position.\n\n- - -\n\n* Child has multiple scroll-snap-align properties to choose from. They are divided as:\n\n  * `none`, `start`, `center`, `end`\n* Example above wants the scroll to stop at the beginning of each child-element."
+}
