@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "language": "en",
+  "date": "2023-01-04T10:47:52.737Z",
+  "title": "URLSearchParams converts JavaScript data types into a URL-encoded string",
+  "body": "Query transmitted as part of the URL cannot contain specific characters. It must therefore be transmitted with URL encoding.\n\nThankfully, we can use `URLSearchParams` to convert a ordinary string, object or array into a URL-encoded string with appropriate seperators (`&`).\n\n```\nconst params = {\n    name: 'Mervin Bratic',\n    height: 193,\n}\n\nconst URLencodedString = new URLSearchParams(params).toString();\nconsole.log(URLencodedString) // 'name=Mervin+Bratic&height=193'\n```"
+}
