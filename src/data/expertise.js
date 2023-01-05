@@ -10,6 +10,9 @@ const tools = [
   { name: "Tailwind CSS",
   icon: null
   },
+  { name: "Styled Components",
+  icon: null
+  },
   { name: "Github",
     icon: "fa-brands fa-github"
   },

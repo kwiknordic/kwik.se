@@ -1,7 +1,5 @@
 const getJsonFiles = import.meta.glob('../data/_posts/*.json', { eager: true })
 
-/* console.log(getJsonFiles) */
-
 function replaceSwedishCharacters(string) {
   return string      
     .replaceAll(/[ä-å]/g, "a")
@@ -28,11 +26,27 @@ const createStructuredPosts = Object.entries(getJsonFiles)
       slug,
       langIcon,
       date: new Date(data.date).toLocaleString('sv-SE', { dateStyle: "long"}),
+      unmodifiedDate: data.date
       }
   })
-  .sort((a,b) => new Date(a.date) < new Date(b.date) ? 1 : -1)
+  
+  const groupedPostsByMonth = createStructuredPosts
+    .reduce((Map, current) => {
+      const date = new Date(current.unmodifiedDate)
+      const year = date.getFullYear()
+      const month = date.getMonth()
+      const monthName = date.toLocaleString('sv-SE', { month: 'long' });
+      const key = `${year}-${month}-${monthName}`
+
+      Map.has(key) ? Map.get(key).push(current) : Map.set(key, [current])
+      return Map
+    }, new Map())
 
   export {
     createStructuredPosts as blogPosts,
+    groupedPostsByMonth,
     replaceSwedishCharacters
   }
+
+  // if need to sort
+  /*   .sort((a,b) => new Date(a.date) < new Date(b.date) ? 1 : -1) */

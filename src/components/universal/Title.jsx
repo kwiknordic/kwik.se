@@ -1,8 +1,12 @@
 import React from 'react'
 
 function Title(props) {
-  const { title, subTitle, priority = "subtitle" } = props
+  const { title, subTitle, priority = "subtitle", tag = "h2" } = props
   let template;
+
+  const titleTag = tag === "h1" ? 
+  <h1 className="title" style={{fontSize: "2rem"}}>{title}</h1> : 
+  <h2 className="title">{title}</h2>
 
   if (priority === "subtitle") {
     template = (
@@ -10,7 +14,7 @@ function Title(props) {
           <span className="sub-title">
             {subTitle}
           </span>
-          <h2 className="title">{title}</h2>
+          {titleTag}
         </div>
     )
   }
@@ -18,7 +22,7 @@ function Title(props) {
   if (priority === "header") {
     template = (
       <div>
-        <h2 className="title">{title}</h2>
+        {titleTag}
         <span className="sub-title">
           {subTitle}
         </span>

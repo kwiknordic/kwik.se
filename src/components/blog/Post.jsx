@@ -24,7 +24,7 @@ function Post() {
           <h1>{title}</h1>
           <ReactMarkdown>{body}</ReactMarkdown>
           <hr />
-          <em>Uppdaterad: {date}</em>
+          <em>{date}</em>
         </div>
       </main>
     </>

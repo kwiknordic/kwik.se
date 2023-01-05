@@ -5,7 +5,12 @@
 }
 
 #blog .title-section {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+
+#blog .monthly-title-section {
+  margin-top: 1.5rem;
+  width: 100%;
 }
 
 .blog-overview-subheader {
