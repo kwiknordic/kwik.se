@@ -3,15 +3,15 @@ import { getImageUrl } from "../util/getImageUrl.js"
 
 let projects = [
   {
-    name: "Localize (under utveckling)",
+    name: "Localize",
     summary: [
-      "En mobile-first aggregator utav lokala händelser.",
-      "Missa inte ett event, nyhet eller uppmaning i din omgivning (enbart Stockholm just nu) med Localize. Localize samlar allt det roliga och intressanta på ett och samma ställe!"
+      "En mobile-first aggregator utav lokala händelser i Stockholm. Missa inte ett event, nyhet eller uppmaning i din omgivning med Localize.",
+      "En full-stack applikation med React (CSR) på klientsidan och Node.js med Express som webbserver på serversidan. Serversidan är byggd på Railway och klientsidan sitter hos Netlify."
     ],
-    demo: null,
+    demo: "https://localize.kwik.se",
     github: "https://github.com/kwiknordic/localize-prototype1",
-    tools: ["HTML", "SCSS", "Tailwind CSS", "JavaScript", "React"],
-    screenshot: null,
+    tools: ["React", "NodeJS", "JavaScript", "SCSS", "HTML"],
+    screenshot: getImageUrl("localize.jpg"),
   },
   {
     name: "HTML till PDF",
@@ -20,7 +20,7 @@ let projects = [
     ],
     demo: `/assets/CV-Mervin-Bratic.pdf`,
     github: "https://github.com/kwiknordic/html-to-pdf",
-    tools: ["HTML", "CSS", "JavaScript", "Node.js"],
+    tools: ["JavaScript", "Node.js", "Puppeteer", "HTML", "CSS"],
     screenshot: null,
   },
   {
@@ -31,18 +31,18 @@ let projects = [
     ],
     demo: "https://kwik.se",
     github: "https://github.com/kwiknordic/kwik.se",
-    tools: ["HTML", "CSS", "JavaScript", "React"],
+    tools: ["React", "JavaScript", "CSS", "HTML"],
     screenshot: getImageUrl("kwik.jpg"),
   },
   {
     name: "Kwikflix",
     summary: [
       "Bläddra, hitta och läs mer om de trendigaste och bästa Film- och TV-produktionerna. Uppdateras kontinuerligt genom API-förfrågningar mot TMDB-databasen. Kwikflix ger även användaren möjlighet att söka efter, och spara, egna resultat.",
-      "Applikationen renderas hos användaren (client-side) och allt innehåll tillhandahålls och sparas via localStorage."
+      "Applikationen renderas på klientsidan och allt innehåll tillhandahålls och sparas via localStorage."
     ],
     demo: "https://flix.kwik.se",
     github: "https://github.com/kwiknordic/Kwikflix",
-    tools: ["HTML", "CSS", "JavaScript"],
+    tools: ["JavaScript", "HTML", "CSS"],
     screenshot: getImageUrl("kwikflix.jpg"),
   },
   {
@@ -52,7 +52,7 @@ let projects = [
     ],
     demo: "https://frontend-dev-game.netlify.app/",
     github: "https://github.com/kwiknordic/frontend-developer-game",
-    tools: ["HTML", "CSS", "JavaScript", "Canvas"],
+    tools: ["JavaScript", "Canvas", "CSS", "HTML"],
     screenshot: getImageUrl("frontend-game.jpg"),
   }
 ]
