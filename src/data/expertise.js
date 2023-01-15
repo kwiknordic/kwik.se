@@ -8,10 +8,12 @@ const tools = [
   icon: "fa-brands fa-sass"
   },
   { name: "Tailwind CSS",
-  icon: null
+  icon: "mdi:tailwind",
+  iconify: true
   },
   { name: "Styled Components",
-  icon: null
+  icon: "file-icons:styledcomponents",
+  iconify: true
   },
   { name: "Github",
     icon: "fa-brands fa-github"
@@ -32,7 +34,8 @@ const tools = [
     icon: "fa-brands fa-js"
   },
   { name: "CRUD & RESTful API",
-    icon: null,
+    icon: "dashicons:rest-api",
+    iconify: true
   },
   { name: "Wordpress",
   icon: "fa-brands fa-wordpress"
@@ -41,13 +44,16 @@ const tools = [
   icon: "fa-brands fa-linux"
   },
   { name: "Apache",
-  icon: null
+  icon: "simple-icons:apache",
+  iconify: true,
   },
   { name: "nginx",
-  icon: null
+  icon: "simple-icons:nginx",
+  iconify: true
   },
   { name: "DNS & Domänhantering",
-  icon: null
+  icon: "material-symbols:dns",
+  iconify: true
   },
 ]
 

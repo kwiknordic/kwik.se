@@ -10,8 +10,8 @@ const Portfolio = () => {
   const [projects, setProjects] = useState(initialProjects)
   let coord;
 
-  const moveSliderLeft = () => setProjects([...projects.slice(1), projects.at(0)])
-  const moveSliderRight = () => setProjects([projects.at(-1), ...projects.slice(0,-1)])
+  const moveSliderRight = () => setProjects([...projects.slice(1), projects.at(0)])
+  const moveSliderLeft = () => setProjects([projects.at(-1), ...projects.slice(0,-1)])
 
   const dragStart = (start) => {
     if (start.target.id === "lightbox-li") return;

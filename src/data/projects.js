@@ -3,14 +3,14 @@ import { getImageUrl } from "../util/getImageUrl.js"
 
 let projects = [
   {
-    name: "Localize",
+    name: "Localize (under uppbyggnad)",
     summary: [
       "En mobile-first aggregator utav lokala händelser i Stockholm. Missa inte ett event, nyhet eller uppmaning i din omgivning med Localize.",
       "En full-stack applikation med React (CSR) på klientsidan och Node.js med Express som webbserver på serversidan. Serversidan är byggd på Railway och klientsidan sitter hos Netlify."
     ],
     demo: "https://localize.kwik.se",
     github: "https://github.com/kwiknordic/localize-fullstack",
-    tools: ["React", "NodeJS", "JavaScript", "SCSS", "HTML"],
+    tools: ["React", "NodeJS", "TypeScript", "SCSS", "HTML"],
     screenshot: getImageUrl("localize-fullstack.jpg"),
   },
   {

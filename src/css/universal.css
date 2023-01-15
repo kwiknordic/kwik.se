@@ -307,8 +307,14 @@ li span {
   color: #e8e8e8;
 }
 
-li span i {
+li span i, li span svg {
   margin-right: 1rem;
+}
+
+li span svg {
+  vertical-align: -13%;
+/*   width: 16px;
+  height: 16px; */
 }
 
 .sub-main {
