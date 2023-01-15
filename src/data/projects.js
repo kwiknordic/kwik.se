@@ -9,9 +9,9 @@ let projects = [
       "En full-stack applikation med React (CSR) på klientsidan och Node.js med Express som webbserver på serversidan. Serversidan är byggd på Railway och klientsidan sitter hos Netlify."
     ],
     demo: "https://localize.kwik.se",
-    github: "https://github.com/kwiknordic/localize-prototype1",
+    github: "https://github.com/kwiknordic/localize-fullstack",
     tools: ["React", "NodeJS", "JavaScript", "SCSS", "HTML"],
-    screenshot: getImageUrl("localize.jpg"),
+    screenshot: getImageUrl("localize-fullstack.jpg"),
   },
   {
     name: "HTML till PDF",
