@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "language": "sv",
+  "date": "2023-01-16T13:29:02.714Z",
+  "title": "Skapa unika strängar med Crypto",
+  "body": "React kräver ett unikt ID-nummer för varje enskilt element skapat med en loop. Webbläsaren och Node.js har ett Crypto-interface vi kan använda oss utav.\n\nI Node.js får man fram ett unikt ID-nummer på följande sätt:\n\n```\nimport * as nodeCrypto from \"node:crypto\"\nconst unqiueID = nodeCrypto.randomUUID()\n```\n\nI webbläsaren får man fram ett unikt ID-nummer på följande sätt:\n\n```\nconst unqiueID = crypto.randomUUID()\n```"
+}
