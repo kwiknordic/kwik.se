@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "language": "en",
+  "date": "2023-12-21T12:43:50.975Z",
+  "title": "Free email-hosting with own domain using Zoho Mail",
+  "body": "I host my website (kwik.se) on Netlify with their free tier - as most of us do. For hosting my custom e-mail (@kwik.se), I use Zoho's free-forever tier.\n\nYour domain provider might want to upsell you web-hosting and e-mail hosting, but there are free alternatives out there. As mentioned: Netlify is a great choice for hosting your projects, and Zoho handles e-mails just fine.\n\nSign up for Zoho Mail (free plan):\\\n[https://mail.zoho.com/signup?type=org&**plan=free**](https://mail.zoho.com/signup?type=org&plan=free)\n\nYou then have to access and change your DNS-records - available on your accounts-page at your domain provider *(one.com, for example)*. These DNS-records will need to your custom domain toward the hosting provider you want to use. Zoho guides you step-by-step through this process, and it is basically a copy-paste job adding 4-5 MX and TXT rows to your DNS-record.\n\nZoho allows five (5) e-mail aliases to receive and send e-mails from, meaning that you can have your *info@, name@, contact@, no-reply@ and order@* looking like a professional.\n\nYour e-mail can be accessed via the browser (<https://mail.zoho.eu>) or by their own Zoho Mail-app."
+}
