@@ -3,17 +3,6 @@ import { getImageUrl } from "../util/getImageUrl.js"
 
 let projects = [
   {
-    name: "Localize (under uppbyggnad)",
-    summary: [
-      "En mobile-first aggregator utav lokala händelser i Stockholm. Missa inte ett event, nyhet eller uppmaning i din omgivning med Localize.",
-      "En full-stack applikation med React (CSR) på klientsidan och Node.js med Express som webbserver på serversidan. Serversidan är byggd på Railway och klientsidan sitter hos Netlify."
-    ],
-    demo: "https://localize.kwik.se",
-    github: "https://github.com/kwiknordic/localize-fullstack",
-    tools: ["React", "NodeJS", "TypeScript", "SCSS", "HTML"],
-    screenshot: getImageUrl("localize-fullstack.jpg"),
-  },
-  {
     name: "HTML till PDF",
     summary: [
       "Jag behövde ett aktuellt CV för framtida jobbansökan och kom till insikt att jag ville skapa layouten med CSS, och fylla innehållet med HTML. Lösningen är byggd med Node.js och använder npm-paketet Puppeteer för konverteringen till PDF."
