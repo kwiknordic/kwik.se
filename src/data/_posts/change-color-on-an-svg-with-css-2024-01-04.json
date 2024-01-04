@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "language": "en",
+  "date": "2024-01-04T08:52:39.042Z",
+  "title": "Change color on an SVG with CSS",
+  "body": "Often I find myself wanting to change a SVG's color (fill) on hover; sometimes it works - sometimes it does not. The solution: currentColor.\n\nChange SVG's fill-value into \"currentColor\". It will then inherit whatever color your font-family uses.\n\n```html\n<svg width=\"1em\" height=\"1em\"> \n  <path fill=\"currentColor\" d=\"m1022.74 942...\"></path>\n</svg>\n```\n\nYou target changes in CSS by:\n\n```css\nsvg {\n  color: red;\n}\n```"
+}
