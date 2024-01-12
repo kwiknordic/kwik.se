@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "language": "en",
+  "date": "2024-01-12T07:51:43.682Z",
+  "body": "Element implicitly has an 'any' type because expression of type 'string' can't be used to index type. What does this even mean and how to fix it?\n\nBobby writes in more detail about this issue on his blog:\n<https://bobbyhadz.com/blog/typescript-element-implicitly-has-any-type-expression>\n\nTypeScript is basically telling us that the `string` type is too broad for it's liking because not all potential strings in the object are necessarely keys — so we have to convince it otherwise; that this is, indeed, one of the object's keys.\n\n<!--StartFragment-->\n\nObject.entries(myObject).forEach((obj, key) => {\\\n  const prop = obj\\[key as keyof typeof obj]\\\n  console.log(prop)\\\n}\n\n<!--EndFragment-->\n\nThe secret sauce is telling Typescript that the index (key) indeed is one of whatever keys the obj contains by using the `typeof keyof` type assertion.",
+  "title": "Use obj[variable] without Typescript causing an issue with \"type assertion\""
+}
