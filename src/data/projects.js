@@ -2,6 +2,16 @@ import { formatter } from "../util/listFormatter.js"
 import { getImageUrl } from "../util/getImageUrl.js"
 
 let projects = [
+    {
+    name: "YouTube till .mp3-filer",
+    summary: [
+      "Skapade för ett slutet sällskap möjlighet att ladda ned sina YouTube-spellistor till en komprimerad fil innehållande listans .mp3-filer."
+    ],
+    demo: `https://print.kwik.se/`,
+    github: "https://github.com/kwiknordic/printkwik",
+    tools: ["JavaScript", "Node.js", "Webassembly", "Restful API", "Nuxt", "CSS"],
+    screenshot: null,
+  },
   {
     name: "HTML till PDF",
     summary: [
