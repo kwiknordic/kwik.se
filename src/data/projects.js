@@ -5,11 +5,11 @@ let projects = [
     {
     name: "YouTube till .mp3-filer",
     summary: [
-      "Skapade för ett slutet sällskap möjlighet att ladda ned sina YouTube-spellistor till en komprimerad fil innehållande listans .mp3-filer."
+      "Skapade för ett slutet sällskap möjlighet att beställa CD-skivor med egna motiv av bifogade YouTube-länkar. Trenden med 'Personalized CDs' is back, I tell you!"
     ],
     demo: `https://print.kwik.se/`,
-    github: "https://github.com/kwiknordic/printkwik",
-    tools: ["JavaScript", "Node.js", "Webassembly", "Restful API", "Nuxt", "CSS"],
+    github: "https://github.com/kwiknordic/kwikprint",
+    tools: ["JavaScript", "Node.js", "Webassembly", "RestAPI", "Nuxt"],
     screenshot: null,
   },
   {
