@@ -1,7 +1,7 @@
 import React from 'react'
 import portrait from '../../assets/hero-portrait.png';
 
-const synopsis = `En självlärd webbutvecklare med praktisk erfarenhet och stor passion i att bygga projekt med branschbeprövad teknologi likväl som med det allra senaste.`
+const synopsis = `En självbildad webbutvecklare med praktisk erfarenhet och stor passion i att bygga projekt med branschbeprövad teknologi likväl som med det allra senaste.`
 
 function HeroSection() {
   return (
@@ -12,7 +12,7 @@ function HeroSection() {
           <div className="title-section">
             <span className="sub-title">Hej, jag heter</span>
             <h1 className="title">Mervin Bratic</h1>
-            <span className="post-title">Frontend-utvecklare</span>        
+            <span className="post-title">Fullstack-utvecklare</span>        
           </div>
 
           <p>{synopsis}</p>
