@@ -8,7 +8,7 @@ import { ReactComponent as Square } from "../assets/portfolio/square.svg"
 import arrow from "../assets/down-arrow.png"
 
 function Blog() {
-  const posts = [...groupedPostsByMonth].sort((a,b) => a[0] < b[0])
+  const posts = [...groupedPostsByMonth].sort((a,b) => b[0].localeCompare(a[0]))
 
   return (
     <>
