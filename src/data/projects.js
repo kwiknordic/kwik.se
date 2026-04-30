@@ -1,67 +1,65 @@
-import { formatter } from "../util/listFormatter.js"
-import { getImageUrl } from "../util/getImageUrl.js"
+import { formatter } from '../util/listFormatter.js'
+import { getImageUrl } from '../util/getImageUrl.js'
 
 let projects = [
-    {
-    name: "YouTube till .mp3-filer",
+  {
+    name: 'YouTube till .mp3-filer',
     summary: [
-      "Skapade för ett slutet sällskap möjlighet att beställa CD-skivor med egna motiv av bifogade YouTube-länkar. Trenden med 'Personalized CDs' is back, I tell you!"
+      "Skapade för några vänner möjlighet att skapa och beställa CD-skivor med egna motiv av bifogade YouTube-länkar. Trenden med 'Personalized CDs' is back, I tell you!",
     ],
     demo: `https://print.kwik.se/`,
-    github: "https://github.com/kwiknordic/kwikprint",
-    tools: ["JavaScript", "Node.js", "Webassembly", "RestAPI", "Nuxt"],
+    github: 'https://github.com/kwiknordic/kwikprint',
+    tools: ['TypeScript', 'Nuxt', 'Webassembly', 'RestAPI'],
     screenshot: null,
   },
   {
-    name: "HTML till PDF",
+    name: 'HTML till PDF',
     summary: [
-      "Jag behövde ett aktuellt CV för framtida jobbansökan och kom till insikt att jag ville skapa layouten med CSS, och fylla innehållet med HTML. Lösningen är byggd med Node.js och använder npm-paketet Puppeteer för konverteringen till PDF."
+      'Jag behövde ett aktuellt CV för framtida jobbansökan och kom till insikt att jag ville skapa layouten med CSS, och fylla innehållet med HTML. Lösningen är byggd med Node.js och använder npm-paketet Puppeteer för konverteringen till PDF.',
     ],
     demo: `/assets/CV-Mervin-Bratic.pdf`,
-    github: "https://github.com/kwiknordic/html-to-pdf",
-    tools: ["JavaScript", "Node.js", "Puppeteer", "HTML", "CSS"],
+    github: 'https://github.com/kwiknordic/html-to-pdf',
+    tools: ['JavaScript', 'Node.js', 'Puppeteer', 'HTML', 'CSS'],
     screenshot: null,
   },
   {
-    name: "kwik.se",
+    name: 'kwik.se',
     summary: [
-      "Personlig hemsida för uppvisning av portfolio, kompetensområden och kontaktinformation.",
-      "Innehållet är lagrat i egna datastrukturer som React renderar genom självständiga komponenter. Bloggen är gjord på Netlify's huvudlösa CMS."
+      'Personlig hemsida för kontaktinformation.',
+      "Innehållet är lagrat i egna datastrukturer som React renderar genom självständiga komponenter. Bloggen är gjord på Netlify's huvudlösa CMS.",
     ],
-    demo: "https://kwik.se",
-    github: "https://github.com/kwiknordic/kwik.se",
-    tools: ["React", "JavaScript", "CSS", "HTML"],
-    screenshot: getImageUrl("kwik.jpg"),
+    demo: 'https://kwik.se',
+    github: 'https://github.com/kwiknordic/kwik.se',
+    tools: ['React', 'JavaScript', 'CSS', 'HTML'],
+    screenshot: getImageUrl('kwik.jpg'),
   },
   {
-    name: "Kwikflix",
+    name: 'Kwikflix',
     summary: [
-      "Bläddra, hitta och läs mer om de trendigaste och bästa Film- och TV-produktionerna. Uppdateras kontinuerligt genom API-förfrågningar mot TMDB-databasen. Kwikflix ger även användaren möjlighet att söka efter, och spara, egna resultat.",
-      "Applikationen renderas på klientsidan och allt innehåll tillhandahålls och sparas via localStorage."
+      'Bläddra, hitta och läs mer om de trendigaste och bästa Film- och TV-produktionerna. Uppdateras kontinuerligt genom API-förfrågningar mot TMDB-databasen. Kwikflix ger även användaren möjlighet att söka efter, och spara, egna resultat.',
+      'Applikationen renderas på klientsidan och allt innehåll tillhandahålls och sparas via localStorage.',
     ],
-    demo: "https://flix.kwik.se",
-    github: "https://github.com/kwiknordic/Kwikflix",
-    tools: ["JavaScript", "HTML", "CSS"],
-    screenshot: getImageUrl("kwikflix.jpg"),
+    demo: 'https://flix.kwik.se',
+    github: 'https://github.com/kwiknordic/Kwikflix',
+    tools: ['JavaScript', 'HTML', 'CSS'],
+    screenshot: getImageUrl('kwikflix.jpg'),
   },
   {
-    name: "Become a frontend-developer",
+    name: 'Become a frontend-developer',
     summary: [
-      "Använd pilarna för att navigera till närmaste delmål. Delmålen ändrar regelbundet position och spelaren har vunnit när alla delmål är tagna."
+      'Använd pilarna för att navigera till närmaste delmål. Delmålen ändrar regelbundet position och spelaren har vunnit när alla delmål är tagna.',
     ],
-    demo: "https://frontend-dev-game.netlify.app/",
-    github: "https://github.com/kwiknordic/frontend-developer-game",
-    tools: ["JavaScript", "Canvas", "CSS", "HTML"],
-    screenshot: getImageUrl("frontend-game.jpg"),
-  }
+    demo: 'https://frontend-dev-game.netlify.app/',
+    github: 'https://github.com/kwiknordic/frontend-developer-game',
+    tools: ['JavaScript', 'Canvas', 'CSS', 'HTML'],
+    screenshot: getImageUrl('frontend-game.jpg'),
+  },
 ]
 
 // Make tools-array into string with punctuations
-projects = projects.map(project => {
+projects = projects.map((project) => {
   project.tools = formatter.format(project.tools)
   return project
 })
 
-export {
-  projects
-}
+export { projects }

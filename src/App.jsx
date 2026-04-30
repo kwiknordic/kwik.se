@@ -1,8 +1,8 @@
-import Layout from './components/Layout';
-import Home from './components/Home';
-import PageNotFound from './components/PageNotFound';
-import Blog from './components/Blog';
-import Post from './components/blog/Post';
+import Layout from './components/Layout'
+import Home from './components/Home'
+import PageNotFound from './components/PageNotFound'
+import Blog from './components/Blog'
+import Post from './components/blog/Post'
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         </Route>
       </Routes>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
