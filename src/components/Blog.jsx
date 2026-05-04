@@ -1,7 +1,8 @@
 import Header from './universal/Header';
+import SchemaMarkup from './universal/SchemaMarkup';
 import Title from './universal/Title';
 import Posts from './blog/Posts';
-import { groupedPostsByMonth } from '../util/postsFormatter';
+import { groupedPostsByMonth, blogPosts } from '../util/postsFormatter';
 import { ReactComponent as Triangle } from "../assets/portfolio/triangle.svg"
 import { ReactComponent as Circle } from "../assets/portfolio/circle.svg"
 import { ReactComponent as Square } from "../assets/portfolio/square.svg"
@@ -10,8 +11,29 @@ import arrow from "../assets/down-arrow.png"
 function Blog() {
   const posts = [...groupedPostsByMonth].sort((a,b) => b[0].localeCompare(a[0]))
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Artiklar – Mervin Bratic",
+    "url": "https://kwik.se/blog",
+    "inLanguage": "sv-SE",
+    "author": {
+      "@type": "Person",
+      "name": "Mervin Bratic",
+      "url": "https://kwik.se"
+    },
+    "blogPost": blogPosts.map(post => ({
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "url": `https://kwik.se/blog/${post.slug}`,
+      "datePublished": post.unmodifiedDate,
+      "inLanguage": post.language === "en" ? "en-GB" : "sv-SE"
+    }))
+  }
+
   return (
     <>
+      <SchemaMarkup schema={blogSchema} />
       <header id="header">
         <Header />
       </header>

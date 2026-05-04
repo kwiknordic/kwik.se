@@ -1,8 +1,18 @@
 import Header from "../universal/Header";
+import SchemaMarkup from "../universal/SchemaMarkup";
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { useParams } from "react-router-dom"
 import { blogPosts, replaceSwedishCharacters } from "../../util/postsFormatter.js"
+
+function getExcerpt(markdownBody) {
+  return markdownBody
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/[#*`_[\]()!]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 200)
+}
 
 function Post() {
   let { slug } = useParams()
@@ -11,10 +21,43 @@ function Post() {
   let post = blogPosts.filter(post => post.slug === slug).at(0)
   if (!post) return
 
-  const { title, body, langIcon, date } = post
+  const { title, body, langIcon, date, unmodifiedDate, language } = post
+  const postUrl = `https://kwik.se/blog/${slug}`
+
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": getExcerpt(body),
+    "url": postUrl,
+    "datePublished": unmodifiedDate,
+    "inLanguage": language === "en" ? "en-GB" : "sv-SE",
+    "author": {
+      "@type": "Person",
+      "name": "Mervin Bratic",
+      "url": "https://kwik.se"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Mervin Bratic",
+      "url": "https://kwik.se"
+    }
+  }
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://kwik.se" },
+      { "@type": "ListItem", "position": 2, "name": "Artiklar", "item": "https://kwik.se/blog" },
+      { "@type": "ListItem", "position": 3, "name": title, "item": postUrl }
+    ]
+  }
 
   return (
     <>
+      <SchemaMarkup schema={blogPostingSchema} />
+      <SchemaMarkup schema={breadcrumbSchema} />
       <header id="header">
         <Header />
       </header>
