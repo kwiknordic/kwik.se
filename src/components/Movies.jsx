@@ -1,9 +1,8 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo, useState, useEffect, useRef } from 'react'
 import {
   useReactTable,
   getCoreRowModel,
   getSortedRowModel,
-  getPaginationRowModel,
   flexRender,
 } from '@tanstack/react-table'
 import movies from '../data/movies.js'
@@ -11,12 +10,13 @@ import Header from './universal/Header'
 import Title from './universal/Title'
 import '../css/movies.css'
 
+const PAGE_SIZE = 20
+
 function Movies() {
   const [sorting, setSorting] = useState([{ id: 'rating', desc: true }])
-  const [pagination, setPagination] = useState({
-    pageIndex: 0,
-    pageSize: 10,
-  })
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
+  const [isLoading, setIsLoading] = useState(false)
+  const sentinelRef = useRef(null)
 
   const columns = useMemo(
     () => [
@@ -26,7 +26,7 @@ function Movies() {
       },
       {
         accessorKey: 'rating',
-        header: 'Mitt betyg',
+        header: '',
         cell: (info) => {
           const rating = info.getValue()
           const stars = []
@@ -43,22 +43,40 @@ function Movies() {
         },
       },
     ],
-    []
+    [],
   )
 
   const table = useReactTable({
     data: movies,
     columns,
-    state: {
-      sorting,
-      pagination,
-    },
+    state: { sorting },
     onSortingChange: setSorting,
-    onPaginationChange: setPagination,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
-    getPaginationRowModel: getPaginationRowModel(),
   })
+
+  const allRows = table.getRowModel().rows
+  const visibleRows = allRows.slice(0, visibleCount)
+  const hasMore = visibleCount < allRows.length
+
+  useEffect(() => {
+    const sentinel = sentinelRef.current
+    if (!sentinel) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && hasMore && !isLoading) {
+          setIsLoading(true)
+          setTimeout(() => {
+            setVisibleCount((c) => c + PAGE_SIZE)
+            setIsLoading(false)
+          }, 900)
+        }
+      },
+      { rootMargin: '100px' },
+    )
+    observer.observe(sentinel)
+    return () => observer.disconnect()
+  }, [hasMore, isLoading])
 
   return (
     <>
@@ -68,7 +86,7 @@ function Movies() {
       <div className="movies-page">
         <div className="title-section sub-main">
           <Title
-            title="Filmer"
+            title="Filmtips"
             tag="h1"
             subTitle={<span>Betygsatt totalt {movies.length} filmer</span>}
             priority="header"
@@ -88,7 +106,7 @@ function Movies() {
               ))}
             </thead>
             <tbody>
-              {table.getRowModel().rows.map((row) => (
+              {visibleRows.map((row) => (
                 <tr key={row.id}>
                   {row.getVisibleCells().map((cell) => (
                     <td key={cell.id} className={cell.column.id === 'rating' ? 'col-rating' : ''}>
@@ -99,29 +117,14 @@ function Movies() {
               ))}
             </tbody>
           </table>
-        </div>
-
-        <div className="movies-pagination">
-          <div className="movies-pagination-buttons">
-            <button
-              className="movies-pagination-btn"
-              onClick={() => table.previousPage()}
-              disabled={!table.getCanPreviousPage()}>
-              ← Föregående
-            </button>
-            <button
-              className="movies-pagination-btn"
-              onClick={() => table.nextPage()}
-              disabled={!table.getCanNextPage()}>
-              Nästa →
-            </button>
-          </div>
-
-          <div className="movies-pagination-info">
-            <span>Sida</span>
-            <strong className="page-current">{table.getState().pagination.pageIndex + 1}</strong>
-            <strong className="page-total">av {table.getPageCount()}</strong>
-          </div>
+          <div ref={sentinelRef} className="movies-scroll-sentinel" />
+          {isLoading && (
+            <div className="movies-loading">
+              <span className="movies-loading-dot" />
+              <span className="movies-loading-dot" />
+              <span className="movies-loading-dot" />
+            </div>
+          )}
         </div>
       </div>
     </>

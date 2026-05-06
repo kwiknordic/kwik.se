@@ -15,7 +15,7 @@ function Navlinks() {
         <HashLink to="/#about-me">Bakgrund</HashLink>
       </li>
       <li>
-        <Link to="/movies">Filmer</Link>
+        <Link to="/movies">Filmtips</Link>
       </li>
       <li>
         <Link to="/blog">Blogg</Link>

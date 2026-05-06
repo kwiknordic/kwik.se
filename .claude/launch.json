@@ -5,8 +5,7 @@
       "name": "kwik-dev",
       "runtimeExecutable": "node",
       "runtimeArgs": ["node_modules/vite/bin/vite.js", "--host"],
-      "port": 5173,
-      "autoPort": true
+      "port": 5174
     }
   ]
 }
