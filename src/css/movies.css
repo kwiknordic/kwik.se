@@ -1,0 +1,132 @@
+.movies-page {
+  padding-block: 3rem;
+  position: relative;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 66rem) {
+  .movies-page {
+    max-width: 1080px;
+    margin: var(--spacing) auto;
+  }
+}
+
+.movies-table-wrapper {
+  margin-bottom: 2rem;
+}
+
+.movies-table {
+  width: 100%;
+  border-collapse: collapse;
+  display: flex;
+  flex-direction: column;
+}
+
+.movies-table thead,
+.movies-table tbody {
+  width: 100%;
+}
+
+.movies-table tr {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.movies-table thead tr {
+  color: black;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.movies-table th {
+  padding: 1.25rem 1rem;
+  user-select: none;
+  font-size: 0.95rem;
+  text-align: left;
+  flex: 1;
+}
+
+.movies-table th.col-rating,
+.movies-table td.col-rating {
+  text-align: right;
+  flex: 0 0 auto;
+}
+
+.rating-stars {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.rating-stars .rating-star {
+  color: var(--secondary-accent);
+  font-size: 0.8rem;
+  padding-right: 0;
+}
+
+.movies-table tbody tr {
+  color: black;
+}
+
+.movies-table td {
+  padding: 0.5rem 1rem;
+  text-align: left;
+  flex: 1;
+}
+
+.movies-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  color: var(--grey-color);
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.movies-pagination-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.movies-pagination-btn {
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  color: black;
+  border: solid 5px var(--secondary-accent);
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+  cursor: pointer;
+  transition: var(--short-transition);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.movies-pagination-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.movies-pagination-btn:not(:disabled):hover {
+  transform: translateY(-2px);
+}
+
+.movies-pagination-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: black;
+}
+
+.movies-pagination-info .page-current {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.movies-pagination-info .page-total {
+  font-weight: bold;
+}
