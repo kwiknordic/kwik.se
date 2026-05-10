@@ -1,4 +1,5 @@
 # Kwik.se
+Skapat av Mervin Bratic
 
 Live-demo: https://kwik.se
 
