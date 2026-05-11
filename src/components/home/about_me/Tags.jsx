@@ -1,32 +1,21 @@
 import React from 'react'
+import renderIcons from '../../universal/Icons'
 
 function Tags(props) {
   const { title, data, structure } = props
 
-  // data is either Array or Object
-  let template;
+  let template
 
-  if (structure === "object") {
-    template = data.map(tag => {
-      return (
-        <li key={tag.name}>
-          <span>
-            <i className={tag.icon} />
-            {tag.name}
-          </span>
-        </li>
-      )
-    })
+  if (structure === 'object') {
+    template = renderIcons(data)
   }
 
-  if (structure === "array") {
-    template = data.map(tag => {
-      return (
-        <li key={tag}>
-          <span>{tag}</span>
-        </li>
-      )
-    })
+  if (structure === 'array') {
+    template = data.map(tag => (
+      <li key={tag}>
+        <span>{tag}</span>
+      </li>
+    ))
   }
 
   return (

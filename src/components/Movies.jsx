@@ -27,6 +27,11 @@ function Movies() {
       {
         accessorKey: 'rating',
         header: '',
+        sortingFn: (a, b) => {
+          const diff = a.original.rating - b.original.rating
+          if (diff !== 0) return diff
+          return a.original.title.localeCompare(b.original.title)
+        },
         cell: (info) => {
           const rating = info.getValue()
           const stars = []

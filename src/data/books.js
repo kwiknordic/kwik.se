@@ -381,7 +381,7 @@ export default [
   },
   {
     title: 'Zero to One',
-    author: 'Peter Thiel & Blake Masters',
+    author: 'Peter Thiel',
     rating: 5,
   },
   {

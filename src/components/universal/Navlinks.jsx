@@ -6,15 +6,6 @@ function Navlinks() {
   return (
     <>
       <li>
-        <HashLink to="/#expertise-container">Kompetens</HashLink>
-      </li>
-      <li>
-        <HashLink to="/#portfolio-container">Portfolio</HashLink>
-      </li>
-      <li>
-        <HashLink to="/#about-me">Bakgrund</HashLink>
-      </li>
-      <li>
         <Link to="/books">Boktips</Link>
       </li>
       <li>

@@ -333,6 +333,8 @@ li span svg {
 
 li span svg {
   vertical-align: -13%;
+  position: static;
+  z-index: auto;
   /*   width: 16px;
   height: 16px; */
 }
