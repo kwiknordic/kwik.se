@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import svgr from "vite-plugin-svgr";
+import svgr from 'vite-plugin-svgr'
 import sitemap from 'vite-plugin-sitemap'
 import { readdirSync } from 'fs'
 import { join } from 'path'
@@ -9,11 +9,11 @@ import { join } from 'path'
 function generateBlogRoutes() {
   const postsDir = join(process.cwd(), 'src/data/_posts')
   try {
-    const files = readdirSync(postsDir).filter(file => file.endsWith('.json'))
-    return files.map(file => {
+    const files = readdirSync(postsDir).filter((file) => file.endsWith('.json'))
+    return files.map((file) => {
       let slug = file.slice(0, file.lastIndexOf('.'))
       // Apply Swedish character replacements (same logic as postsFormatter)
-      slug = slug.replaceAll(/[ä-å]/g, "a").replaceAll("ö", "o")
+      slug = slug.replaceAll(/[ä-å]/g, 'a').replaceAll('ö', 'o')
       return `/blog/${slug}`
     })
   } catch (error) {
@@ -29,13 +29,7 @@ export default defineConfig({
     react(),
     sitemap({
       hostname: 'https://www.kwik.se',
-      routes: [
-        '/',
-        '/blog',
-        '/books',
-        '/movies',
-        ...generateBlogRoutes()
-      ]
-    })
-  ]
+      routes: ['/', '/blog', '/books', '/movies', ...generateBlogRoutes()],
+    }),
+  ],
 })
