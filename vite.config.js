@@ -29,7 +29,8 @@ export default defineConfig({
     react(),
     sitemap({
       hostname: 'https://www.kwik.se',
-      routes: ['/', '/blog', '/books', '/movies', ...generateBlogRoutes()],
+      dynamicRoutes: ['/blog', '/books', '/movies', ...generateBlogRoutes()],
+      exclude: ['/admin'],
     }),
   ],
 })
