@@ -19,3 +19,6 @@
   for = "/*"
   [headers.values]
   Link = "<https://www.kwik.se>; rel='canonical'"
+  
+[build.processing]
+  skip_processing = false

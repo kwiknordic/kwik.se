@@ -7,13 +7,13 @@ import { join } from 'path'
 
 // Generate blog post routes dynamically
 function generateBlogRoutes() {
-  const postsDir = join(process.cwd(), 'src/data/_posts')
+  const postsDir = join(process.cwd(), 'src/data/posts')
   try {
     const files = readdirSync(postsDir).filter((file) => file.endsWith('.json'))
     return files.map((file) => {
       let slug = file.slice(0, file.lastIndexOf('.'))
       // Apply Swedish character replacements (same logic as postsFormatter)
-      slug = slug.replaceAll(/[ä-å]/g, 'a').replaceAll('ö', 'o')
+      slug = slug.replaceAll('ä', 'a').replaceAll('å', 'a').replaceAll('ö', 'o')
       return `/blog/${slug}`
     })
   } catch (error) {
@@ -21,6 +21,9 @@ function generateBlogRoutes() {
     return []
   }
 }
+
+const blogRoutes = generateBlogRoutes()
+console.log('Generated blog routes:', blogRoutes.length, blogRoutes)
 
 // https://vitejs.dev/config/
 export default defineConfig({
