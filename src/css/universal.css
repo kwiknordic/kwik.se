@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Inter&family=Poppins:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Inter&family=Poppins:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&display=swap');
 @import url('../assets/fontawesome/css/fontawesome.css');
 @import url('../assets/fontawesome/css/brands.css');
 @import url('../assets/fontawesome/css/solid.css');
@@ -183,14 +184,17 @@ nav li:hover {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  p {
+    width: 75%;
+    font-size: 1.1rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+  }
 }
 
 #hero-section .title-section {
   position: relative;
-}
-
-#hero-section p {
-  width: 75%;
 }
 
 .sub-title {

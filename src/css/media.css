@@ -1,5 +1,4 @@
 @media (min-width: 31.5rem) {
-
   #hero-container {
     padding-top: 3rem;
   }
@@ -15,7 +14,7 @@
   .call-to-action {
     gap: 1rem;
   }
-  
+
   .btn {
     font-size: unset;
   }
@@ -26,16 +25,16 @@
     rotate: 20deg;
     width: 100px;
   }
-  
+
   .list-items-inline li {
     list-style-type: none;
     display: inline;
   }
-  
+
   #about-me .sub-title {
     color: purple;
   }
-  
+
   #about-me p {
     font-family: 'Patrick Hand';
     font-size: 1.3rem;
@@ -43,12 +42,11 @@
     position: relative;
     margin-top: 0;
   }
-  
+
   .title-section .sub-title svg {
     padding-left: 2px;
     padding-right: 4px;
   }
-  
 }
 
 @media (min-width: 44.5rem) {
@@ -72,14 +70,9 @@
 }
 
 @media (min-width: 56rem) {
-
   .hero-grid {
     flex-direction: row;
     max-width: 1080px;
-  }
-
-  #hero-section p {
-    width: initial;
   }
 
   .portrait {
@@ -101,11 +94,9 @@
   .call-to-action {
     margin-bottom: 3rem;
   }
-  
 }
 
 @media (min-width: 66rem) {
-
   header nav {
     justify-self: end;
     order: unset;
@@ -124,7 +115,7 @@
   }
 
   nav li:hover {
-    color: rgb(33, 48, 81);;
+    color: rgb(33, 48, 81);
   }
 
   header .mobile-nav {

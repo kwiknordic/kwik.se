@@ -1,7 +1,7 @@
 import React from 'react'
 import portrait from '../../assets/hero-portrait.png'
 
-const synopsis = `Fullstack-utvecklare som, bland annat, är stark på ehandel och interna verktyg. Drivit eget företag med fokus på tekniska lösningar för cirkulär ekonomi inom hemelektronik.`
+const synopsis = `Stark på ehandel och interna verktyg. Erfarenhet som egenföretagare inom tekniska lösningar för cirkulär ekonomi av hemelektronik.`
 
 function HeroSection() {
   return (
