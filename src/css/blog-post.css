@@ -1,0 +1,8 @@
+h2 {
+  font-size: 1.2rem;
+}
+
+.blog-overview-post pre,
+.blog-single-entry pre {
+  padding: unset;
+}

@@ -1,9 +1,12 @@
-import Header from "../universal/Header";
-import SchemaMarkup from "../universal/SchemaMarkup";
+import Header from '../universal/Header'
+import SchemaMarkup from '../universal/SchemaMarkup'
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import { useParams } from "react-router-dom"
-import { blogPosts, replaceSwedishCharacters } from "../../util/postsFormatter.js"
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import { useParams } from 'react-router-dom'
+import { blogPosts, replaceSwedishCharacters } from '../../util/postsFormatter.js'
+import '../../css/blog-post.css'
 
 function getExcerpt(markdownBody) {
   return markdownBody
@@ -18,40 +21,40 @@ function Post() {
   let { slug } = useParams()
   slug = replaceSwedishCharacters(slug)
 
-  let post = blogPosts.filter(post => post.slug === slug).at(0)
+  let post = blogPosts.filter((post) => post.slug === slug).at(0)
   if (!post) return
 
   const { title, body, langIcon, date, unmodifiedDate, language } = post
   const postUrl = `https://kwik.se/blog/${slug}`
 
   const blogPostingSchema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": title,
-    "description": getExcerpt(body),
-    "url": postUrl,
-    "datePublished": unmodifiedDate,
-    "inLanguage": language === "en" ? "en-GB" : "sv-SE",
-    "author": {
-      "@type": "Person",
-      "name": "Mervin Bratic",
-      "url": "https://kwik.se"
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description: getExcerpt(body),
+    url: postUrl,
+    datePublished: unmodifiedDate,
+    inLanguage: language === 'en' ? 'en-GB' : 'sv-SE',
+    author: {
+      '@type': 'Person',
+      name: 'Mervin Bratic',
+      url: 'https://kwik.se',
     },
-    "publisher": {
-      "@type": "Person",
-      "name": "Mervin Bratic",
-      "url": "https://kwik.se"
-    }
+    publisher: {
+      '@type': 'Person',
+      name: 'Mervin Bratic',
+      url: 'https://kwik.se',
+    },
   }
 
   const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Hem", "item": "https://kwik.se" },
-      { "@type": "ListItem", "position": 2, "name": "Artiklar", "item": "https://kwik.se/blog" },
-      { "@type": "ListItem", "position": 3, "name": title, "item": postUrl }
-    ]
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Hem', item: 'https://kwik.se' },
+      { '@type': 'ListItem', position: 2, name: 'Artiklar', item: 'https://kwik.se/blog' },
+      { '@type': 'ListItem', position: 3, name: title, item: postUrl },
+    ],
   }
 
   return (
@@ -62,10 +65,26 @@ function Post() {
         <Header />
       </header>
 
-      <main id="post" className='align-container-center blog-single-entry'>
-        <div className=''>
+      <main id="post" className="align-container-center blog-single-entry">
+        <div className="">
           <h1>{title}</h1>
-          <ReactMarkdown>{body}</ReactMarkdown>
+          <ReactMarkdown
+            components={{
+              code({ node, inline, className, children, ...props }) {
+                const match = /language-(\w+)/.exec(className || '')
+                return !inline && match ? (
+                  <SyntaxHighlighter style={oneDark} language={match[1]} PreTag="div" {...props}>
+                    {String(children).replace(/\n$/, '')}
+                  </SyntaxHighlighter>
+                ) : (
+                  <code className={className} {...props}>
+                    {children}
+                  </code>
+                )
+              },
+            }}>
+            {body}
+          </ReactMarkdown>
           <hr />
           <em>{date}</em>
         </div>
