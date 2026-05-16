@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect, useState } from 'react'
 import portrait from '../../assets/hero-portrait.png'
 
 const synopsis = `Stark på ehandel och interna verktyg. Erfarenhet som egenföretagare inom tekniska lösningar för cirkulär ekonomi av hemelektronik.`
@@ -17,13 +18,12 @@ function HeroSection() {
           <p>{synopsis}</p>
 
           <div className="call-to-action">
-            <a
-              href={`/assets/CV-Mervin-Bratic.pdf`}
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-primary">
-              Ladda ned mitt CV
-            </a>
+            <div className="btn btn-primary btn-cv">
+              <a href={`/assets/CV-Mervin-Bratic.pdf`} target="_blank" rel="noreferrer">
+                Ladda ned mitt CV
+              </a>
+              <PdfSize />
+            </div>
             <a href="#info-box" className="btn btn-secondary">
               Kontakta mig
             </a>
@@ -33,6 +33,33 @@ function HeroSection() {
       </div>
     </div>
   )
+}
+
+function PdfSize() {
+  const [fileSize, setFileSize] = useState('')
+
+  useEffect(() => {
+    async function getPdfSize() {
+      try {
+        const response = await fetch('/assets/CV-Mervin-Bratic.pdf', {
+          method: 'HEAD',
+        })
+
+        const size = response.headers.get('content-length')
+
+        if (size) {
+          const sizeInMB = (Number(size) / (1024 * 1024)).toFixed(1)
+          setFileSize(`${sizeInMB} MB`)
+        }
+      } catch (error) {
+        console.error('Failed to get PDF size', error)
+      }
+    }
+
+    getPdfSize()
+  }, [])
+
+  return <span>PDF ({fileSize ? `${fileSize}` : ''})</span>
 }
 
 export default HeroSection
