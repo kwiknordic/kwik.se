@@ -1,4 +1,6 @@
 const softSkills = [
+  'Fyndig',
+  'Resursfull',
   'Kommunikativ',
   'Social',
   'Allmänbildad',
@@ -11,9 +13,10 @@ const softSkills = [
 const languages = ['Svenska', 'Engelska', 'Bosniska']
 
 const synopsis = [
-  'Fullstack-utvecklare som, bland annat, är stark på ehandel och interna verktyg. Drivit eget företag med fokus på tekniska lösningar för cirkulär ekonomi inom hemelektronik.',
-  'Jag har en absolut trespråkighet i svenska, bosniska och engelska, både i tal och skrift. Haft inom yrket längre utomeuropeiska sejourer och känner mig trygg i alla typer av dynamiska, sociala och kulturella miljöer. Har stor intern drivkraft men prioriterar gruppen framför jaget.',
-  'Som egenföretagare har jag även utvecklat fingertoppskänsla för kundbevarande och kommunikation mot kund.',
+  'Fullstack-utvecklare som, bland annat, är stark på ehandel och interna verktyg. Min första e-handel blev vägen in i webbutveckling.',
+  'Har tidigare varit egenföretagare med fokus på cirkulär ekonomi av hemelektronik. Innan dess har jag erfarenhet av projektledning, försäljning och kundhantering.',
+  'Talar och skriver felfri svenska, engelska och bosniska. Tillbringat också perioder i jobbet utomlands och är van att jobba i olika dynamiska, sociala och kulturella miljöer.',
+  'Jag trivs i roller där teknik och människor möts.',
 ]
 
 const interests = [
