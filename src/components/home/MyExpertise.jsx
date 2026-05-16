@@ -11,7 +11,7 @@ const MyExpertise = () => {
       <div className="sub-main align-container-center">
         <div className="title-section">
           <Title title="Kompetensområden" subTitle={'\u2605'.repeat(5)} priority="header" />
-          <img className="arrow" src={arrow} alt="" />
+          <img className="arrow" src={arrow} alt="Se nedan" />
         </div>
 
         <div className="grid">

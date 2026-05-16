@@ -18,18 +18,20 @@ function HeroSection() {
           <p>{synopsis}</p>
 
           <div className="call-to-action">
-            <div className="btn btn-primary btn-cv">
-              <a href={`/assets/CV-Mervin-Bratic.pdf`} target="_blank" rel="noreferrer">
-                Ladda ned mitt CV
-              </a>
+            <a
+              href={`/assets/CV-Mervin-Bratic.pdf`}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-primary btn-cv">
+              Ladda ned mitt CV
               <PdfSize />
-            </div>
+            </a>
             <a href="#info-box" className="btn btn-secondary">
               Kontakta mig
             </a>
           </div>
         </div>
-        <img className="portrait" src={portrait} alt="" />
+        <img className="portrait" src={portrait} alt="Porträtt av Mervin Bratic" />
       </div>
     </div>
   )
@@ -59,7 +61,7 @@ function PdfSize() {
     getPdfSize()
   }, [])
 
-  return <span>PDF ({fileSize ? `${fileSize}` : ''})</span>
+  return <span>{fileSize ? `PDF (${fileSize})` : 'PDF (0.2 MB)'}</span>
 }
 
 export default HeroSection
