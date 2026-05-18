@@ -2,11 +2,24 @@ import Header from '../universal/Header'
 import SchemaMarkup from '../universal/SchemaMarkup'
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import javascript from 'react-syntax-highlighter/dist/esm/languages/prism/javascript'
+import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx'
+import css from 'react-syntax-highlighter/dist/esm/languages/prism/css'
+import bash from 'react-syntax-highlighter/dist/esm/languages/prism/bash'
+import json from 'react-syntax-highlighter/dist/esm/languages/prism/json'
+import markup from 'react-syntax-highlighter/dist/esm/languages/prism/markup'
 import { useParams } from 'react-router-dom'
 import { blogPosts, replaceSwedishCharacters } from '../../util/postsFormatter.js'
 import '../../css/blog-post.css'
+
+SyntaxHighlighter.registerLanguage('javascript', javascript)
+SyntaxHighlighter.registerLanguage('jsx', jsx)
+SyntaxHighlighter.registerLanguage('css', css)
+SyntaxHighlighter.registerLanguage('bash', bash)
+SyntaxHighlighter.registerLanguage('json', json)
+SyntaxHighlighter.registerLanguage('markup', markup)
 
 function getExcerpt(markdownBody) {
   return markdownBody
