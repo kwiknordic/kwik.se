@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "language": "sv",
+  "date": "2026-05-20T09:29:12.597Z",
+  "title": "Bra och gratis verktyg för att lyxa till din presentation",
+  "body": "Snygga till dina tankar med diagram, stylade PDF:er, korta klipp eller gifs - allt enbart genom kod!\n\n## Skapa en snygg presentation med MARP\n\n- Skriv i markdown (.md)\n- Använd HTML och CSS för att styla ytterligare\n- Kommer med flera layouter/teman\n- Använd emoji-ikoner, slipp importera\n- Exportera som HTML\n- Exportera som PDF\n- Live Preview som VS-code tillägg\n\n## Skapa diagram med MermaidRender\n\n- Rita som du skriver\n- Live Preview direkt i webbläsaren\n- Kommer med flera layouter/mallar\n- Exportera som SVG\n- Exportera som en PDF-fil\n- Exportera som bilder (jpeg, png)\n- Dina exporterade bilder är högupplösta\n\n## Färdiga färgnyanser med Shadowlord\n[Till shadowlord](https://noeldelgado.github.io/shadowlord/)\n\n- Ingen tidsspill på att hitta ljusare och mörkare färgtoner\n- Live Preview direkt i webbläsaren\n\n## Bibliotek för Emoji-ikoner på getEmoji 👈\n[Till getEmoji](https://getemoji.com/)\n\n- Live Preview\n- Enklickskopiering\n\n## Gifs med Windows Skärmklippsverktyget\n\n- Förinstallerat på datorn\n- Välj vad på skärmen som ska spelas in\n- Exportera som video (mp4)\n- Exportera som gif\n\n## Remotion\n\n- Koda filmklipp med React\n- Open Source\n- Kommer med flera mallar/exempel"
+}

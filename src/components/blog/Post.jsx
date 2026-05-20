@@ -83,6 +83,9 @@ function Post() {
           <h1>{title}</h1>
           <ReactMarkdown
             components={{
+              a({ href, children }) {
+                return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
+              },
               code({ node, inline, className, children, ...props }) {
                 const match = /language-(\w+)/.exec(className || '')
                 return match ? (
