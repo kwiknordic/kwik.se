@@ -24,6 +24,9 @@
     "sort-by": "^0.0.2",
     "vite-plugin-svgr": "^2.2.2"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
   "devDependencies": {
     "@iconify/react": "^4.0.1",
     "@types/react": "^18.0.24",
