@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tanstack/react-table": "^8.21.3",
+    "@vercel/analytics": "^2.0.1",
     "dotenv": "^16.0.3",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
