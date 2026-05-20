@@ -6,12 +6,12 @@ import '../../../css/codeBlocks.css';
 function code(props) {
   const { title, code } = props
 
-  const formattedBlock = code.map(line => {
+  const formattedBlock = code.map((line, i) => {
     const { string, css, newLine } = line
 
     return newLine ? (
-      <><span className={css}>{string}</span><br/></>) 
-      : <span className={css}>{string}</span>
+      <React.Fragment key={i}><span className={css}>{string}</span><br/></React.Fragment>)
+      : <span key={i} className={css}>{string}</span>
   })
 
   return (

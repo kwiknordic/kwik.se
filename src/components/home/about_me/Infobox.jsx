@@ -6,15 +6,15 @@ const contact = contactInfo.map((contact, index) => {
   const { icon, username, link } = contact
 
   return (
-    <>
-      <li key={index}>
+    <React.Fragment key={index}>
+      <li>
         <i className={icon} />
         <a href={link} target="_blank" rel="noreferrer">
           {username}
         </a>
       </li>
       <Telephone className="telephone-svg" />
-    </>
+    </React.Fragment>
   )
 })
 

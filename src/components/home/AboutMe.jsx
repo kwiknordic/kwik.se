@@ -18,8 +18,8 @@ function AboutMe() {
 
       <div className="sub-main-grid">
         <div>
-          {synopsis.map((paragraph) => (
-            <p>{paragraph}</p>
+          {synopsis.map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
           ))}
           <Infobox />
         </div>

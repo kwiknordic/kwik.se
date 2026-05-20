@@ -1,3 +1,4 @@
+import React from 'react';
 import Header from './universal/Header';
 import SchemaMarkup from './universal/SchemaMarkup';
 import Title from './universal/Title';
@@ -49,15 +50,15 @@ function Blog() {
           const entries = collection.at(1).sort((a,b) => new Date(a.unmodifiedDate) < new Date(b.unmodifiedDate) ? 1 : -1)
 
           return (
-            <>
+            <React.Fragment key={`${year}-${month}`}>
               <div className="monthly-title-section title-section">
-                <Title 
+                <Title
                   title={`${monthName} ${year}`}
-                  subTitle={[<Circle />, <Square />, <Triangle />]}
+                  subTitle={[<Circle key="circle" />, <Square key="square" />, <Triangle key="triangle" />]}
                   priority="header" />
               </div>
               <Posts posts={entries} />
-            </>
+            </React.Fragment>
           )
 
         })}

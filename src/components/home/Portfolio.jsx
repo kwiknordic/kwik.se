@@ -28,7 +28,7 @@ const Portfolio = () => {
       <div className="title-section">
         <Title
           title="Nöjesprojekt"
-          subTitle={[<Triangle />, <Circle />, <Square />]}
+          subTitle={[<Triangle key="triangle" />, <Circle key="circle" />, <Square key="square" />]}
           priority="subtitle"
         />
       </div>
@@ -37,7 +37,7 @@ const Portfolio = () => {
         <i className="arrows fa-solid fa-chevron-left" onClick={moveSliderLeft}></i>
         <div className="sub-main-grid">
           {projects.map((project) => (
-            <Project project={project} />
+            <Project key={project.name} project={project} />
           ))}
         </div>
         <i className="arrows fa-solid fa-chevron-right" onClick={moveSliderRight}></i>

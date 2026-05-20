@@ -14,7 +14,7 @@ function PageNotFound() {
 
     <main id="404" className='sub-main align-container-center'>
       <div className="title-section">
-        <Title title="404: Sidan kunde inte hittas" subTitle={[<Circle />, <Square />, <Triangle />]} />
+        <Title title="404: Sidan kunde inte hittas" subTitle={[<Circle key="circle" />, <Square key="square" />, <Triangle key="triangle" />]} />
       </div>
     </main>
   </>

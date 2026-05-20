@@ -11,13 +11,11 @@ function Posts({posts}) {
       {posts.map(post => {
         const { title, body, langIcon, date, slug} = post
         return (
-          <>
-            <div className='blog-overview-post'>
-              <h2>{title}</h2>
-              <ReactMarkdown className='text-area'>{body}</ReactMarkdown>
-              <ReadMore icon={langIcon} date={date} slug={slug}></ReadMore>
-            </div>
-          </>
+          <div key={slug} className='blog-overview-post'>
+            <h2>{title}</h2>
+            <ReactMarkdown className='text-area'>{body}</ReactMarkdown>
+            <ReadMore icon={langIcon} date={date} slug={slug}></ReadMore>
+          </div>
         )}
       )}
     </div>
