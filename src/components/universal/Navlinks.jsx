@@ -6,6 +6,9 @@ function Navlinks() {
   return (
     <>
       <li>
+        <Link to="/activities">Aktiviteter</Link>
+      </li>
+      <li>
         <Link to="/books">Boktips</Link>
       </li>
       <li>
