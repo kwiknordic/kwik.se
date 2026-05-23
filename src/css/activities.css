@@ -26,30 +26,26 @@
   display: flex;
   flex-direction: column;
 
-  h4 {
-    margin: 0;
-  }
-
-  .activity-speakar-list {
+  & .activity-speakar-list {
     list-style-position: inside;
     columns: 3 30ch;
     padding: 0;
     margin: 0;
 
-    li {
+    & li {
       break-inside: avoid;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       padding-bottom: 0.5rem;
 
-      .speaker-name {
+      & .speaker-name {
         color: #e8a15a;
         padding-inline: 0;
         padding-block: 0.5rem;
       }
 
-      em {
+      & em {
         font-size: 0.85rem;
       }
     }
