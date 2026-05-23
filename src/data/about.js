@@ -14,7 +14,7 @@ const languages = ['Svenska', 'Engelska', 'Bosniska']
 
 const synopsis = [
   'Fullstack-utvecklare som, bland annat, är stark på ehandel och interna verktyg. Min första e-handel blev vägen in i webbutveckling.',
-  'Har tidigare varit egenföretagare inom på cirkulär ekonomi av hemelektronik. Innan dess har jag samlat på erfarenhet av projektledning, försäljning och kundhantering.',
+  'Har tidigare varit egenföretagare inom cirkulär ekonomi av hemelektronik. Innan dess har jag samlat på erfarenhet av projektledning, försäljning och kundhantering.',
   'Talar och skriver felfri svenska, engelska och bosniska. Tillbringat också perioder i jobbet utomlands och är van att jobba i olika dynamiska, sociala och kulturella miljöer.',
   'Jag trivs i roller där teknik och människor möts.',
 ]

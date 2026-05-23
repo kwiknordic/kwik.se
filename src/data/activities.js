@@ -3,10 +3,10 @@ export default [
     eventId: '314178329',
     title: 'Designing, Embedding & Orchestrating Physical AI',
     date: '2026-05-21',
-    at: 'Stockholm MLOps',
+    at: 'HIQ',
     attendees: 173,
     summary:
-      'Ett meetup med fokus på att designa, integrera och orkestrera fysiska AI-system. Evenemanget utforskar hur AI-agenter kan integreras med IoT-enheter och robotik via meddelandeinfrastruktur, diskuterar agentbaserade designmetoder för mekaniska system samt adresserar utmaningar med att köra avancerade AI-modeller på edge-enheter med begränsade beräkningsresurser.',
+      'Snack om design, integrering och orkestrering av fysiska AI-system. Talarna utforskade hur AI-agenter kan integreras med IoT-enheter och robotik via meddelandeinfrastruktur, diskuterade agentbaserade designmetoder för mekaniska system samt adresserade utmaningar med att köra avancerade AI-modeller på edge-enheter med begränsade beräkningsresurser.',
     speakers: [
       {
         name: 'Ivan Dyachkov',
@@ -27,22 +27,22 @@ export default [
   },
   {
     eventId: '314710666',
-    title: 'AI agents and MCP security',
+    title: 'AI agenter & MCP säkerhet med OWASP Stockholm',
     date: '2026-05-19',
-    at: 'OWASP Stockholm',
+    at: 'Epicenter',
     attendees: 45,
     summary:
-      'Ett OWASP-evenemang om säkerhetsaspekter hos AI-agenter och Model Context Protocol (MCP). Diskussionerna fokuserar på säker driftsättning av AI-agenter inom organisationer, demonstration av attackmönster och verkliga incidenter från det senaste året samt praktiska säkerhetskontroller för team som implementerar AI-agentlösningar.',
+      'Snack om säkerhetsaspekter hos AI-agenter och Model Context Protocol (MCP). Diskussionerna fokuserade på säker driftsättning av AI-agenter inom organisationer, demonstration av attackmönster och verkliga incidenter från det senaste året samt praktiska säkerhetskontroller för team som implementerar AI-agentlösningar.',
     speakers: [
       {
         name: 'Linus Lagerhjelm',
         position: 'Security Professional',
-        employer: 'Builders',
+        employer: null,
       },
       {
         name: 'Amine Raji',
         position: 'AI Security Researcher (PhD)',
-        employer: 'Breakers',
+        employer: null,
       },
     ],
   },
@@ -53,7 +53,7 @@ export default [
     at: 'Stockholm Waterfront Congress',
     attendees: 117,
     summary:
-      'Ett JavaScript-meetup på Jfokus-konferensen med föredrag om metaprogrammering i modern JavaScript och optimeringsdesignmönster från spelindustrin. Ämnena inkluderar JavaScript-metaprogrammerings-API:er, prestandaoptimeringstekniker för webbapplikationer samt optimeringsmönster för CPU- och minneshantering.',
+      'Snack om metaprogrammering i modern JavaScript och optimeringsdesignmönster från spelindustrin. Ämnena inkluderade JavaScript-metaprogrammerings-API:er, prestandaoptimeringstekniker för webbapplikationer samt optimeringsmönster för CPU- och minneshantering.',
     speakers: [
       {
         name: 'Dr. Venkat Subramaniam',
@@ -83,7 +83,7 @@ export default [
     at: 'Friends of 46elks',
     attendees: 29,
     summary:
-      'En avslappnad kodningssession där utvecklare samlas för att jobba på sina projekt, dela idéer och hjälpa varandra lösa problem. Meetupet betonar samarbete, inspiration och kollegialt stöd för utvecklare som arbetar med olika programmeringsprojekt.',
+      'En avslappnad kodningssession där utvecklare samlades för att jobba på sina projekt, dela idéer och hjälpa varandra lösa problem. Sessionen betonade samarbete, inspiration och kollegialt stöd för utvecklare som arbetar med olika programmeringsprojekt.',
     speakers: [],
   },
   {
@@ -111,11 +111,11 @@ export default [
     at: 'Spotify',
     attendees: 37,
     summary:
-      'En presentation om tillförlitlighetsarkitektur och site reliability engineering-praxis. Föredraget diskuterar hur principer från stordatoradministration fortsätter att påverka moderna DevOps- och SRE-metoder, med fokus på att säkerställa tjänsttillgänglighet i skala i distribuerade ekosystem.',
+      'En presentation om tillförlitlighetsarkitektur och site reliability engineering-praxis. Vi diskuterade hur principer från stordatoradministration fortsätter att påverka moderna DevOps- och SRE-metoder, med fokus på att säkerställa tjänsttillgänglighet i skala i distribuerade ekosystem.',
     speakers: [
       {
         name: 'Laura Morgan',
-        position: 'Speaker',
+        position: null,
         employer: 'Spotify',
       },
     ],
@@ -127,17 +127,17 @@ export default [
     at: 'Microsoft',
     attendees: 81,
     summary:
-      'Ett JavaScript-meetup med föredrag om att överbrygga klyftan mellan utveckling och säkerhet samt strategier för prestandaövervakning. Ämnena inkluderar integrering av säkerhetspraxis i agila arbetsflöden, att bevisa nödvändigheten av prestandaförbättringar med data samt övervakning av prestandamätvärden för olika användarscenarier.',
+      'Snack om att överbrygga klyftan mellan utveckling och säkerhet samt strategier för prestandaövervakning. Ämnena inkluderade integrering av säkerhetspraxis i agila arbetsflöden, att bevisa nödvändigheten av prestandaförbättringar med data samt övervakning av prestandamätvärden för olika användarscenarier.',
     speakers: [
       {
         name: 'Luisa Emme',
         position: 'Security Speaker',
-        employer: 'Not specified',
+        employer: null,
       },
       {
         name: 'Vinicius Dallacqua',
         position: 'Performance Expert',
-        employer: 'Not specified',
+        employer: null,
       },
     ],
   },
@@ -148,8 +148,19 @@ export default [
     at: 'Hemnet',
     attendees: 19,
     summary:
-      'Ett spel- och nätverkningsevenemang arrangerat av Hemnet för teknikproffs och utvecklare. Meetupet kombinerar socialt spelande med företagskultur, med spelet Fall Guys och nätverkingsmöjligheter för att lära sig mer om att arbeta på en av Sveriges mest populära bostadsplattformar.',
-    speakers: [],
+      'Socialt spelande och nätverkande arrangerat av Hemnet. Kvällen kombinerade spelet Fall Guys med nätverkingsmöjligheter på en av Sveriges mest populära bostadsplattformar.',
+    speakers: [
+      {
+        name: 'Hanna Snygg',
+        position: null,
+        employer: 'Hemnet',
+      },
+      {
+        name: 'Elin Jakobsson',
+        position: null,
+        employer: 'Hemnet',
+      },
+    ],
   },
   {
     eventId: '289401021',
@@ -158,8 +169,14 @@ export default [
     at: 'Space Stockholm',
     attendees: 97,
     summary:
-      'En stor startupsammankomst med diskussioner om impact-investering och hållbara affärslösningar. Evenemanget samlar Sveriges ledande affärsänglar och investeringsfirmor för att diskutera impact-drivna startups, intervjua branschledare och visa upp innovativa lösningar med fokus på hållbarhet och positiv global påverkan.',
-    speakers: [],
+      'Diskussioner om impact-investering och hållbara affärslösningar. Sveriges ledande affärsänglar och investeringsfirmor samlades för att diskutera impact-drivna startups, intervjua branschledare och visa upp innovativa lösningar med fokus på hållbarhet och positiv global påverkan.',
+    speakers: [
+      {
+        name: 'Tyler Crowley',
+        position: 'Organizer',
+        employer: 'STHLM Tech',
+      },
+    ],
   },
   {
     eventId: '289164195',
@@ -168,16 +185,16 @@ export default [
     at: 'Storykit',
     attendees: 85,
     summary:
-      'Ett JavaScript-meetup om visuella tillståndsmaskiner och GPU-drivna grafikeffekter för webbapplikationer. Ämnena inkluderar strukturering av applikationslogik med tillståndsmaskiner via XState, visualisering av komplexa applikationstillstånd samt utnyttjande av GPU-kapacitet för specialeffekter i webbappar utan tunga spelmotorbibliotek.',
+      'Snack om visuella tillståndsmaskiner och GPU-drivna grafikeffekter för webbapplikationer. Ämnena inkluderade strukturering av applikationslogik med tillståndsmaskiner via XState, visualisering av komplexa applikationstillstånd samt utnyttjande av GPU-kapacitet för specialeffekter i webbappar utan tunga spelmotorbibliotek.',
     speakers: [
       {
         name: 'Daniel Rönnkvist',
-        position: 'Speaker',
+        position: null,
         employer: 'Storykit',
       },
       {
         name: 'Max Sandelin',
-        position: 'Speaker',
+        position: null,
         employer: 'Tele2',
       },
     ],
@@ -189,7 +206,7 @@ export default [
     at: 'Google',
     attendees: 47,
     summary:
-      'Ett tekniskt meetup om säkerhet i leveranskedjan och DevOps-filosofi. Evenemanget utforskar identifiering och förebyggande av skadliga paket i programvaruförråd, grunderna och utvecklingen av DevOps-praxis samt hur man säkrar utvecklingsarbetsflöden i takt med att mjukvaruanvändningen expanderar inom industrin.',
+      'Snack om säkerhet i leveranskedjan och DevOps-filosofi. Talarna utforskade identifiering och förebyggande av skadliga paket i programvaruförråd, grunderna och utvecklingen av DevOps-praxis samt hur man säkrar utvecklingsarbetsflöden i takt med att mjukvaruanvändningen expanderar inom industrin.',
     speakers: [
       {
         name: 'Jonathan Sar Shalom',
@@ -210,7 +227,13 @@ export default [
     at: 'Futurice Stockholm',
     attendees: 26,
     summary: null,
-    speakers: [],
+    speakers: [
+      {
+        name: 'Patricia Bolner Camiansky',
+        position: null,
+        employer: 'Futurice',
+      },
+    ],
   },
   {
     eventId: '288581926',
@@ -219,11 +242,11 @@ export default [
     at: 'OmegaPoint',
     attendees: 33,
     summary:
-      'Ett mjukvaruutvecklingsmeetup om testmetodiker och kvalitetssäkring. Evenemanget täcker fuzz-testningstekniker för att hitta buggar i öppen källkod, olika metoder för att testa databasförråd samt strategier för att säkerställa kodens robusthet i olika backend-arkitekturer.',
+      'Snack om testmetodiker och kvalitetssäkring. Ämnena täckte fuzz-testningstekniker för att hitta buggar i öppen källkod, olika metoder för att testa databasförråd samt strategier för att säkerställa kodens robusthet i olika backend-arkitekturer.',
     speakers: [
       {
         name: 'Simon Johansson',
-        position: 'Speaker',
+        position: null,
         employer: 'Omegapoint',
       },
       {
@@ -240,16 +263,16 @@ export default [
     at: 'SeenThis',
     attendees: 61,
     summary:
-      'Ett JavaScript-meetup med föredrag om testdriven utveckling och Jamstack-backenttjänster. Ämnena inkluderar praktiska TDD-metoder i JavaScript med verkliga exempel, bygge av Jamstack-applikationer samt vad moderna backenttjänster bör erbjuda i form av API:er, SDK:er och utvecklararbetsflöden.',
+      'Snack om testdriven utveckling och Jamstack-backenttjänster. Ämnena inkluderade praktiska TDD-metoder i JavaScript med verkliga exempel, bygge av Jamstack-applikationer samt vad moderna backenttjänster bör erbjuda i form av API:er, SDK:er och utvecklararbetsflöden.',
     speakers: [
       {
         name: 'Jakob Leczinsky',
-        position: 'Speaker',
+        position: null,
         employer: 'Seen This',
       },
       {
         name: 'Johan Eliasson',
-        position: 'Speaker',
+        position: null,
         employer: 'Nhost',
       },
     ],
@@ -261,7 +284,13 @@ export default [
     at: 'FreeCode',
     attendees: 24,
     summary: null,
-    speakers: [],
+    speakers: [
+      {
+        name: 'Johanna H.',
+        position: null,
+        employer: 'FreeCode',
+      },
+    ],
   },
   {
     eventId: '285992822',
@@ -270,17 +299,17 @@ export default [
     at: 'HIQ',
     attendees: 29,
     summary:
-      'Ett teknikmeetup med snabbföredrag om Java- och JavaScript-nyheter. Evenemanget täcker kommande JVM-trender inklusive GraalVM och Quarkus, nya användningsområden för Java-applikationer samt nyligen introducerade ECMAScript-funktioner och förbättringar av JavaScript-språkstandarderna.',
+      'Snabbföredrag om Java- och JavaScript-nyheter. Ämnena täckte kommande JVM-trender inklusive GraalVM och Quarkus, nya användningsområden för Java-applikationer samt nyligen introducerade ECMAScript-funktioner och förbättringar av JavaScript-språkstandarderna.',
     speakers: [
       {
         name: 'Victor Duran',
-        position: 'Speaker',
-        employer: 'Not specified',
+        position: null,
+        employer: null,
       },
       {
         name: 'Naim Latifi',
-        position: 'Speaker',
-        employer: 'Not specified',
+        position: null,
+        employer: null,
       },
     ],
   },
@@ -291,8 +320,14 @@ export default [
     at: 'Space Stockholm',
     attendees: 54,
     summary:
-      'Ett stort startupsevenemang med pitchsessioner och intervjuer med ledande investeringsfirmor. Meetupet samlar Europas främsta startups med investerare från Atomico och andra framstående riskkapitalbolag för att diskutera finansieringsmöjligheter, visa upp innovativa produkter och nätverka inom startup-ekosystemet.',
-    speakers: [],
+      'Pitchsessioner och intervjuer med ledande investeringsfirmor, däribland Atomico. Europas främsta startups samlades med investerare för att diskutera finansieringsmöjligheter, visa upp innovativa produkter och nätverka inom startup-ekosystemet.',
+    speakers: [
+      {
+        name: 'Tyler Crowley',
+        position: 'Organizer',
+        employer: 'STHLM Tech',
+      },
+    ],
   },
   {
     eventId: '286134779',
@@ -301,7 +336,13 @@ export default [
     at: 'Avega Stockholm',
     attendees: 44,
     summary: null,
-    speakers: [],
+    speakers: [
+      {
+        name: 'Marco H.',
+        position: null,
+        employer: 'Avega',
+      },
+    ],
   },
   {
     eventId: '286391590',
@@ -310,16 +351,16 @@ export default [
     at: 'Mpya Digital',
     attendees: 63,
     summary:
-      'Ett JavaScript-meetup om tillståndsmaskiner och GPU-accelererad grafik. Ämnena inkluderar användning av XState för visualisering och hantering av tillståndsmaskiner, bygge av högpresterande webbapplikationer med GPU-acceleration samt implementering av specialeffekter utan tunga ramverk.',
+      'Snack om tillståndsmaskiner och GPU-accelererad grafik; bland annat XState för visualisering och hantering av tillståndsmaskiner, bygge av högpresterande webbapplikationer med GPU-acceleration samt implementering av specialeffekter utan tunga ramverk.',
     speakers: [
       {
         name: 'Anton Gunnarsson',
-        position: 'Speaker',
+        position: null,
         employer: 'Mpya Digital',
       },
       {
         name: 'Daniel Roos',
-        position: 'Speaker',
+        position: null,
         employer: 'njorda.se',
       },
     ],
@@ -331,7 +372,7 @@ export default [
     at: 'Google',
     attendees: 71,
     summary:
-      'Ett moln- och DevOps-evenemang arrangerat på Google med fokus på policy-as-code, DevOps-praxis och API-hantering. Meetupet utforskar Open Policy Agent för att tillämpa policyer i distribuerade system, presenterar resultaten från 2022 State of DevOps-rapporten samt diskuterar API-hantering med Apigee-plattformen.',
+      'Snack om policy-as-code, DevOps-praxis och API-hantering. Vi utforskade Open Policy Agent för att tillämpa policyer i distribuerade system, presenterade resultaten från 2022 State of DevOps-rapporten samt diskuterade API-hantering med Apigee-plattformen.',
     speakers: [
       {
         name: 'Anders Eknert',
@@ -357,8 +398,19 @@ export default [
     at: 'Äventyret',
     attendees: 11,
     summary:
-      'Äventyret delar med sig om sina utvecklingsmetoder och verktyg. Evenemanget täcker användning av Block Editor för modern WordPress-utveckling, ramverken Bedrock och Sage, inbäddade Vue-applikationer i WordPress samt introducerar Solarplexus, ett öppen källkod-plugin för dynamisk innehållshantering.',
-    speakers: [],
+      'Äventyret delade med sig om sina utvecklingsmetoder och verktyg. Presentationen täckte användning av Block Editor för modern WordPress-utveckling, ramverken Bedrock och Sage, inbäddade Vue-applikationer i WordPress samt introducerade Solarplexus, ett öppen källkod-plugin för dynamisk innehållshantering.',
+    speakers: [
+      {
+        name: 'Joel Bergqvist',
+        position: 'VD',
+        employer: 'Äventyret',
+      },
+      {
+        name: 'Samuel Brynolf',
+        position: 'UX-design',
+        employer: 'Äventyret',
+      },
+    ],
   },
   {
     eventId: '285388716',
@@ -367,12 +419,12 @@ export default [
     at: 'West Forest Tech',
     attendees: 48,
     summary:
-      'Ett meetup om maskininlärning som täcker både teori och praktiska tillämpningar. Ämnena inkluderar grunderna i artificiell intelligens och maskininlärning, naturlig språkbehandling, olika inlärningsparadigm (övervakat, oövervakat och förstärkningsinlärning) samt vanliga algoritmer för klassificering, regression och klustring.',
+      'Snack om maskininlärning med fokus på både teori och praktiska tillämpningar. Ämnena inkluderade grunderna i artificiell intelligens och maskininlärning, naturlig språkbehandling, olika inlärningsparadigm (övervakat, oövervakat och förstärkningsinlärning) samt vanliga algoritmer för klassificering, regression och klustring.',
     speakers: [
       {
         name: 'Daniel Andersson',
-        position: 'Speaker',
-        employer: 'Not specified',
+        position: null,
+        employer: null,
       },
     ],
   },
@@ -383,17 +435,17 @@ export default [
     at: 'Curb Food',
     attendees: 84,
     summary:
-      'Ett JavaScript-meetup med föredrag om designsystem och typsäkra webbapplikationer. Evenemanget täcker byggande av återanvändbara designsystem med Material UI i monorepos, skapande av applikationer med heltäckande typsäkerhet från databas till komponenter via tRPC samt förbättring av utvecklarupplevelsen med moderna verktyg.',
+      'Snack om designsystem och typsäkra webbapplikationer. Ämnena täckte byggande av återanvändbara designsystem med Material UI i monorepos, skapande av applikationer med heltäckande typsäkerhet från databas till komponenter via tRPC samt förbättring av utvecklarupplevelsen med moderna verktyg.',
     speakers: [
       {
         name: 'Leo Gisselberg',
-        position: 'Speaker',
+        position: null,
         employer: 'Curb',
       },
       {
         name: 'Albin Groen',
-        position: 'Speaker',
-        employer: 'Not specified',
+        position: null,
+        employer: null,
       },
     ],
   },
@@ -404,8 +456,14 @@ export default [
     at: 'Space Stockholm',
     attendees: 66,
     summary:
-      'Ett startupevenemang fokuserat på Web3 och framtidens fundraising. Meetupet utforskar decentraliserade internetkoncept, kryptovalutans påverkan på finansieringsmekanismer, nya teknologier och plattformar inom Web3-området samt hur dessa utvecklingar omformar startupfinansiering.',
-    speakers: [],
+      'Diskussioner om Web3 och framtidens fundraising. Ämnena utforskade decentraliserade internetkoncept, kryptovalutans påverkan på finansieringsmekanismer, nya teknologier och plattformar inom Web3-området samt hur dessa utvecklingar omformar startupfinansiering.',
+    speakers: [
+      {
+        name: 'Tyler Crowley',
+        position: 'Organizer',
+        employer: 'STHLM Tech',
+      },
+    ],
   },
   {
     eventId: '285386290',
@@ -414,17 +472,17 @@ export default [
     at: 'Stockholm Waterfront Congress',
     attendees: 91,
     summary:
-      'Jfokus-konferens med föredrag om webbautentisering och blockkedjeteknik. Ämnena inkluderar WebAuthn för nätfiskeresistent tvåfaktorsautentisering, decentraliserade arkitekturkoncept, Web3-utvecklingsverktyg samt hur JavaScript-utvecklare kan skapa decentraliserade applikationer.',
+      'Snack om webbautentisering och blockkedjeteknik; bland annat WebAuthn för nätfiskeresistent tvåfaktorsautentisering, decentraliserade arkitekturkoncept, Web3-utvecklingsverktyg samt hur JavaScript-utvecklare kan skapa decentraliserade applikationer.',
     speakers: [
       {
         name: 'Emil Lundberg',
-        position: 'Speaker',
+        position: null,
         employer: 'Yubico',
       },
       {
         name: 'Gerard Sans',
-        position: 'Speaker',
-        employer: 'Not specified',
+        position: null,
+        employer: null,
       },
     ],
   },

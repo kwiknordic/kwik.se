@@ -3,17 +3,14 @@ import Header from './universal/Header'
 import SchemaMarkup from './universal/SchemaMarkup'
 import Title from './universal/Title'
 import activities from '../data/activities'
-import { ReactComponent as Triangle } from '../assets/portfolio/triangle.svg'
-import { ReactComponent as Circle } from '../assets/portfolio/circle.svg'
-import { ReactComponent as Square } from '../assets/portfolio/square.svg'
-import arrow from '../assets/down-arrow.png'
+import '../css/activities.css'
 
 function Activities() {
-  const sortedActivities = [...activities].sort((a, b) => b[date].localeCompare(a[date]))
+  const sortedActivities = [...activities].sort((a, b) => new Date(b.date) - new Date(a.date))
 
   const ActivitiesSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Aktiviteter',
+    '@type': 'ItemList',
     name: 'Aktiviteter – Mervin Bratic',
     url: 'https://kwik.se/activities',
     inLanguage: 'sv-SE',
@@ -33,33 +30,41 @@ function Activities() {
 
       <main id="blog" className="align-container-center">
         <div className="title-section" style={{ display: 'flex' }}>
-          <Title title="Aktiviteter" tag="h1" subTitle={''} priority="header" />
-          <img className="arrow" src={arrow} alt="" style={{ paddingTop: '1rem' }} />
+          <Title title="Mina aktiviteter" tag="h1" subTitle={'🔥'.repeat(3)} priority="subtitle" />
         </div>
 
-        {sortedActivities.map((collection) => {
-          const [year, month, monthName] = collection.at(0).split('-')
-          const entries = collection
-            .at(1)
-            .sort((a, b) => (new Date(a.unmodifiedDate) < new Date(b.unmodifiedDate) ? 1 : -1))
-
-          return (
-            <React.Fragment key={`${year}-${month}`}>
-              <div className="monthly-title-section title-section">
-                <Title
-                  title={`${monthName} ${year}`}
-                  subTitle={[
-                    <Circle key="circle" />,
-                    <Square key="square" />,
-                    <Triangle key="triangle" />,
-                  ]}
-                  priority="header"
-                />
-              </div>
-              <Posts posts={entries} />
-            </React.Fragment>
-          )
-        })}
+        <div className="container">
+          {' '}
+          {sortedActivities.map((activity) => (
+            <div key={activity.eventId} className="activities-content">
+              <h3 className="title">{activity.title}</h3>
+              {activity.speakers.length > 0 && (
+                <div className="activity-speakers">
+                  <ul className="activity-speakar-list">
+                    {activity.speakers.map((speaker) => (
+                      <li key={speaker.name}>
+                        <span className="speaker-name">🧑🏼‍💼 {speaker.name}</span>
+                        <em>{speaker.position}</em>
+                        <em>{speaker.employer}</em>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {activity.summary && (
+                <div className="activity-summary">
+                  <p>{activity.summary}</p>
+                </div>
+              )}
+              {activity.at.length > 0 && (
+                <div className="activity-footer">
+                  <span>på {activity.at}</span>
+                  <span>{activity.date}</span>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </main>
     </>
   )
