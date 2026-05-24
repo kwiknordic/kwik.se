@@ -16,7 +16,7 @@ let projects = [
   {
     name: 'Kwikflix',
     summary: [
-      'Bläddra, hitta och läs mer om de trendigaste och bästa Film- och TV-produktionerna. Uppdateras kontinuerligt genom API-förfrågningar mot TMDB-databasen. Kwikflix ger även användaren möjlighet att söka efter, och spara, egna resultat; allt lagras hos användaren i localStorage.',
+      'Håll koll på senaste filmer & serier. Uppdateras kontinuerligt genom API-förfrågningar mot TMDB-databasen. Kwikflix ger möjlighet att söka efter, och spara resultat; allt lagras lokalt i localStorage.',
       'Applikationen är helt byggt utan ett framework(!); använder webbkomponenter med Shadom DOM, slots, och en j*vla massa getQuerySelectors...',
     ],
     demo: 'https://flix.kwik.se',

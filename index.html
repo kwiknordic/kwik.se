@@ -8,6 +8,13 @@
       content="Fullstack-utvecklare med fokus på TypeScript, Next.js, AWS, SQL Databas | Stark på ehandel och interna verktyg (dashboards) | Nyfiken & Anpassningsbar | Erfarenhet som egenföretagare" />
     <title>Kwik @ Mervin Bratic | Fullstack-utvecklare | TypeScript, Next.js</title>
     <link rel="icon" href="/favicon/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Patrick+Hand&family=Poppins:wght@300;500;700&family=Roboto+Condensed:wght@100..900&display=swap" />
+    <link rel="stylesheet" href="/src/assets/fontawesome/css/fontawesome.css" />
+    <link rel="stylesheet" href="/src/assets/fontawesome/css/brands.css" />
+    <link rel="stylesheet" href="/src/assets/fontawesome/css/solid.css" />
+    <link rel="stylesheet" href="/src/assets/fontawesome/css/regular.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -34,11 +41,11 @@
       }
     </script>
     <script src="/src/main.jsx" type="module"></script>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     <div id="root"></div>
-    <script>
+    <script type="module">
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on('init', (user) => {
           if (!user) {

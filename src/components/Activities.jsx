@@ -28,7 +28,7 @@ function Activities() {
         <Header />
       </header>
 
-      <main id="blog" className="align-container-center">
+      <main id="activities" className="align-container-center">
         <div className="title-section" style={{ display: 'flex' }}>
           <Title title="Mina aktiviteter" tag="h1" subTitle={'🔥'.repeat(3)} priority="subtitle" />
         </div>

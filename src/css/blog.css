@@ -1,13 +1,3 @@
-#blog {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#blog .title-section {
-  margin-bottom: 2rem;
-}
-
 #blog .monthly-title-section {
   margin-top: 1.5rem;
   width: 100%;
@@ -44,13 +34,14 @@
   margin-bottom: 1rem;
 }
 
-.blog-overview-post pre, .blog-single-entry pre {
+.blog-overview-post pre,
+.blog-single-entry pre {
   background-color: var(--dark-bg);
   color: var(--grey-color);
   padding: 1rem;
   border-radius: 5px;
   display: block;
-  white-space: pre-wrap; 
+  white-space: pre-wrap;
 }
 
 .blog-overview-post .read-more {
@@ -77,5 +68,5 @@
 }
 
 .blog-single-entry a {
-  color: var(--primary-accent)
+  color: var(--primary-accent);
 }
