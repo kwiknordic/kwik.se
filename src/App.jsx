@@ -7,7 +7,6 @@ import Movies from './components/Movies'
 import Books from './components/Books'
 import Post from './components/blog/Post'
 import { Route, Routes } from 'react-router-dom'
-import { Analytics } from '@vercel/analytics/react'
 
 function App() {
   return (
@@ -25,7 +24,6 @@ function App() {
           <Route path="*" element={<PageNotFound status={404} />} />
         </Route>
       </Routes>
-      <Analytics />
     </>
   )
 }
