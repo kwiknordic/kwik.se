@@ -39,10 +39,16 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-          'markdown': ['react-markdown', 'react-syntax-highlighter'],
-          'table': ['@tanstack/react-table'],
+        manualChunks(id) {
+          if (id.includes('/react/') || id.includes('/react-dom/') || id.includes('/react-router')) {
+            return 'vendor-react'
+          }
+          if (id.includes('/react-markdown/') || id.includes('/react-syntax-highlighter/')) {
+            return 'markdown'
+          }
+          if (id.includes('/@tanstack/react-table/')) {
+            return 'table'
+          }
         },
       },
     },
