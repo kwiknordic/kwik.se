@@ -36,4 +36,15 @@ export default defineConfig({
       exclude: ['/admin'],
     }),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'markdown': ['react-markdown', 'react-syntax-highlighter'],
+          'table': ['@tanstack/react-table'],
+        },
+      },
+    },
+  },
 })

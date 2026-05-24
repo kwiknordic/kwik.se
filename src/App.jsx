@@ -1,16 +1,18 @@
+import { lazy, Suspense } from 'react'
 import Layout from './components/Layout'
-import Home from './components/Home'
-import PageNotFound from './components/PageNotFound'
-import Blog from './components/Blog'
-import Activities from './components/Activities'
-import Movies from './components/Movies'
-import Books from './components/Books'
-import Post from './components/blog/Post'
 import { Route, Routes } from 'react-router-dom'
+
+const Home = lazy(() => import('./components/Home'))
+const PageNotFound = lazy(() => import('./components/PageNotFound'))
+const Blog = lazy(() => import('./components/Blog'))
+const Activities = lazy(() => import('./components/Activities'))
+const Movies = lazy(() => import('./components/Movies'))
+const Books = lazy(() => import('./components/Books'))
+const Post = lazy(() => import('./components/blog/Post'))
 
 function App() {
   return (
-    <>
+    <Suspense fallback={null}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -24,7 +26,7 @@ function App() {
           <Route path="*" element={<PageNotFound status={404} />} />
         </Route>
       </Routes>
-    </>
+    </Suspense>
   )
 }
 

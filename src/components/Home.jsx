@@ -15,7 +15,7 @@ function Home() {
 
       <main>
         <MyExpertise />
-        {/* <Portfolio /> */}
+        <Portfolio />
         <AboutMe />
       </main>
     </>

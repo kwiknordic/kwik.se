@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import Title from '../universal/Title'
 import Project from './portfolio/Project'
 import { projects as initialProjects } from '../../data/projects.js'
-import { ReactComponent as Triangle } from '../../assets/portfolio/triangle.svg'
-import { ReactComponent as Circle } from '../../assets/portfolio/circle.svg'
-import { ReactComponent as Square } from '../../assets/portfolio/square.svg'
+import Triangle from '../../assets/portfolio/triangle.svg?react'
+import Circle from '../../assets/portfolio/circle.svg?react'
+import Square from '../../assets/portfolio/square.svg?react'
 
 const Portfolio = () => {
   const [projects, setProjects] = useState(initialProjects)
@@ -27,7 +27,7 @@ const Portfolio = () => {
     <div id="portfolio-container" className="sub-main">
       <div className="title-section">
         <Title
-          title="Nöjesprojekt"
+          title="Fritidsprojekt"
           subTitle={[<Triangle key="triangle" />, <Circle key="circle" />, <Square key="square" />]}
           priority="subtitle"
         />

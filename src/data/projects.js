@@ -3,26 +3,6 @@ import { getImageUrl } from '../util/getImageUrl.js'
 
 let projects = [
   {
-    name: 'YouTube till .mp3-filer',
-    summary: [
-      "Skapade för några vänner möjlighet att skapa och beställa CD-skivor med egna motiv av bifogade YouTube-länkar. Trenden med 'Personalized CDs' is back, I tell you!",
-    ],
-    demo: `https://print.kwik.se/`,
-    github: 'https://github.com/kwiknordic/kwikprint',
-    tools: ['TypeScript', 'Nuxt', 'Webassembly', 'RestAPI'],
-    screenshot: null,
-  },
-  {
-    name: 'HTML till PDF',
-    summary: [
-      'Jag behövde ett aktuellt CV för framtida jobbansökan och kom till insikt att jag ville skapa layouten med CSS, och fylla innehållet med HTML. Lösningen är byggd med Node.js och använder npm-paketet Puppeteer för konverteringen till PDF.',
-    ],
-    demo: `/assets/CV-Mervin-Bratic.pdf`,
-    github: 'https://github.com/kwiknordic/html-to-pdf',
-    tools: ['JavaScript', 'Node.js', 'Puppeteer', 'HTML', 'CSS'],
-    screenshot: null,
-  },
-  {
     name: 'kwik.se',
     summary: [
       'Personlig hemsida för kontaktinformation.',
@@ -36,8 +16,8 @@ let projects = [
   {
     name: 'Kwikflix',
     summary: [
-      'Bläddra, hitta och läs mer om de trendigaste och bästa Film- och TV-produktionerna. Uppdateras kontinuerligt genom API-förfrågningar mot TMDB-databasen. Kwikflix ger även användaren möjlighet att söka efter, och spara, egna resultat.',
-      'Applikationen renderas på klientsidan och allt innehåll tillhandahålls och sparas via localStorage.',
+      'Bläddra, hitta och läs mer om de trendigaste och bästa Film- och TV-produktionerna. Uppdateras kontinuerligt genom API-förfrågningar mot TMDB-databasen. Kwikflix ger även användaren möjlighet att söka efter, och spara, egna resultat; allt lagras hos användaren i localStorage.',
+      'Applikationen är helt byggt utan ett framework(!); använder webbkomponenter med Shadom DOM, slots, och en j*vla massa getQuerySelectors...',
     ],
     demo: 'https://flix.kwik.se',
     github: 'https://github.com/kwiknordic/Kwikflix',
@@ -45,14 +25,24 @@ let projects = [
     screenshot: getImageUrl('kwikflix.jpg'),
   },
   {
-    name: 'Become a frontend-developer',
+    name: 'HTML till PDF',
     summary: [
-      'Använd pilarna för att navigera till närmaste delmål. Delmålen ändrar regelbundet position och spelaren har vunnit när alla delmål är tagna.',
+      'Jag behövde ett aktuellt CV för framtida jobbansökan och kom till insikt att jag ville skapa layouten med CSS, och fylla innehållet med HTML. Lösningen är byggd med Node.js och använder Puppeteer för konverteringen till PDF.',
     ],
-    demo: 'https://frontend-dev-game.netlify.app/',
-    github: 'https://github.com/kwiknordic/frontend-developer-game',
-    tools: ['JavaScript', 'Canvas', 'CSS', 'HTML'],
-    screenshot: getImageUrl('frontend-game.jpg'),
+    demo: `/assets/CV-Mervin-Bratic.pdf`,
+    github: 'https://github.com/kwiknordic/html-to-pdf',
+    tools: ['JavaScript', 'Node.js', 'Puppeteer', 'HTML', 'CSS'],
+    screenshot: null,
+  },
+  {
+    name: 'YouTube till .mp3-filer',
+    summary: [
+      "Skapade för några vänner möjlighet att skapa och beställa CD-skivor med egna motiv av bifogade YouTube-länkar. Trenden med 'Personalized CDs' is back, I tell you!",
+    ],
+    demo: `https://print.kwik.se/`,
+    github: 'https://github.com/kwiknordic/kwikprint',
+    tools: ['TypeScript', 'Nuxt', 'Webassembly', 'RestAPI'],
+    screenshot: null,
   },
 ]
 

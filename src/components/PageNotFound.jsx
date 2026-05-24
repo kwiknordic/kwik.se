@@ -1,9 +1,9 @@
 import React from 'react'
 import Header from './universal/Header';
 import Title from './universal/Title';
-import { ReactComponent as Triangle } from "../assets/portfolio/triangle.svg"
-import { ReactComponent as Circle } from "../assets/portfolio/circle.svg"
-import { ReactComponent as Square } from "../assets/portfolio/square.svg"
+import Triangle from "../assets/portfolio/triangle.svg?react"
+import Circle from "../assets/portfolio/circle.svg?react"
+import Square from "../assets/portfolio/square.svg?react"
 
 function PageNotFound() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
-import { ReactComponent as Wheel } from "../../../assets/expertise/wheel.svg"
-import { ReactComponent as Arrow } from "../../../assets/expertise/arrow.svg"
+import Wheel from "../../../assets/expertise/wheel.svg?react"
+import Arrow from "../../../assets/expertise/arrow.svg?react"
 import '../../../css/codeBlocks.css';
 
 function code(props) {

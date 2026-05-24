@@ -86,7 +86,7 @@ function Post() {
               a({ href, children }) {
                 return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
               },
-              code({ node, inline, className, children, ...props }) {
+              code({ node, className, children, ...props }) {
                 const match = /language-(\w+)/.exec(className || '')
                 return match ? (
                   <SyntaxHighlighter style={oneDark} language={match[1]} PreTag="div">

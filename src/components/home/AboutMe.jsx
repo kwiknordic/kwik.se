@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactComponent as Hamburger } from '../../assets/about/hamburger.svg'
+import Hamburger from '../../assets/about/hamburger.svg?react'
 import { interests, languages, softSkills, synopsis } from '../../data/about.js'
 import Title from '../universal/Title'
 import Infobox from './about_me/Infobox'

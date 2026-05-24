@@ -13,7 +13,7 @@ function Posts({posts}) {
         return (
           <div key={slug} className='blog-overview-post'>
             <h2>{title}</h2>
-            <ReactMarkdown className='text-area'>{body}</ReactMarkdown>
+            <div className='text-area'><ReactMarkdown>{body}</ReactMarkdown></div>
             <ReadMore icon={langIcon} date={date} slug={slug}></ReadMore>
           </div>
         )}

@@ -4,9 +4,9 @@ import SchemaMarkup from './universal/SchemaMarkup';
 import Title from './universal/Title';
 import Posts from './blog/Posts';
 import { groupedPostsByMonth, blogPosts } from '../util/postsFormatter';
-import { ReactComponent as Triangle } from "../assets/portfolio/triangle.svg"
-import { ReactComponent as Circle } from "../assets/portfolio/circle.svg"
-import { ReactComponent as Square } from "../assets/portfolio/square.svg"
+import Triangle from "../assets/portfolio/triangle.svg?react"
+import Circle from "../assets/portfolio/circle.svg?react"
+import Square from "../assets/portfolio/square.svg?react"
 import arrow from "../assets/down-arrow.png"
 
 function Blog() {
