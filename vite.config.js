@@ -31,7 +31,7 @@ export default defineConfig({
     svgr(),
     react(),
     sitemap({
-      hostname: 'https://www.kwik.se',
+      hostname: 'https://kwik.se',
       dynamicRoutes: ['/blog', '/books', '/movies', ...generateBlogRoutes()],
       exclude: ['/admin'],
     }),
@@ -40,7 +40,11 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (id.includes('/react/') || id.includes('/react-dom/') || id.includes('/react-router')) {
+          if (
+            id.includes('/react/') ||
+            id.includes('/react-dom/') ||
+            id.includes('/react-router')
+          ) {
             return 'vendor-react'
           }
           if (id.includes('/react-markdown/') || id.includes('/react-syntax-highlighter/')) {

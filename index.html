@@ -10,7 +10,9 @@
     <link rel="icon" href="/favicon/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Patrick+Hand&family=Poppins:wght@300;500;700&family=Roboto+Condensed:wght@100..900&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Patrick+Hand&family=Poppins:wght@300;500;700&family=Roboto+Condensed:wght@100..900&display=swap" />
     <link rel="stylesheet" href="/src/assets/fontawesome/css/fontawesome.css" />
     <link rel="stylesheet" href="/src/assets/fontawesome/css/brands.css" />
     <link rel="stylesheet" href="/src/assets/fontawesome/css/solid.css" />
@@ -41,20 +43,8 @@
       }
     </script>
     <script src="/src/main.jsx" type="module"></script>
-    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module">
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('init', (user) => {
-          if (!user) {
-            window.netlifyIdentity.on('login', () => {
-              document.location.href = '/admin/'
-            })
-          }
-        })
-      }
-    </script>
   </body>
 </html>
