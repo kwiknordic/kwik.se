@@ -4,24 +4,14 @@ Skapat av Mervin Bratic
 Live-demo: https://kwik.se
 
 # Om
-
-Personlig hemsida för uppvisning av portfolio, kompetensområden och kontaktinformation.
+Personlig hemsida för uppvisning av kompetensområden och kontaktinformation.
 
 # Höjdpunkter
-
-- Eget koncept, design och kompotenter, byggda med React (JSX) och CSS
-- Använt npm-paketet "create react app" för att skapa en strukturmall
-- Uppdaterat: migrerat från CRA till Vite
-- Använder Netlify CMS som Blogg
-- React Router v6+ för laddning av undersidor
-- ReactMarkdown för att rendera innehåll skrivet i .md
-- Alla synliga element är skapade som funktionella React-komponenter
+- Eget koncept, design och komponenter, byggda med React (JSX) och CSS
 - Generella hjälpfunktioner under "utils" (mass-import av bilder, strängomvandlare)
 - Personlig information finns under samma tak i "data"-mappen
-- Delat upp komponenter baserat på dess domän-hierarki
-- Responsiv (mobile-first) design med flertal max-width brytpunkter
+- Responsiv (mobile-first) design
 - Använder pointerEvents för responsiv slider
 - Använder useState för att rendera rätt slidervy
-- Använder "prop drilling" för att dela state till underliggande komponenter
-- FontAwesome-ikoner
 - Responsiva absolut-positionerade SVG-bilder av ritad karaktär för att mjukna upp designen
+- Använder Sveltia CMS för att skriva bloggen
