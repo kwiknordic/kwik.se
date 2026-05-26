@@ -1,12 +1,10 @@
 site_url: https://www.kwik.se/
-locale: 'sv'
 
 backend:
   name: github
   repo: kwiknordic/kwik.se
   branch: main
-  auth_endpoint: https://sveltia-cms-auth.pages.dev/auth
-  app_id: Ov23liXROaCRpqJa5ilk
+
 
 media_folder: '/src/cms/uploads/'
 public_folder: '/public/uploads'
