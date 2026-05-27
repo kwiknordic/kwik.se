@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import portrait from '../../assets/hero-portrait.png'
+import portrait from '../../assets/hero-portrait-cartoon.png'
 
 const synopsis = `Stark på ehandel och interna verktyg. Erfarenhet som egenföretagare inom tekniska lösningar för cirkulär ekonomi av hemelektronik.`
 
