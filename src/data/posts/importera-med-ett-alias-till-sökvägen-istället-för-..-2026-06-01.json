@@ -1,0 +1,7 @@
+{
+  "layout": "blog",
+  "date": "2026-06-01T10:57:00",
+  "title": "Importera med ett alias @ till sökvägen istället för ../",
+  "body": "Lägg till en path-alias i din tsconfig.json för att kunna importera filer i ditt projekt utan att behöva tänka på den relativa sökvägen.\n\n```json\n// tsconfig.json\n{ \"compilerOptions\": { \n\t\"baseUrl\": \".\",\n\t\"paths\": {\n\t\t\"@/*\": [\"./src/*\"] \n\t\t}\n\t}\n}\n```\n\nOch då kan du importera genom att använda aliaset @ som nedan:\n\n```typescript\nimport { someHelper } from '@/utils/helpers'\n```",
+  "language": "sv"
+}
