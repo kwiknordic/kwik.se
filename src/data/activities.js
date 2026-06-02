@@ -236,6 +236,46 @@ export default [
     ],
   },
   {
+    eventId: 314456076,
+    title: 'AI Labs Live',
+    date: '2026-05-25',
+    at: 'Amazon Web Services',
+    attendees: 48,
+    summary: 'Snack om världsmodeller och hur de kommer kunna prognostisera allt!',
+    speakers: [
+      {
+        name: 'Shaena Harrison',
+      },
+      {
+        name: 'Henrik Djurestål',
+      },
+      {
+        name: 'Marcus Larsson',
+      },
+    ],
+  },
+  {
+    eventId: 314456076,
+    title: 'Agentic Engineering',
+    date: '2026-05-07',
+    at: 'OmegaPoint',
+    attendees: 68,
+    summary:
+      'In the future, AI will build our IT systems! It is an increasingly common observation, but at the same time many solutions seem to be replaced by AI rather than built by it. In this talk we dive deeper into this question. We invent a completely neural full-stack solution and invite you to reflect on the hypothesis that traditional software will not eat so much of the world?',
+    speakers: [
+      {
+        name: 'Sebastian Ware',
+        position: 'Fullstack builder',
+        employer: 'Omegapoint',
+      },
+      {
+        name: 'Simon Velander',
+        position: 'Backend Developer',
+        employer: 'Omegapoint',
+      },
+    ],
+  },
+  {
     eventId: '288581926',
     title: 'Fuzz testing & Testing Your Repositories',
     date: '2022-10-04',
