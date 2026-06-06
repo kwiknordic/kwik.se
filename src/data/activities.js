@@ -15,7 +15,7 @@ export default [
       },
       {
         name: 'Markus Kjellner',
-        position: 'VP of Nordics & Baltics',
+        position: 'VP Nordics & Baltics',
         employer: 'Cloudera',
       },
       {
