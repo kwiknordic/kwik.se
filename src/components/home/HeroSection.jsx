@@ -1,43 +1,17 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import portrait from '../../assets/hero-portrait-cartoon.png'
 
-const synopsis = `Stark på ehandel och interna verktyg. Erfarenhet som egenföretagare inom tekniska lösningar för cirkulär ekonomi av hemelektronik.`
-
-function HeroSection() {
+function HeroSection({ children }) {
   return (
     <div id="hero-container">
       <div className="hero-grid">
-        <div id="hero-section" className="unskewed-content">
-          <div className="title-section">
-            <span className="sub-title">Hej, jag heter</span>
-            <h1 className="title">Mervin Bratic</h1>
-            <span className="post-title">Fullstack-utvecklare</span>
-          </div>
-
-          <p>{synopsis}</p>
-
-          <div className="call-to-action">
-            <a
-              href={`/assets/CV-Mervin-Bratic.pdf`}
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-primary btn-cv">
-              Ladda ned mitt CV
-              <PdfSize />
-            </a>
-            <a href="#info-box" className="btn btn-secondary">
-              Kontakta mig
-            </a>
-          </div>
-        </div>
-        <img className="portrait" src={portrait} alt="Porträtt av Mervin Bratic" />
+        {children}
       </div>
     </div>
   )
 }
 
-function PdfSize() {
+export function PdfSize() {
   const [fileSize, setFileSize] = useState('')
 
   useEffect(() => {

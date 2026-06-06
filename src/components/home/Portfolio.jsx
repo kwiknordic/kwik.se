@@ -1,12 +1,8 @@
 import React, { useState } from 'react'
-import Title from '../universal/Title'
 import Project from './portfolio/Project'
 import { projects as initialProjects } from '../../data/projects.js'
-import Triangle from '../../assets/portfolio/triangle.svg?react'
-import Circle from '../../assets/portfolio/circle.svg?react'
-import Square from '../../assets/portfolio/square.svg?react'
 
-const Portfolio = () => {
+const Portfolio = ({ children }) => {
   const [projects, setProjects] = useState(initialProjects)
   let coord
 
@@ -26,11 +22,7 @@ const Portfolio = () => {
   return (
     <div id="portfolio-container" className="sub-main">
       <div className="title-section">
-        <Title
-          title="Fritidsprojekt"
-          subTitle={[<Triangle key="triangle" />, <Circle key="circle" />, <Square key="square" />]}
-          priority="subtitle"
-        />
+        {children}
       </div>
 
       <div className="slider-grid" onPointerDown={dragStart} onPointerUp={dragEnd}>
