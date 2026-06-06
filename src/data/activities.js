@@ -1,5 +1,31 @@
 export default [
   {
+    eventId: '314439389',
+    title: 'Token Efficiency & Air-Gapped AI',
+    date: '2026-06-03',
+    at: 'AI Sweden',
+    attendees: 133,
+    summary:
+      'Use vector embeddings to increase information density, so an orchestrator works only with retrieved context from a vector store. This way of working is backed up with a benchmark experiment across three datasets (SWE-Bench, LongMemEval, FinanceBench) comparing agentic grep, Qdrant BM25 sparse, and Qdrant dense retrieval, measuring tokens-to-resolution as the primary metric.',
+    speakers: [
+      {
+        name: 'Ewa Szyszka',
+        position: 'DevRel Engineer',
+        employer: 'Qdrant',
+      },
+      {
+        name: 'Markus Kjellner',
+        position: 'VP of Nordics & Baltics',
+        employer: 'Cloudera',
+      },
+      {
+        name: 'Mikael Vesavuori',
+        position: 'Product Manager of AI Products',
+        employer: 'evroc',
+      },
+    ],
+  },
+  {
     eventId: '314178329',
     title: 'Designing, Embedding & Orchestrating Physical AI',
     date: '2026-05-21',
