@@ -1,39 +1,9 @@
 import React from 'react'
-import Hamburger from '../../assets/about/hamburger.svg?react'
-import { interests, languages, softSkills, synopsis } from '../../data/about.js'
-import Title from '../universal/Title'
-import Infobox from './about_me/Infobox'
-import Tags from './about_me/Tags'
 
-function AboutMe() {
+function AboutMe({ children }) {
   return (
     <div id="about-me" className="sub-main align-container-center">
-      <div className="title-section">
-        <Title
-          title="Min bakgrund"
-          subTitle={<i className="fa-solid fa-backward" />}
-          priority="subtitle"
-        />
-      </div>
-
-      <div className="sub-main-grid">
-        <div>
-          {synopsis.map((paragraph, i) => (
-            <p key={i}>{paragraph}</p>
-          ))}
-          <Infobox />
-        </div>
-        <div className="tags-container">
-          <Tags title="Språkkunskaper" data={languages} structure={'array'} />
-          <Tags
-            title="Mjuka kompetenser"
-            data={softSkills}
-            structure={'array'}
-          />
-          <Tags title="Intressen" data={interests} structure={'object'} />
-          <Hamburger className="hamburger-svg" />
-        </div>
-      </div>
+      {children}
     </div>
   )
 }
