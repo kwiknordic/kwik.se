@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "pnpm run build && wrangler dev",
+    "deploy": "pnpm run build && wrangler deploy"
   },
   "dependencies": {
     "@tanstack/react-table": "^8.21.3",
@@ -29,11 +30,13 @@
     ]
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.40.0",
     "@iconify/react": "^6.0.2",
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.2",
     "vite": "^8.0.14",
-    "vite-plugin-sitemap": "^0.8.2"
+    "vite-plugin-sitemap": "^0.8.2",
+    "wrangler": "^4.98.0"
   }
 }
