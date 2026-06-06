@@ -5,6 +5,8 @@ import sitemap from 'vite-plugin-sitemap'
 import { readdirSync } from 'fs'
 import { join } from 'path'
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 // Generate blog post routes dynamically
 function generateBlogRoutes() {
   const postsDir = join(process.cwd(), 'src/data/posts')
@@ -27,15 +29,11 @@ console.log('Generated blog routes:', blogRoutes.length, blogRoutes)
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    svgr(),
-    react(),
-    sitemap({
-      hostname: 'https://kwik.se',
-      dynamicRoutes: ['/blog', '/books', '/movies', ...generateBlogRoutes()],
-      exclude: ['/admin'],
-    }),
-  ],
+  plugins: [svgr(), react(), sitemap({
+    hostname: 'https://kwik.se',
+    dynamicRoutes: ['/blog', '/books', '/movies', ...generateBlogRoutes()],
+    exclude: ['/admin'],
+  }), cloudflare()],
   build: {
     rollupOptions: {
       output: {
