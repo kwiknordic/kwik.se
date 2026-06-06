@@ -266,7 +266,7 @@ export default [
       {
         name: 'Sebastian Ware',
         position: 'Fullstack builder',
-        employer: 'Omegapoint',
+        employer: 'Urbantalk',
       },
       {
         name: 'Simon Velander',
