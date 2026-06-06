@@ -1,23 +1,8 @@
 {
-<<<<<<< HEAD
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "kwik",
-  "compatibility_date": "2026-06-06",
-  "observability": {
-    "enabled": true
-  },
-  "assets": {
-    "not_found_handling": "single-page-application"
-  },
-  "compatibility_flags": [
-    "nodejs_compat"
-  ]
-=======
   "name": "kwik",
   "compatibility_date": "2026-06-06",
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "single-page-application"
-  }
->>>>>>> 108e442 (use children props in parent)
+    "not_found_handling": "single-page-application",
+  },
 }
