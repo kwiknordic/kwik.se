@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './universal/Header'
 import SchemaMarkup from './universal/SchemaMarkup'
 import Title from './universal/Title'
-import activities from '../data/activities'
+import activities from '../data/activities.json'
 import '../css/activities.css'
 
 function Activities() {

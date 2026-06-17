@@ -5,7 +5,7 @@ import {
   getSortedRowModel,
   flexRender,
 } from '@tanstack/react-table'
-import movies from '../data/movies.js'
+import movies from '../data/movies.json'
 import Header from './universal/Header'
 import Title from './universal/Title'
 import '../css/movies.css'

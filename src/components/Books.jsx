@@ -5,7 +5,7 @@ import {
   getSortedRowModel,
   flexRender,
 } from '@tanstack/react-table'
-import books from '../data/books.js'
+import books from '../data/books.json'
 import Header from './universal/Header.jsx'
 import Title from './universal/Title.jsx'
 import '../css/books.css'
