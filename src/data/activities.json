@@ -1,5 +1,64 @@
 [
   {
+    "eventId": 314270265,
+    "title": "Stockholm MLOps Summerbash!!!",
+    "date": "2026-06-11",
+    "at": "IBM",
+    "attendees": 224,
+    "summary": "All right!!! Please note that you will also have to register at IBM's event-page: ibm.biz/mlops-summerbash. This is office policy. Meetup #37: June 11, it's once again time for another Stockholm MLOps Summerbash!!! For those of you who have been around for a while, you know that we always try to give local start-ups some exposure as we wrap up things before taking a break for the summer. This time, we will once again team up with IBM and try to do something special. Roof-top mingle, pizzas baked on site, dub-plates sound-system spinning anything from King Tubby to Storskogen and a a whole bunch of exciting start-ups all pushing the local scene into the future! So buckle up and keep your eyes peeled!",
+    "speakers": []
+  },
+  {
+    "eventId": 314842898,
+    "title": "FP + AI @ Functional Software",
+    "date": "2026-06-10",
+    "at": "Embassy House Söder",
+    "attendees": 46,
+    "summary": "Welcome to a FP + AI evening at Functional Software! Whether you're a seasoned FP Developer that are using AI on a daily basis or just getting started, this is a great opportunity to meet the community, network and share knowledge. We will have two talks sharing how it is to code FP with AI, lessons learnt, pros/cons.",
+    "speakers": [
+      {
+        "name": "Max Sörliden Nordlund",
+        "position": "",
+        "employer": ""
+      },
+      {
+        "name": "Felix Alm",
+        "position": "",
+        "employer": ""
+      }
+    ]
+  },
+  {
+    "eventId": 314860055,
+    "title": "Trustworthy AI in Finance",
+    "date": "2026-06-03",
+    "at": "SEB",
+    "attendees": 69,
+    "summary": "Join us for an insightful session about how GenAI is reshaping financial services fast, but speed without safety is a liability, especially in highly regulated industries like banking. This meetup brings together experts working on the hardest problems such as the role GenAI is playing across finance today, overconfident models as a systemic risk; building responsibly under regulatory scrutiny, and architecting data pipelines at scale.",
+    "speakers": [
+      {
+        "name": "Ala Tarighati",
+        "position": "Chief AI Strategist",
+        "employer": "SEB"
+      },
+      {
+        "name": "Jim Dowling",
+        "position": "Co-Founder & CEO at Hopsworks. O’Reilly Author. Feature Store.",
+        "employer": "Hopsworks"
+      },
+      {
+        "name": "Adam Nylén",
+        "position": "Data Engineer",
+        "employer": "SEB"
+      },
+      {
+        "name": "Paris Carbone",
+        "position": "Co-Founder",
+        "employer": "OrbDB Labs"
+      }
+    ]
+  },
+  {
     "eventId": "314439389",
     "title": "Token Efficiency & Air-Gapped AI",
     "date": "2026-06-03",
@@ -21,6 +80,26 @@
         "name": "Mikael Vesavuori",
         "position": "Product Manager of AI Products",
         "employer": "evroc"
+      }
+    ]
+  },
+  {
+    "eventId": 204590172,
+    "source": "luma",
+    "title": "AI Labs Live",
+    "date": "2026-05-25",
+    "at": "Amazon Web Services",
+    "attendees": 48,
+    "summary": "Snack om världsmodeller och hur de kommer kunna prognostisera allt!",
+    "speakers": [
+      {
+        "name": "Shaena Harrison"
+      },
+      {
+        "name": "Henrik Djurestål"
+      },
+      {
+        "name": "Marcus Larsson"
       }
     ]
   },
@@ -66,6 +145,26 @@
         "name": "Amine Raji",
         "position": "AI Security Researcher (PhD)",
         "employer": null
+      }
+    ]
+  },
+  {
+    "eventId": 314456076,
+    "title": "Agentic Engineering",
+    "date": "2026-05-07",
+    "at": "OmegaPoint",
+    "attendees": 68,
+    "summary": "In the future, AI will build our IT systems! It is an increasingly common observation, but at the same time many solutions seem to be replaced by AI rather than built by it. In this talk we dive deeper into this question. We invent a completely neural full-stack solution and invite you to reflect on the hypothesis that traditional software will not eat so much of the world?",
+    "speakers": [
+      {
+        "name": "Sebastian Ware",
+        "position": "Fullstack builder",
+        "employer": "Urbantalk"
+      },
+      {
+        "name": "Simon Velander",
+        "position": "Backend Developer",
+        "employer": "Omegapoint"
       }
     ]
   },
@@ -247,46 +346,6 @@
         "name": "Patricia Bolner Camiansky",
         "position": null,
         "employer": "Futurice"
-      }
-    ]
-  },
-  {
-    "eventId": 204590172,
-    "source": "luma",
-    "title": "AI Labs Live",
-    "date": "2026-05-25",
-    "at": "Amazon Web Services",
-    "attendees": 48,
-    "summary": "Snack om världsmodeller och hur de kommer kunna prognostisera allt!",
-    "speakers": [
-      {
-        "name": "Shaena Harrison"
-      },
-      {
-        "name": "Henrik Djurestål"
-      },
-      {
-        "name": "Marcus Larsson"
-      }
-    ]
-  },
-  {
-    "eventId": 314456076,
-    "title": "Agentic Engineering",
-    "date": "2026-05-07",
-    "at": "OmegaPoint",
-    "attendees": 68,
-    "summary": "In the future, AI will build our IT systems! It is an increasingly common observation, but at the same time many solutions seem to be replaced by AI rather than built by it. In this talk we dive deeper into this question. We invent a completely neural full-stack solution and invite you to reflect on the hypothesis that traditional software will not eat so much of the world?",
-    "speakers": [
-      {
-        "name": "Sebastian Ware",
-        "position": "Fullstack builder",
-        "employer": "Urbantalk"
-      },
-      {
-        "name": "Simon Velander",
-        "position": "Backend Developer",
-        "employer": "Omegapoint"
       }
     ]
   },
