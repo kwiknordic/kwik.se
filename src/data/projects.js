@@ -6,11 +6,13 @@ let projects = [
     name: 'meetup-mcp',
     summary: [
       'En MCP-server för att skrapa Meetup-events du varit på.',
-      'Den ger AI-agenten verktyg att hitta dina tidigare events, att begränsa från ett visst datum/event; att returnera färdig strukturerad data. Jag använder den till att fylla mina aktiviteter på hemsidan.',
+      'Den ger AI-agenten verktyg att hitta dina tidigare events, att begränsa från ett visst datum/event; att returnera färdig strukturerad data.',
+      'Jag använder den till att uppdatera kwik.se med mina aktiviteter.',
     ],
     demo: 'https://www.npmjs.com/package/@kwiknordic/meetup-events-scraper-mcp#meetup-mcp-server',
     github: 'https://github.com/kwiknordic/meetup-events-scraper-mcp',
     tools: ['MCP', 'TypeScript', 'npm.js', 'node'],
+    screenshot: getImageUrl('meetup-mcp.jpg'),
   },
   {
     name: 'kwik.se',
