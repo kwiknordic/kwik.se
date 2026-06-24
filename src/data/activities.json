@@ -251,7 +251,8 @@
     ]
   },
   {
-    "eventId": 314456076,
+    "eventId": 204590172,
+    "source": "luma",
     "title": "AI Labs Live",
     "date": "2026-05-25",
     "at": "Amazon Web Services",
@@ -310,8 +311,8 @@
     ]
   },
   {
-    "eventId": "Praktiska TDD-metoder i JavaScript och bygge av Jamstack-applikationer",
-    "title": "SeenThis",
+    "eventId": "288213492",
+    "title": "Praktiska TDD-metoder i JavaScript och bygge av Jamstack-applikationer",
     "date": "2022-09-15",
     "at": "SeenThis",
     "attendees": 61,
