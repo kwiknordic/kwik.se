@@ -3,6 +3,16 @@ import { getImageUrl } from '../util/getImageUrl.js'
 
 let projects = [
   {
+    name: 'meetup-mcp',
+    summary: [
+      'En MCP-server för att skrapa Meetup-events du varit på.',
+      'Den ger AI-agenten verktyg att hitta dina tidigare events, att begränsa från ett visst datum/event; att returnera färdig strukturerad data. Jag använder den till att fylla mina aktiviteter på hemsidan.',
+    ],
+    demo: 'https://www.npmjs.com/package/@kwiknordic/meetup-events-scraper-mcp#meetup-mcp-server',
+    github: 'https://github.com/kwiknordic/meetup-events-scraper-mcp',
+    tools: ['MCP', 'TypeScript', 'npm.js', 'node'],
+  },
+  {
     name: 'kwik.se',
     summary: [
       'Personlig hemsida för kontaktinformation.',
