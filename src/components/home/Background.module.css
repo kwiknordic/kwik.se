@@ -1,0 +1,138 @@
+.about-grid {
+  display: grid;
+  grid-template-areas:
+    'bio tags'
+    'contact tags';
+  gap: 2.5rem;
+  align-items: start;
+}
+.about-bio p {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0 0 1rem;
+}
+.about-contact {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+.about-contact h4 {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 1rem;
+}
+.about-contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.about-contact li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.about-contact-ic {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  background: var(--warm-wash);
+  color: var(--warm-deep);
+  flex-shrink: 0;
+}
+.about-contact a {
+  font-weight: 600;
+  font-size: 0.96rem;
+  color: var(--ink);
+  transition: var(--t-fast);
+  white-space: nowrap;
+}
+.about-contact a:hover {
+  color: var(--warm-deep);
+}
+.about-tags {
+  display: grid;
+  grid-template-areas:
+    'lang'
+    'soft'
+    'interests';
+  gap: 2rem;
+}
+.tag-group h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.12rem;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.01em;
+}
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.tag {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 0.36rem 0.8rem;
+  border-radius: 999px;
+  transition: var(--t-fast);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.tag:hover {
+  border-color: var(--line);
+  color: var(--ink-soft);
+}
+.tag-soft {
+  background: var(--warm-wash);
+  border-color: transparent;
+  color: var(--warm-ink);
+}
+.tag-soft:hover {
+  color: var(--warm-ink);
+  border-color: transparent;
+}
+.tag-lang {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+  font-weight: 600;
+}
+.tag-lang:hover {
+  color: #fff;
+  background: var(--dark-2);
+}
+
+@media (max-width: 940px) {
+  .about-grid {
+    grid-template-areas:
+      'bio'
+      'tags'
+      'contact';
+    gap: 1rem;
+  }
+
+  .about-contact {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 620px) {
+  .about-bio p:first-child {
+    font-size: 1.14rem;
+  }
+}

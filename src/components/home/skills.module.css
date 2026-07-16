@@ -1,0 +1,51 @@
+.skills {
+  background: var(--dark);
+  border-radius: var(--radius-lg);
+  padding: 2.1rem 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.skills::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 90% -30%, rgba(194, 97, 59, 0.3), transparent 46%);
+  pointer-events: none;
+}
+.skills-groups {
+  display: grid;
+  grid-template-areas:
+    'webbutveckling'
+    'datahantering'
+    'infrastruktur'
+    'llm'
+    'nätverk'
+    'kodredigerare'
+    'paradigm';
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: 700px) {
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas:
+      'webbutveckling paradigm'
+      'datahantering kodredigerare'
+      'infrastruktur kodredigerare'
+      'nätverk kodredigerare'
+      'llm .';
+  }
+}
+.skill-tags {
+  li {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.76rem;
+    color: #f3efe8;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.32rem 0.78rem;
+    border-radius: 999px;
+  }
+}
