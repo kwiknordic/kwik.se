@@ -43,3 +43,7 @@ next-env.d.ts
 
 # ai
 .design
+
+# cloudflare
+/.open-next/
+/.wrangler/
