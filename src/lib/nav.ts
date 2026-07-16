@@ -8,7 +8,6 @@ export type NavTab = { href: string; label: string }
 
 /** Top navigation — order matters, it's reused in the footer too. */
 export const NAV_TABS: NavTab[] = [
-  { href: '/', label: 'Hem' },
   { href: '/aktiviteter', label: 'Aktiviteter' },
   { href: '/tips', label: 'Tips' },
   { href: '/galleri', label: 'Ögonblick' },

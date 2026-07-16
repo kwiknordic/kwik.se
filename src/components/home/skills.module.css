@@ -37,15 +37,3 @@
       'llm .';
   }
 }
-.skill-tags {
-  li {
-    font-family: var(--font-body);
-    font-weight: 500;
-    font-size: 0.76rem;
-    color: #f3efe8;
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 0.32rem 0.78rem;
-    border-radius: 999px;
-  }
-}

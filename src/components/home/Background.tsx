@@ -24,7 +24,7 @@ export default function Background() {
         </div>
 
         <div className={styles['about-contact']} style={{ gridArea: 'contact' }}>
-          <h4>Kontaktuppgifter</h4>
+          <h3>Kontaktuppgifter</h3>
           <ul>
             {contacts.map(contact => (
               <li key={contact.label}>
@@ -41,8 +41,10 @@ export default function Background() {
 
         <div className={styles['about-tags']} style={{ gridArea: 'tags' }}>
           {collection.map(tag => (
-            <div className={styles['tag-group']} key={tag.label} style={{ gridArea: tag.slug }}>
-              <h4>{tag.label}</h4>
+            <details className={styles['tag-group']} key={tag.label} style={{ gridArea: tag.slug }} open>
+              <summary className={styles['tag-heading']}>
+                {tag.label}
+              </summary>
               <ul className={styles['tag-list']}>
                 {tag.skills.map((skill: Interest) => (
                   <li key={skill.name} className={`${styles.tag} ${styles[`tag-${tag.slug}`]}`}>
@@ -51,7 +53,7 @@ export default function Background() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </details>
           ))}
         </div>
       </div>

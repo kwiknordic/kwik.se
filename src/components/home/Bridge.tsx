@@ -21,18 +21,18 @@ export default function Bridge() {
       </SectionHead>
       <div className={`${styles['bridge-grid']} stagger`}>
         {BRIDGES.map((bridge) => (
-          <Link className={`${styles['bridge-card']} flex flex-col gap-4 rounded-lg p-6`} key={bridge.href} href={bridge.href}>
+          <div className={`${styles['bridge-card']} flex flex-col gap-4 rounded-lg p-6 relative`} key={bridge.title}>
             <div className='flex flex-row items-center gap-4'>
               <div className={`${styles['bridge-ic']} flex items-center justify-center w-11 h-11 rounded-lg`}>
                 <i className={`${bridge.icon}`} aria-hidden="true" />
               </div>
-              <h3>{bridge.title}</h3>
+              <h3 className='order-1'>{bridge.title}</h3>
             </div>
             <p className='flex-1'>{bridge.desc}</p>
-            <span className={styles.go}>
+            <Link href={bridge.href} className={`${styles.go} after:absolute after:inset-0`}>
               {bridge.go} <i className="pi pi-arrow-right" aria-hidden="true" />
-            </span>
-          </Link>
+            </Link>
+          </div>
         ))}
       </div>
     </section>

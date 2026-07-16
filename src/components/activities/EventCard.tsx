@@ -25,7 +25,7 @@ export default function EventCard({ ev }: { ev: ActivityEvent }) {
   return (
     <article className={styles['event-card']}>
       <div className={styles['event-top']}>
-        <h3 className={styles['event-title']}>{ev.title}</h3>
+        <h2 className={styles['event-title']}>{ev.title}</h2>
         <span className={styles['event-date']}>{formatDateSv(ev.date)}</span>
       </div>
       <div className={styles['event-meta']}>

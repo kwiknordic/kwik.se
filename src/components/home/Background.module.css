@@ -67,12 +67,16 @@
     'interests';
   gap: 2rem;
 }
-.tag-group h4 {
+.tag-heading {
+  display: block;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.12rem;
   margin-bottom: 0.85rem;
   letter-spacing: -0.01em;
+}
+.tag-heading::-webkit-details-marker {
+  display: none;
 }
 .tag-list {
   display: flex;

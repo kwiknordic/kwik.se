@@ -91,7 +91,7 @@ export default function BlogList({ posts }: { posts: BlogListItem[] }) {
             <Link className={styles['blog-row']} key={p.slug} href={`/blogg/${p.slug}`}>
               <span className={styles['blog-num']}>{p.num}</span>
               <div>
-                <h3>{p.title}</h3>
+                <h2>{p.title}</h2>
                 <p>{p.excerpt}</p>
                 <div className={styles['blog-meta']}>
                   <span className={styles['blog-lang-badge']}>{p.langFlag}</span>

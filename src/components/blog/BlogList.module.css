@@ -47,7 +47,7 @@
 .blog-row:hover {
   padding-left: 0.6rem;
 }
-.blog-row:hover h3 {
+.blog-row:hover h2 {
   color: var(--warm-deep);
 }
 .blog-num {
@@ -55,7 +55,7 @@
   font-size: 0.82rem;
   color: var(--ink-faint);
 }
-.blog-row h3 {
+.blog-row h2 {
   font-size: 1.3rem;
   margin-bottom: 0.4rem;
   transition: var(--t-fast);

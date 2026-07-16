@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import activities from '../../data/activities.js'
-import { computeActivityStats, type ActivityEvent } from '../../lib/activities'
+import activities from '@/src/data/activities'
+import { computeActivityStats, type ActivityEvent } from '@/src/lib/activities'
 import StatsBand from '@/src/components/activities/StatsBand'
 import Timeline from '@/src/components/activities/Timeline'
 import StructuredData from '@/src/components/seo/StructuredData'
