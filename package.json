@@ -9,7 +9,9 @@
     "lint": "eslint",
     "fetch:bucket": "bun scripts/fetch-bucket.ts",
     "prepare:data": "bun scripts/prepare-data.ts && bun scripts/fetch-bucket.ts",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf:build": "opennextjs-cloudflare build",
+    "cf:deploy": "wrangler deploy",
+    "cf:upload": "wrangler versions upload",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview"
   },
   "dependencies": {
