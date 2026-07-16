@@ -1837,6 +1837,28 @@
     "deleted": true
   },
   {
+    "id": "4369358062141225",
+    "podcastId": "4069281",
+    "podcastTitle": "The Peter Schiff Show Podcast",
+    "title": "AI Cash Cows Just Became Cash Vacuums… This Breaks the Bond Market",
+    "publishedAt": "2026-07-14T22:44:57-04:00",
+    "audioUrl": "https://pdst.fm/e/dts.podtrac.com/redirect.mp3/pscrb.fm/rss/p/clrtpod.com/m/mgln.ai/e/137/arttrk.com/p/ARTS0/audio4.redcircle.com/episodes/8a239ada-4675-4b80-bd1f-39f0295f9489/stream.mp3",
+    "progress": 0,
+    "playedAt": "2026-07-15T07:52:41-04:00",
+    "deleted": true
+  },
+  {
+    "id": "4369357722076657",
+    "podcastId": "4069281",
+    "podcastTitle": "The Peter Schiff Show Podcast",
+    "title": "The Bond Market Breakdown Has Started… Stocks, Housing, Crypto Are Next",
+    "publishedAt": "2026-07-11T21:22:01-04:00",
+    "audioUrl": "https://pdst.fm/e/dts.podtrac.com/redirect.mp3/pscrb.fm/rss/p/clrtpod.com/m/mgln.ai/e/137/arttrk.com/p/ARTS0/audio4.redcircle.com/episodes/6e0f3a9e-b0e6-45c9-a90d-870c569167b8/stream.mp3",
+    "progress": 0,
+    "playedAt": "2026-07-15T07:25:39-04:00",
+    "deleted": true
+  },
+  {
     "id": "4369357407543420",
     "podcastId": "4069281",
     "podcastTitle": "The Peter Schiff Show Podcast",
@@ -3740,6 +3762,17 @@
     "deleted": true
   },
   {
+    "id": "5783748830369778",
+    "podcastId": "5386535",
+    "podcastTitle": "Syntax - Tasty Web Development Treats",
+    "title": "1021: We got addicted to an AI model we can’t talk about",
+    "publishedAt": "2026-07-15T07:00:00-04:00",
+    "audioUrl": "https://traffic.megaphone.fm/FSI8452544208.mp3",
+    "progress": 0,
+    "playedAt": "2026-07-15T13:50:51-04:00",
+    "deleted": true
+  },
+  {
     "id": "5783748544367690",
     "podcastId": "5386535",
     "podcastTitle": "Syntax - Tasty Web Development Treats",
@@ -3747,8 +3780,8 @@
     "publishedAt": "2026-07-06T07:00:00-04:00",
     "audioUrl": "https://traffic.megaphone.fm/FSI1850985972.mp3",
     "progress": 0,
-    "playedAt": "2026-07-06T19:55:35-04:00",
-    "deleted": false
+    "playedAt": "2026-07-14T19:39:55-04:00",
+    "deleted": true
   },
   {
     "id": "5783748870144928",
@@ -3960,6 +3993,105 @@
     "deleted": false
   },
   {
+    "id": "5880717131503822",
+    "podcastId": "5476844",
+    "podcastTitle": "Hidden Forces",
+    "title": "Iran’s New Grand Strategy | Vali Nasr",
+    "publishedAt": "2026-07-09T03:00:16-04:00",
+    "audioUrl": "https://dts.podtrac.com/redirect.mp3/traffic.libsyn.com/secure/hiddenforces/Ep.487_Vali_Nasr_Main_Feed_7-9-26.mp3?dest-id=457899",
+    "progress": 0,
+    "playedAt": "2026-07-14T19:39:55-04:00",
+    "deleted": true
+  },
+  {
+    "id": "5880716969988367",
+    "podcastId": "5476844",
+    "podcastTitle": "Hidden Forces",
+    "title": "Schrödinger’s Strait and the New Energy Order | Daniel Yergin",
+    "publishedAt": "2026-07-06T03:00:00-04:00",
+    "audioUrl": "https://dts.podtrac.com/redirect.mp3/traffic.libsyn.com/secure/hiddenforces/Ep.486_Daniel_Yergin_Main_Feed_7-2-26.mp3?dest-id=457899",
+    "progress": 0,
+    "playedAt": "2026-07-13T15:37:06-04:00",
+    "deleted": true
+  },
+  {
+    "id": "5880716730286526",
+    "podcastId": "5476844",
+    "podcastTitle": "Hidden Forces",
+    "title": "After the Fall: Reckoning with the End of History | Ian Shapiro",
+    "publishedAt": "2026-06-29T03:00:00-04:00",
+    "audioUrl": "https://dts.podtrac.com/redirect.mp3/traffic.libsyn.com/secure/hiddenforces/Ep.485_Ian_Shapiro_Main_Feed_6-29-26.mp3?dest-id=457899",
+    "progress": 0,
+    "playedAt": "2026-07-13T15:37:06-04:00",
+    "deleted": true
+  },
+  {
+    "id": "5880716804309188",
+    "podcastId": "5476844",
+    "podcastTitle": "Hidden Forces",
+    "title": "AI Governance and the National Security State | Dean W. Ball",
+    "publishedAt": "2026-06-25T03:00:00-04:00",
+    "audioUrl": "https://dts.podtrac.com/redirect.mp3/traffic.libsyn.com/secure/hiddenforces/Ep.484_Dean_W._Ball_Main_Feed_6-23-26.mp3?dest-id=457899",
+    "progress": 0,
+    "playedAt": "2026-07-13T15:37:06-04:00",
+    "deleted": true
+  },
+  {
+    "id": "5880717291010032",
+    "podcastId": "5476844",
+    "podcastTitle": "Hidden Forces",
+    "title": "Ending the Iran War: a New Balance of Power in the Middle East | Hamidreza Azizi",
+    "publishedAt": "2026-06-22T03:00:00-04:00",
+    "audioUrl": "https://dts.podtrac.com/redirect.mp3/traffic.libsyn.com/secure/hiddenforces/Ep.483_Hamidreza_Azizi_Main_Feed_6-18-26.mp3?dest-id=457899",
+    "progress": 0,
+    "playedAt": "2026-07-13T15:37:06-04:00",
+    "deleted": true
+  },
+  {
+    "id": "5880716697072668",
+    "podcastId": "5476844",
+    "podcastTitle": "Hidden Forces",
+    "title": "Why History Can’t Prepare Us for What’s Coming | Alap Shah",
+    "publishedAt": "2026-06-01T03:00:00-04:00",
+    "audioUrl": "https://dts.podtrac.com/redirect.mp3/traffic.libsyn.com/secure/hiddenforces/Ep.482_Alap_Shah_Main_Feed_6-1-26.mp3?dest-id=457899",
+    "progress": 0,
+    "playedAt": "2026-07-13T15:37:06-04:00",
+    "deleted": true
+  },
+  {
+    "id": "5880716949068820",
+    "podcastId": "5476844",
+    "podcastTitle": "Hidden Forces",
+    "title": "How Demographics Will Break the Bond Market | Manoj Pradhan",
+    "publishedAt": "2026-05-25T03:00:00-04:00",
+    "audioUrl": "https://dts.podtrac.com/redirect.mp3/traffic.libsyn.com/secure/hiddenforces/Ep.481_Manoj_Pradhan_Main_Feed_5-25-26_2.mp3?dest-id=457899",
+    "progress": 0,
+    "playedAt": "2026-07-13T15:37:06-04:00",
+    "deleted": true
+  },
+  {
+    "id": "5880717402201164",
+    "podcastId": "5476844",
+    "podcastTitle": "Hidden Forces",
+    "title": "How China Is Winning the Iran War | Jon Alterman",
+    "publishedAt": "2026-05-04T03:13:31-04:00",
+    "audioUrl": "https://dts.podtrac.com/redirect.mp3/traffic.libsyn.com/secure/hiddenforces/Ep.478_Jon_Alterman_Main_Feed_4-30-26.mp3?dest-id=457899",
+    "progress": 0,
+    "playedAt": "2026-07-13T15:37:06-04:00",
+    "deleted": true
+  },
+  {
+    "id": "5880717260041267",
+    "podcastId": "5476844",
+    "podcastTitle": "Hidden Forces",
+    "title": "Why America Cannot Afford to Lose Another War | Marvin Barth",
+    "publishedAt": "2026-04-16T03:00:00-04:00",
+    "audioUrl": "https://dts.podtrac.com/redirect.mp3/traffic.libsyn.com/secure/hiddenforces/Ep.476_Marvin_Barth_Main_Feed_4-15-26.mp3?dest-id=457899",
+    "progress": 0,
+    "playedAt": "2026-07-13T15:37:06-04:00",
+    "deleted": true
+  },
+  {
     "id": "5880717509967751",
     "podcastId": "5476844",
     "podcastTitle": "Hidden Forces",
@@ -3968,6 +4100,17 @@
     "audioUrl": "https://dts.podtrac.com/redirect.mp3/traffic.libsyn.com/secure/hiddenforces/Ep.475_John_Burn-Murdoch_Main_Feed_4-13-26.mp3?dest-id=457899",
     "progress": 0,
     "playedAt": "2026-05-14T05:17:12-04:00",
+    "deleted": true
+  },
+  {
+    "id": "5880716578464187",
+    "podcastId": "5476844",
+    "podcastTitle": "Hidden Forces",
+    "title": "What History’s Greatest Currencies Tell Us About the Future of the Dollar | Barry Eichengreen",
+    "publishedAt": "2026-03-16T07:30:54-04:00",
+    "audioUrl": "https://dts.podtrac.com/redirect.mp3/traffic.libsyn.com/secure/hiddenforces/Ep.468_Barry_Eichengreen_Main_Feed_3-16-26.mp3?dest-id=457899",
+    "progress": 0,
+    "playedAt": "2026-07-13T15:37:06-04:00",
     "deleted": true
   },
   {

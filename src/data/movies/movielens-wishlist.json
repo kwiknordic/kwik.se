@@ -14,13 +14,6 @@
     "title": "Death Sentence (2007)"
   },
   {
-    "movie_id": "312835",
-    "imdb_id": "31176520",
-    "tmdb_id": "648878",
-    "average_rating": "3.43536",
-    "title": "Eddington (2025)"
-  },
-  {
     "movie_id": "104457",
     "imdb_id": "1853739",
     "tmdb_id": "83899",
@@ -38,21 +31,21 @@
     "movie_id": "527",
     "imdb_id": "0108052",
     "tmdb_id": "424",
-    "average_rating": "4.23528",
+    "average_rating": "4.23532",
     "title": "Schindler's List (1993)"
   },
   {
     "movie_id": "197651",
     "imdb_id": "7984766",
     "tmdb_id": "504949",
-    "average_rating": "3.65",
+    "average_rating": "3.65032",
     "title": "The King (2019)"
   },
   {
     "movie_id": "130576",
     "imdb_id": "2649554",
     "tmdb_id": "245703",
-    "average_rating": "3.29428",
+    "average_rating": "3.29445",
     "title": "Midnight Special (2016)"
   },
   {
@@ -94,14 +87,14 @@
     "movie_id": "82459",
     "imdb_id": "1403865",
     "tmdb_id": "44264",
-    "average_rating": "3.78368",
+    "average_rating": "3.78362",
     "title": "True Grit (2010)"
   },
   {
     "movie_id": "143385",
     "imdb_id": "3682448",
     "tmdb_id": "296098",
-    "average_rating": "3.78891",
+    "average_rating": "3.78907",
     "title": "Bridge of Spies (2015)"
   },
   {
@@ -157,7 +150,7 @@
     "movie_id": "3105",
     "imdb_id": "0099077",
     "tmdb_id": "11005",
-    "average_rating": "3.77558",
+    "average_rating": "3.77576",
     "title": "Awakenings (1990)"
   },
   {
@@ -178,7 +171,7 @@
     "movie_id": "64034",
     "imdb_id": "0914798",
     "tmdb_id": "14574",
-    "average_rating": "3.76393",
+    "average_rating": "3.7625",
     "title": "The Boy in the Striped Pyjamas (2008)"
   },
   {
@@ -199,7 +192,7 @@
     "movie_id": "39",
     "imdb_id": "0112697",
     "tmdb_id": "9603",
-    "average_rating": "3.43761",
+    "average_rating": "3.43763",
     "title": "Clueless (1995)"
   },
   {
@@ -213,7 +206,7 @@
     "movie_id": "5673",
     "imdb_id": "0272338",
     "tmdb_id": "8051",
-    "average_rating": "3.58117",
+    "average_rating": "3.58115",
     "title": "Punch-Drunk Love (2002)"
   },
   {
@@ -241,7 +234,7 @@
     "movie_id": "96829",
     "imdb_id": "2106476",
     "tmdb_id": "103663",
-    "average_rating": "4.07472",
+    "average_rating": "4.07461",
     "title": "The Hunt (2012)"
   },
   {
@@ -255,7 +248,7 @@
     "movie_id": "68159",
     "imdb_id": "0473705",
     "tmdb_id": "16995",
-    "average_rating": "3.57585",
+    "average_rating": "3.57603",
     "title": "State of Play (2009)"
   },
   {
@@ -311,7 +304,7 @@
     "movie_id": "1610",
     "imdb_id": "0099810",
     "tmdb_id": "1669",
-    "average_rating": "3.86956",
+    "average_rating": "3.8696",
     "title": "The Hunt for Red October (1990)"
   },
   {
@@ -332,7 +325,7 @@
     "movie_id": "197197",
     "imdb_id": "8236336",
     "tmdb_id": "524348",
-    "average_rating": "3.68446",
+    "average_rating": "3.68495",
     "title": "The Report (2019)"
   },
   {
@@ -360,7 +353,7 @@
     "movie_id": "206419",
     "imdb_id": "8404614",
     "tmdb_id": "551332",
-    "average_rating": "3.7218",
+    "average_rating": "3.72184",
     "title": "The Two Popes (2019)"
   },
   {
@@ -381,7 +374,7 @@
     "movie_id": "89",
     "imdb_id": "0113972",
     "tmdb_id": "2086",
-    "average_rating": "3.12344",
+    "average_rating": "3.12354",
     "title": "Nick of Time (1995)"
   },
   {
@@ -409,7 +402,7 @@
     "movie_id": "106100",
     "imdb_id": "0790636",
     "tmdb_id": "152532",
-    "average_rating": "3.90095",
+    "average_rating": "3.90089",
     "title": "Dallas Buyers Club (2013)"
   },
   {
@@ -423,14 +416,14 @@
     "movie_id": "69757",
     "imdb_id": "1022603",
     "tmdb_id": "19913",
-    "average_rating": "3.725",
+    "average_rating": "3.72503",
     "title": "(500) Days of Summer (2009)"
   },
   {
     "movie_id": "107141",
     "imdb_id": "2140373",
     "tmdb_id": "140823",
-    "average_rating": "3.60816",
+    "average_rating": "3.60771",
     "title": "Saving Mr. Banks (2013)"
   },
   {
@@ -458,14 +451,14 @@
     "movie_id": "71304",
     "imdb_id": "0762073",
     "tmdb_id": "22536",
-    "average_rating": "3.56555",
+    "average_rating": "3.56602",
     "title": "Thirst (2009)"
   },
   {
     "movie_id": "317071",
     "imdb_id": "1527793",
     "tmdb_id": "639988",
-    "average_rating": "3.86552",
+    "average_rating": "3.85795",
     "title": "No Other Choice (2025)"
   },
   {
@@ -479,7 +472,7 @@
     "movie_id": "98961",
     "imdb_id": "1790885",
     "tmdb_id": "97630",
-    "average_rating": "3.71259",
+    "average_rating": "3.71241",
     "title": "Zero Dark Thirty (2012)"
   },
   {
@@ -500,7 +493,7 @@
     "movie_id": "6297",
     "imdb_id": "0311289",
     "tmdb_id": "8326",
-    "average_rating": "3.52378",
+    "average_rating": "3.52335",
     "title": "Holes (2003)"
   },
   {
@@ -528,7 +521,7 @@
     "movie_id": "200354",
     "imdb_id": "1860242",
     "tmdb_id": "500682",
-    "average_rating": "3.52107",
+    "average_rating": "3.52275",
     "title": "The Highwaymen (2019)"
   },
   {
@@ -542,7 +535,7 @@
     "movie_id": "112804",
     "imdb_id": "2884206",
     "tmdb_id": "244267",
-    "average_rating": "3.67623",
+    "average_rating": "3.67654",
     "title": "I Origins (2014)"
   },
   {
@@ -556,14 +549,14 @@
     "movie_id": "316077",
     "imdb_id": "27847051",
     "tmdb_id": "1220564",
-    "average_rating": "3.64565",
+    "average_rating": "3.64502",
     "title": "The Secret Agent (2025)"
   },
   {
     "movie_id": "278702",
     "imdb_id": "11564570",
     "tmdb_id": "661374",
-    "average_rating": "3.58858",
+    "average_rating": "3.58821",
     "title": "Glass Onion: A Knives Out Mystery (2022)"
   },
   {
@@ -577,21 +570,21 @@
     "movie_id": "82093",
     "imdb_id": "1213648",
     "tmdb_id": "48838",
-    "average_rating": "3.16295",
+    "average_rating": "3.1625",
     "title": "London Boulevard (2010)"
   },
   {
     "movie_id": "36525",
     "imdb_id": "0425123",
     "tmdb_id": "9007",
-    "average_rating": "3.48283",
+    "average_rating": "3.48339",
     "title": "Just Like Heaven (2005)"
   },
   {
     "movie_id": "315561",
     "imdb_id": "36491653",
     "tmdb_id": "1456349",
-    "average_rating": "3.61364",
+    "average_rating": "3.60897",
     "title": "It Was Just an Accident (2025)"
   },
   {
@@ -661,7 +654,7 @@
     "movie_id": "225984",
     "imdb_id": "10288566",
     "tmdb_id": "580175",
-    "average_rating": "3.82028",
+    "average_rating": "3.81982",
     "title": "Another Round (2020)"
   },
   {
@@ -752,14 +745,14 @@
     "movie_id": "1246",
     "imdb_id": "0097165",
     "tmdb_id": "207",
-    "average_rating": "3.9486",
+    "average_rating": "3.94865",
     "title": "Dead Poets Society (1989)"
   },
   {
     "movie_id": "6879",
     "imdb_id": "0313542",
     "tmdb_id": "11329",
-    "average_rating": "3.58955",
+    "average_rating": "3.58964",
     "title": "Runaway Jury (2003)"
   },
   {
@@ -801,14 +794,14 @@
     "movie_id": "81641",
     "imdb_id": "0977855",
     "tmdb_id": "38363",
-    "average_rating": "3.3559",
+    "average_rating": "3.35392",
     "title": "Fair Game (2010)"
   },
   {
     "movie_id": "87785",
     "imdb_id": "1135084",
     "tmdb_id": "22907",
-    "average_rating": "3.03261",
+    "average_rating": "3.03251",
     "title": "Takers (2010)"
   },
   {
@@ -822,7 +815,7 @@
     "movie_id": "208108",
     "imdb_id": "9071322",
     "tmdb_id": "552178",
-    "average_rating": "3.88982",
+    "average_rating": "3.88962",
     "title": "Dark Waters (2019)"
   },
   {
@@ -843,7 +836,7 @@
     "movie_id": "1784",
     "imdb_id": "0119822",
     "tmdb_id": "2898",
-    "average_rating": "3.7706",
+    "average_rating": "3.77062",
     "title": "As Good as It Gets (1997)"
   },
   {
@@ -892,7 +885,7 @@
     "movie_id": "318211",
     "imdb_id": "27543632",
     "tmdb_id": "1368166",
-    "average_rating": "3.27855",
+    "average_rating": "3.2732",
     "title": "The Housemaid (2025)"
   },
   {
@@ -920,7 +913,7 @@
     "movie_id": "1307",
     "imdb_id": "0098635",
     "tmdb_id": "639",
-    "average_rating": "3.83703",
+    "average_rating": "3.83705",
     "title": "When Harry Met Sally... (1989)"
   },
   {
@@ -962,7 +955,7 @@
     "movie_id": "1834",
     "imdb_id": "0120176",
     "tmdb_id": "29193",
-    "average_rating": "3.85726",
+    "average_rating": "3.85689",
     "title": "The Spanish Prisoner (1997)"
   },
   {
@@ -997,7 +990,7 @@
     "movie_id": "102194",
     "imdb_id": "1935179",
     "tmdb_id": "103731",
-    "average_rating": "3.64776",
+    "average_rating": "3.64787",
     "title": "Mud (2013)"
   },
   {
@@ -1032,7 +1025,7 @@
     "movie_id": "41285",
     "imdb_id": "0416320",
     "tmdb_id": "116",
-    "average_rating": "3.71784",
+    "average_rating": "3.71788",
     "title": "Match Point (2005)"
   },
   {
@@ -1074,14 +1067,14 @@
     "movie_id": "219994",
     "imdb_id": "10272386",
     "tmdb_id": "600354",
-    "average_rating": "3.97481",
+    "average_rating": "3.97484",
     "title": "The Father (2020)"
   },
   {
     "movie_id": "2395",
     "imdb_id": "0128445",
     "tmdb_id": "11545",
-    "average_rating": "3.83939",
+    "average_rating": "3.83946",
     "title": "Rushmore (1998)"
   },
   {
@@ -1095,7 +1088,7 @@
     "movie_id": "92509",
     "imdb_id": "1606389",
     "tmdb_id": "72570",
-    "average_rating": "3.54463",
+    "average_rating": "3.54554",
     "title": "The Vow (2012)"
   },
   {
@@ -1116,7 +1109,7 @@
     "movie_id": "2915",
     "imdb_id": "0086200",
     "tmdb_id": "9346",
-    "average_rating": "3.48399",
+    "average_rating": "3.48414",
     "title": "Risky Business (1983)"
   },
   {
@@ -1130,7 +1123,7 @@
     "movie_id": "357",
     "imdb_id": "0109831",
     "tmdb_id": "712",
-    "average_rating": "3.64012",
+    "average_rating": "3.6401",
     "title": "Four Weddings and a Funeral (1994)"
   },
   {
@@ -1193,7 +1186,7 @@
     "movie_id": "4979",
     "imdb_id": "0265666",
     "tmdb_id": "9428",
-    "average_rating": "3.78402",
+    "average_rating": "3.78384",
     "title": "The Royal Tenenbaums (2001)"
   },
   {
@@ -1202,13 +1195,6 @@
     "tmdb_id": "1290159",
     "average_rating": "3.30275",
     "title": "A House of Dynamite (2025)"
-  },
-  {
-    "movie_id": "71033",
-    "imdb_id": "1305806",
-    "tmdb_id": "25376",
-    "average_rating": "4.00408",
-    "title": "The Secret in Their Eyes (2009)"
   },
   {
     "movie_id": "85881",
@@ -1221,7 +1207,7 @@
     "movie_id": "192379",
     "imdb_id": "1213641",
     "tmdb_id": "369972",
-    "average_rating": "3.59971",
+    "average_rating": "3.59985",
     "title": "First Man (2018)"
   },
   {
@@ -1256,14 +1242,14 @@
     "movie_id": "180095",
     "imdb_id": "2543472",
     "tmdb_id": "406997",
-    "average_rating": "3.76738",
+    "average_rating": "3.76796",
     "title": "Wonder (2017)"
   },
   {
     "movie_id": "4992",
     "imdb_id": "0035423",
     "tmdb_id": "11232",
-    "average_rating": "3.17573",
+    "average_rating": "3.17569",
     "title": "Kate & Leopold (2001)"
   },
   {
@@ -1277,7 +1263,7 @@
     "movie_id": "132480",
     "imdb_id": "1655441",
     "tmdb_id": "293863",
-    "average_rating": "3.66696",
+    "average_rating": "3.66756",
     "title": "The Age of Adaline (2015)"
   },
   {
@@ -1298,14 +1284,14 @@
     "movie_id": "212361",
     "imdb_id": "5363618",
     "tmdb_id": "502033",
-    "average_rating": "3.86303",
+    "average_rating": "3.8631",
     "title": "Sound of Metal (2020)"
   },
   {
     "movie_id": "78218",
     "imdb_id": "0914863",
     "tmdb_id": "38199",
-    "average_rating": "3.45801",
+    "average_rating": "3.4595",
     "title": "Unthinkable (2010)"
   },
   {
@@ -1354,7 +1340,7 @@
     "movie_id": "318865",
     "imdb_id": "32916440",
     "tmdb_id": "1317288",
-    "average_rating": "3.71778",
+    "average_rating": "3.71749",
     "title": "Marty Supreme (2025)"
   },
   {
@@ -1410,14 +1396,14 @@
     "movie_id": "4014",
     "imdb_id": "0241303",
     "tmdb_id": "392",
-    "average_rating": "3.65834",
+    "average_rating": "3.65835",
     "title": "Chocolat (2000)"
   },
   {
     "movie_id": "1968",
     "imdb_id": "0088847",
     "tmdb_id": "2108",
-    "average_rating": "3.82449",
+    "average_rating": "3.82448",
     "title": "The Breakfast Club (1985)"
   },
   {
@@ -1431,7 +1417,7 @@
     "movie_id": "4019",
     "imdb_id": "0181536",
     "tmdb_id": "711",
-    "average_rating": "3.66044",
+    "average_rating": "3.6606",
     "title": "Finding Forrester (2000)"
   },
   {
@@ -1452,14 +1438,14 @@
     "movie_id": "176567",
     "imdb_id": "3986820",
     "tmdb_id": "430231",
-    "average_rating": "3.59789",
+    "average_rating": "3.59782",
     "title": "The Endless (2017)"
   },
   {
     "movie_id": "104374",
     "imdb_id": "2194499",
     "tmdb_id": "122906",
-    "average_rating": "3.97678",
+    "average_rating": "3.97679",
     "title": "About Time (2013)"
   },
   {
@@ -1473,14 +1459,14 @@
     "movie_id": "78266",
     "imdb_id": "1017460",
     "tmdb_id": "37707",
-    "average_rating": "2.83565",
+    "average_rating": "2.83575",
     "title": "Splice (2010)"
   },
   {
     "movie_id": "307143",
     "imdb_id": "32249218",
     "tmdb_id": "1284120",
-    "average_rating": "3.56849",
+    "average_rating": "3.57143",
     "title": "The Ugly Stepsister (2025)"
   },
   {
@@ -1515,7 +1501,7 @@
     "movie_id": "115149",
     "imdb_id": "2911666",
     "tmdb_id": "245891",
-    "average_rating": "3.85725",
+    "average_rating": "3.8574",
     "title": "John Wick (2014)"
   },
   {
@@ -1529,14 +1515,14 @@
     "movie_id": "43983",
     "imdb_id": "0434008",
     "tmdb_id": "18747",
-    "average_rating": "3.61386",
+    "average_rating": "3.61084",
     "title": "Election (2005)"
   },
   {
     "movie_id": "55247",
     "imdb_id": "0758758",
     "tmdb_id": "5915",
-    "average_rating": "3.84305",
+    "average_rating": "3.84301",
     "title": "Into the Wild (2007)"
   },
   {
@@ -1550,14 +1536,14 @@
     "movie_id": "175569",
     "imdb_id": "5362988",
     "tmdb_id": "395834",
-    "average_rating": "3.87269",
+    "average_rating": "3.87251",
     "title": "Wind River (2017)"
   },
   {
     "movie_id": "307159",
     "imdb_id": "18382850",
     "tmdb_id": "1160360",
-    "average_rating": "3.40698",
+    "average_rating": "3.40173",
     "title": "If I Had Legs I'd Kick You (2025)"
   },
   {
@@ -1578,7 +1564,7 @@
     "movie_id": "314323",
     "imdb_id": "27714581",
     "tmdb_id": "1124566",
-    "average_rating": "3.90829",
+    "average_rating": "3.90547",
     "title": "Sentimental Value (2025)"
   },
   {
@@ -1592,7 +1578,7 @@
     "movie_id": "226270",
     "imdb_id": "1070874",
     "tmdb_id": "556984",
-    "average_rating": "3.8341",
+    "average_rating": "3.83422",
     "title": "The Trial of the Chicago 7 (2020)"
   },
   {
@@ -1613,14 +1599,14 @@
     "movie_id": "167392",
     "imdb_id": "5074352",
     "tmdb_id": "360814",
-    "average_rating": "3.89363",
+    "average_rating": "3.89378",
     "title": "Dangal (2016)"
   },
   {
     "movie_id": "115170",
     "imdb_id": "1872194",
     "tmdb_id": "205587",
-    "average_rating": "3.49023",
+    "average_rating": "3.4911",
     "title": "The Judge (2014)"
   },
   {
@@ -1641,14 +1627,14 @@
     "movie_id": "140267",
     "imdb_id": "4263482",
     "tmdb_id": "310131",
-    "average_rating": "3.78242",
+    "average_rating": "3.78232",
     "title": "The Witch (2016)"
   },
   {
     "movie_id": "323565",
     "imdb_id": "15940132",
     "tmdb_id": "1265609",
-    "average_rating": "2.98256",
+    "average_rating": "2.98563",
     "title": "War Machine (2026)"
   },
   {
@@ -1690,7 +1676,7 @@
     "movie_id": "46578",
     "imdb_id": "0449059",
     "tmdb_id": "773",
-    "average_rating": "3.86796",
+    "average_rating": "3.8679",
     "title": "Little Miss Sunshine (2006)"
   },
   {
@@ -1704,7 +1690,7 @@
     "movie_id": "5620",
     "imdb_id": "0256415",
     "tmdb_id": "11529",
-    "average_rating": "3.18679",
+    "average_rating": "3.18708",
     "title": "Sweet Home Alabama (2002)"
   },
   {
@@ -1718,7 +1704,7 @@
     "movie_id": "315889",
     "imdb_id": "11539996",
     "tmdb_id": "1088166",
-    "average_rating": "3.47973",
+    "average_rating": "3.47651",
     "title": "Relay (2025)"
   },
   {
