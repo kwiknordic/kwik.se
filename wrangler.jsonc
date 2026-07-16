@@ -13,5 +13,6 @@
 
   "assets": {
     "directory": ".open-next/assets",
+    "binding": "ASSETS",
   },
 }
