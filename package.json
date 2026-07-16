@@ -4,13 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "bun run cf:build",
-    "build:next": "bun run prepare:data && next build --webpack",
+    "build": "bun run prepare:data && next build --webpack",
     "start": "next start",
     "lint": "eslint",
     "fetch:bucket": "bun scripts/fetch-bucket.ts",
     "prepare:data": "bun scripts/prepare-data.ts && bun scripts/fetch-bucket.ts",
-    "cf:build": "bun run prepare:data && opennextjs-cloudflare build",
+    "cf:build": "opennextjs-cloudflare build",
     "cf:deploy": "wrangler deploy",
     "cf:upload": "wrangler versions upload",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview"
