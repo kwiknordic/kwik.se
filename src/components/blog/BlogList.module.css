@@ -1,0 +1,118 @@
+.blog-controls {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  margin-bottom: 1.6rem;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+}
+.blog-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+}
+.blog-filter-bar .filter-row {
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+.blog-lang-badge {
+  font-size: 0.95rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+.blog-list {
+  display: flex;
+  flex-direction: column;
+}
+.blog-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--line);
+  transition: var(--t-fast);
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
+.blog-row:hover {
+  padding-left: 0.6rem;
+}
+.blog-row:hover h3 {
+  color: var(--warm-deep);
+}
+.blog-num {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+}
+.blog-row h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+  transition: var(--t-fast);
+}
+.blog-row p {
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+  margin: 0;
+  max-width: 60ch;
+}
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--ink-faint);
+  flex-wrap: wrap;
+}
+.blog-row .blog-meta {
+  margin: 0.5rem 0 0;
+}
+.blog-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--warm-deep);
+  background: var(--warm-wash);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+}
+.blog-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--ink-faint);
+}
+.blog-arrow {
+  color: var(--ink-faint);
+  transition: var(--t-fast);
+  display: inline-flex;
+}
+.blog-arrow i {
+  width: 1rem;
+  height: 1rem;
+}
+.blog-row:hover .blog-arrow {
+  color: var(--warm);
+}
+
+@media (max-width: 620px) {
+  .blog-row {
+    grid-template-columns: 1fr auto;
+    gap: 0.8rem;
+  }
+  .blog-num {
+    display: none;
+  }
+}

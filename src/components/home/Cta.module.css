@@ -1,0 +1,77 @@
+.cta-inner {
+  background: var(--dark);
+  border-radius: var(--radius-lg);
+  padding: 3.2rem 3rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.cta-inner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 12% 120%, rgba(194, 97, 59, 0.34), transparent 44%),
+    radial-gradient(circle at 96% -30%, rgba(65, 88, 77, 0.34), transparent 42%);
+  pointer-events: none;
+}
+.cta-text {
+  position: relative;
+  z-index: 1;
+}
+.cta-text .note {
+  color: var(--warm-soft);
+  margin-bottom: 0.5rem;
+}
+.cta-text h2 {
+  color: #fff;
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  max-width: 18ch;
+}
+.cta-text p {
+  color: rgba(255, 255, 255, 0.62);
+  margin: 0.7rem 0 0;
+  max-width: 40ch;
+}
+.cta-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.cta :global(.btn-primary) {
+  background: var(--warm);
+}
+.cta :global(.btn-primary):hover {
+  background: var(--warm-deep);
+}
+.cta :global(.btn-light) {
+  background: #fff;
+  color: var(--ink);
+}
+.cta :global(.btn-light):hover {
+  background: var(--paper);
+}
+.cta :global(.btn-outline) {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+.cta :global(.btn-outline):hover {
+  border-color: #fff;
+}
+
+@media (max-width: 620px) {
+  .cta {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  .cta-inner {
+    padding: 2.2rem 1.6rem;
+  }
+}

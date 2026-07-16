@@ -1,18 +1,36 @@
-import { formatter } from '../util/listFormatter.js'
-import { getImageUrl } from '../util/getImageUrl.js'
+import { formatter } from '@/src/lib/listFormatter'
+import kwikScreenshot from '@/src/assets/portfolio/kwik.jpg'
+import flixScreenshot from '@/src/assets/portfolio/kwikflix.jpg'
+import meetupMCP from '@/src/assets/portfolio/meetup-mcp.jpg'
 
 let projects = [
   {
-    name: 'meetup-mcp',
+    name: 'kwik.se (omdesign)',
     summary: [
-      'En MCP-server för att skrapa Meetup-events du varit på.',
-      'Den ger AI-agenten verktyg att hitta dina tidigare events, att begränsa från ett visst datum/event; att returnera färdig strukturerad data.',
-      'Jag använder den till att uppdatera kwik.se med mina aktiviteter.',
+      'Personlig hemsida för kontaktinformation med ny omdesign.',
+      'Innehållet är lagrat i egna datastrukturer som React renderar genom självständiga komponenter. Bloggen är gjord på en huvudlös CMS.',
     ],
-    demo: 'https://www.npmjs.com/package/@kwiknordic/meetup-events-scraper-mcp#meetup-mcp-server',
-    github: 'https://github.com/kwiknordic/meetup-events-scraper-mcp',
-    tools: ['MCP', 'TypeScript', 'npm.js', 'node'],
-    screenshot: getImageUrl('meetup-mcp.jpg'),
+    demo: 'https://kwik.se',
+    github: 'https://github.com/kwiknordic/kwik.se',
+    tools: ['React', 'TypeScript', 'Tailwind', 'Claude'],
+    screenshot: null,
+  },
+  {
+    name: 'MCP-server: Meetup Events Scraper',
+    summary: [
+      'An MCP server for automating Meetup event tracking with an AI agent. It equips the agent with tools to browse Meetup.com, detect new events since the last known record, and return structured event data.',
+      'I use it to populate kwik.se/aktiviteter',
+    ],
+    github: 'https://www.npmjs.com/package/@kwiknordic/meetup-events-scraper-mcp',
+    screenshot: meetupMCP,
+    tools: ['node', 'stdio'],
+  },
+  {
+    name: 'Ivy Tendril',
+    summary: ['Bidragit med förslag på förbättringar, skapat och fått merge:at PRs.'],
+    demo: 'https://ivy.app/',
+    github: 'https://github.com/Ivy-Interactive/Ivy-Tendril',
+    tools: ['.NET'],
   },
   {
     name: 'kwik.se',
@@ -23,7 +41,7 @@ let projects = [
     demo: 'https://kwik.se',
     github: 'https://github.com/kwiknordic/kwik.se',
     tools: ['React', 'JavaScript', 'CSS', 'HTML'],
-    screenshot: getImageUrl('kwik.jpg'),
+    screenshot: kwikScreenshot,
   },
   {
     name: 'Kwikflix',
@@ -34,7 +52,7 @@ let projects = [
     demo: 'https://flix.kwik.se',
     github: 'https://github.com/kwiknordic/Kwikflix',
     tools: ['JavaScript', 'HTML', 'CSS'],
-    screenshot: getImageUrl('kwikflix.jpg'),
+    screenshot: flixScreenshot,
   },
   {
     name: 'HTML till PDF',

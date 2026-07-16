@@ -1,0 +1,8 @@
+.stars {
+  display: inline-flex;
+  gap: 1.5px;
+  align-items: center;
+}
+.stars svg {
+  display: block;
+}

@@ -1,0 +1,91 @@
+.timeline {
+  position: relative;
+  --rail-gap: 1.2rem;
+  padding-left: var(--rail-gap);
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 10px;
+  bottom: 0;
+  width: 2px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--ink-faint) 0px,
+    var(--ink-faint) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+.year-group {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+.year-marker {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.2rem 0 1.4rem;
+  position: relative;
+}
+.year-marker:first-child {
+  margin-top: 0;
+}
+.year-dot {
+  position: absolute;
+  left: calc(-1 * var(--rail-gap) - 8px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--warm);
+  border: 3px solid var(--paper);
+  box-shadow: 0 0 0 2px var(--warm);
+  z-index: 2;
+}
+.year-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+.year-label span {
+  color: var(--ink-faint);
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+  font-family: var(--font-body);
+}
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding-left: 0;
+}
+
+@media (max-width: 620px) {
+  .timeline {
+    --rail-gap: 0.9rem;
+    padding-left: 0;
+  }
+  .timeline::before {
+    left: calc(-1 * var(--rail-gap) - 1px);
+  }
+  .year-marker {
+    left: calc(-1 * var(--rail-gap) - 1px);
+    padding-left: var(--rail-gap);
+  }
+  .year-dot {
+    left: calc(-1 * var(--rail-gap) + 8px);
+  }
+  .year-label {
+    padding-left: calc(var(--rail-gap) * 1.5);
+  }
+  .event-list {
+    padding-left: 0;
+  }
+}
