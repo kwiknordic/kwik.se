@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "bun run prepare:data && next build --webpack",
+    "build": "bun run cf:build",
+    "build:next": "bun run prepare:data && next build --webpack",
     "start": "next start",
     "lint": "eslint",
     "fetch:bucket": "bun scripts/fetch-bucket.ts",
