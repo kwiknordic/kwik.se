@@ -6,6 +6,7 @@ import { renderMarkdown } from '../../../lib/markdown'
 import { formatDateSv } from '../../../lib/format'
 import ShareBar from '../../../components/blog/ShareBar'
 import PostEnhancements from '../../../components/blog/PostEnhancements'
+import StructuredData from '../../../components/seo/StructuredData'
 import styles from './page.module.css'
 
 /* Pre-render every post at build time for instant loads. */
@@ -32,6 +33,22 @@ export default async function PostPage({ params }: PageProps<'/blogg/[slug]'>) {
 
   return (
     <main>
+      <StructuredData
+        id={`kwik-blogg-${post.slug}`}
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: post.title,
+          description: post.excerpt,
+          url: `https://kwik.se/blogg/${post.slug}`,
+          datePublished: post.date,
+          inLanguage: post.language === 'sv' ? 'sv-SE' : 'en',
+          isAccessibleForFree: true,
+          author: { '@type': 'Person', name: 'Mervin Bratic', url: 'https://kwik.se' },
+          publisher: { '@type': 'Person', name: 'Mervin Bratic', url: 'https://kwik.se' },
+          mainEntityOfPage: `https://kwik.se/blogg/${post.slug}`,
+        }}
+      />
       <PostEnhancements />
 
       <section className={styles['post-hero']}>

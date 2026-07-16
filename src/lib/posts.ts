@@ -2,20 +2,14 @@
    Blog posts loader.
 
    The posts live as individual JSON files in src/data/posts.
-   We read them on the server with the filesystem (this module is
-   only ever imported from Server Components), derive a URL slug
-   from the filename, and add a few presentation helpers (excerpt,
-   reading time, language flag).
+   The build script generates src/data/posts-index.ts, which imports
+   the JSON files into the application bundle. This keeps the loader
+   compatible with runtimes that do not provide a project filesystem,
+   such as Cloudflare Workers.
 
-   Note: the prototype's src/util/postsFormatter.js used Vite's
-   import.meta.glob, which Next/Turbopack does not support — so we
-   read the directory with node:fs instead.
    ============================================================ */
-import fs from 'node:fs'
-import path from 'node:path'
+import { POST_SOURCES } from '../data/posts-index'
 import { readingTime } from './format'
-
-const POSTS_DIR = path.join(process.cwd(), 'src', 'data', 'posts')
 
 export type Post = {
   slug: string
@@ -54,9 +48,9 @@ function makeExcerpt(body: string): string {
   return words.length > 32 ? short + '…' : short
 }
 
-function readPost(fileName: string): Post {
-  const raw = fs.readFileSync(path.join(POSTS_DIR, fileName), 'utf-8')
-  const data = JSON.parse(raw) as {
+function readPost(source: (typeof POST_SOURCES)[number]): Post {
+  const { fileName, data } = source
+  const typedData = data as {
     title: string
     language: 'sv' | 'en'
     date: string
@@ -64,20 +58,19 @@ function readPost(fileName: string): Post {
   }
   return {
     slug: fileToSlug(fileName),
-    title: data.title,
-    language: data.language,
-    langFlag: data.language === 'en' ? '🇬🇧' : '🇸🇪',
-    date: data.date,
-    body: data.body,
-    excerpt: makeExcerpt(data.body),
-    readingMinutes: readingTime(data.body),
+    title: typedData.title,
+    language: typedData.language,
+    langFlag: typedData.language === 'en' ? '🇬🇧' : '🇸🇪',
+    date: typedData.date,
+    body: typedData.body,
+    excerpt: makeExcerpt(typedData.body),
+    readingMinutes: readingTime(typedData.body),
   }
 }
 
 /** All posts, newest first. */
 export function getAllPosts(): Post[] {
-  const files = fs.readdirSync(POSTS_DIR).filter((f) => f.endsWith('.json'))
-  return files
+  return POST_SOURCES
     .map(readPost)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }

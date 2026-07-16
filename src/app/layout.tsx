@@ -13,6 +13,7 @@ import 'primeicons/primeicons.css'
 import '../assets/fontawesome/css/all.min.css'
 import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
+import StructuredData from '../components/seo/StructuredData'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 const bricolage = Bricolage_Grotesque({ subsets: ['latin'], variable: '--font-bricolage', display: 'swap' })
@@ -24,10 +25,10 @@ const patrick = Patrick_Hand({ subsets: ['latin'], weight: '400', variable: '--f
 const fontVars = [bricolage, hanken, newsreader, jetbrains, patrick].map((font) => font.variable).join(' ')
 
 export const metadata: Metadata = {
-  title: {
+  title: Object.assign({
     default: 'Kwik @ Mervin Bratic | Fullstack-utvecklare | TypeScript, Next.js',
-    template: '%s · Kwik @ Mervin Bratic',
-  },
+    template: '%s | Kwik @ Mervin Bratic',
+  }, { template: '%s | Kwik @ Mervin Bratic' }),
   description:
     'Fullstack-utvecklare med fokus på TypeScript, Next.js, AWS, SQL Databas | Stark på ehandel och interna verktyg (dashboards) | Nyfiken & Anpassningsbar',
   icons: {
@@ -41,6 +42,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="sv" className={cn(fontVars, 'font-sans', inter.variable)}>
       <body>
+        <StructuredData
+          id="kwik-webbplats"
+          data={{
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'Kwik – Mervin Bratic',
+            url: 'https://kwik.se',
+            inLanguage: 'sv-SE',
+            author: {
+              '@type': 'Person',
+              name: 'Mervin Bratic',
+              url: 'https://kwik.se',
+            },
+          }}
+        />
         <div className="app-bg">
           <Header />
           {children}

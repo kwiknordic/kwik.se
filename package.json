@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "bun run prepare:data && next build",
+    "build": "bun run prepare:data && next build --webpack",
     "start": "next start",
     "lint": "eslint",
     "fetch:bucket": "bun scripts/fetch-bucket.ts",
     "prepare:data": "bun scripts/prepare-data.ts && bun scripts/fetch-bucket.ts",
-    "cf:build": "opennextjs-cloudflare build",
+    "cf:build": "bun run prepare:data && opennextjs-cloudflare build",
     "cf:deploy": "wrangler deploy",
     "cf:upload": "wrangler versions upload",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview"
@@ -23,6 +23,7 @@
     "csv-parse": "^7.0.1",
     "fast-xml-parser": "^5.10.0",
     "next": "16.2.9",
+    "next-seo": "^7.2.0",
     "oauth-1.0a": "^2.2.6",
     "primeicons": "^7.0.0",
     "react": "19.2.4",

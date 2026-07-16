@@ -5,6 +5,7 @@ import movieWishlist from '@/src/data/movies/movielens-wishlist.json'
 import podcasts from '@/src/data/podcasts/overcast.json'
 import { normalizePodcastEpisodeTitle, normalizePodcastTitle, splitMovieTitle, type CollectionItem } from '../../lib/collection'
 import TipsExplorer from '@/src/components/tips/TipsExplorer'
+import StructuredData from '@/src/components/seo/StructuredData'
 
 export const metadata: Metadata = {
   title: 'Tips',
@@ -63,6 +64,18 @@ export default async function TipsPage() {
 
   return (
     <main className="page">
+      <StructuredData
+        id="kwik-tips"
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Tips – Kwik',
+          description: 'Mervin Bratics samling av filmer, böcker, poddar och artiklar.',
+          url: 'https://kwik.se/tips',
+          inLanguage: 'sv-SE',
+          author: { '@type': 'Person', name: 'Mervin Bratic' },
+        }}
+      />
       <div className="page-head reveal">
         <span className="eyebrow">Bläddra i hyllan</span>
         <h1 className="page-title">

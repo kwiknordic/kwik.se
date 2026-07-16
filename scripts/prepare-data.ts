@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises'
 import { parse as parseCsvFile } from 'csv-parse/sync'
-import { writeJson, dataPath } from './utils'
+import { writeJson, dataPath, writeText } from './utils'
+import { generatePostIndex } from './generate-post-index'
 
 import { XMLParser } from 'fast-xml-parser'
 
@@ -127,15 +128,18 @@ const ratings = await parseCsv(dataPath(files.movieRatings.csv))
 const wishlist = await parseCsv(dataPath(files.movieWishlist.csv))
 const opml = await parseOPML(dataPath(files.podcasts.opml))
 const podcasts = podcastEpisodes.extract(opml)
+const blogPosts = await generatePostIndex()
 
 // TODO: loop through the json files and merge it with new records instead of rewriting it
 await writeJson(dataPath(files.movieRatings.json), ratings)
 await writeJson(dataPath(files.movieWishlist.json), wishlist)
 await writeJson(dataPath(files.podcasts.json), podcasts)
+await writeText(dataPath('/posts-index.ts'), blogPosts)
 
-console.log(`Wrote ${ratings.length} movieRatings`)
-console.log(`Wrote ${wishlist.length} movieWishlists`)
-console.log(`Wrote ${podcasts.length} podcasts`)
+console.log(`Indexed ${ratings.length} movieRatings`)
+console.log(`Indexed ${wishlist.length} movieWishlists`)
+console.log(`Indexed ${podcasts.length} podcasts`)
+console.log(`Indexed ${blogPosts.length} post chars`)
 
 async function parseCsv(filePath: string) {
   const file = await fs.readFile(filePath, 'utf8')

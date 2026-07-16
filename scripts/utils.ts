@@ -8,3 +8,7 @@ export function dataPath(filePath: string) {
 export async function writeJson(filePath: string, data: unknown) {
   await fs.writeFile(filePath, `${JSON.stringify(data, null, 2)}\n`, 'utf8')
 }
+
+export async function writeText(filePath: string, data: string) {
+  await fs.writeFile(filePath, data, 'utf8')
+}
