@@ -41,9 +41,10 @@ export default function Background() {
 
         <div className={styles['about-tags']} style={{ gridArea: 'tags' }}>
           {collection.map(tag => (
-            <details className={styles['tag-group']} key={tag.label} style={{ gridArea: tag.slug }} open>
-              <summary className={styles['tag-heading']}>
-                {tag.label}
+            <details className={`${styles['tag-group']} flex flex-col group`} key={tag.label} style={{ gridArea: tag.slug }} open>
+              <summary className={`${styles['tag-heading']} flex items-center gap-2 list-none cursor-pointer`}>
+                <i className='fa fa-arrow-right text-(--warm) text-sm group-open:rotate-90' aria-hidden="true" />
+                <span>{tag.label}</span>
               </summary>
               <ul className={styles['tag-list']}>
                 {tag.skills.map((skill: Interest) => (
