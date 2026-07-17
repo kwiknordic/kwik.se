@@ -1,5 +1,5 @@
-import { formatDateSv } from '../../lib/format'
-import type { ActivityEvent, Speaker } from '../../lib/activities'
+import { formatDateSv } from '@/src/lib/format'
+import type { ActivityEvent, Speaker } from '@/src/lib/activities'
 import styles from './EventCard.module.css'
 
 function SpeakerChip({ speaker }: { speaker: Speaker }) {

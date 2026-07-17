@@ -2,8 +2,18 @@ import { formatter } from '@/src/lib/listFormatter'
 import kwikScreenshot from '@/src/assets/portfolio/kwik.jpg'
 import flixScreenshot from '@/src/assets/portfolio/kwikflix.jpg'
 import meetupMCP from '@/src/assets/portfolio/meetup-mcp.jpg'
+import { StaticImageData } from 'next/image'
 
-let projects = [
+type ProjectInput = {
+  name: string
+  summary: string[]
+  demo: string | null
+  github: string | null
+  tools: string[]
+  screenshot: StaticImageData | null
+}
+
+const projects: ProjectInput[] = [
   {
     name: 'kwik.se (omdesign)',
     summary: [
@@ -21,6 +31,7 @@ let projects = [
       'An MCP server for automating Meetup event tracking with an AI agent. It equips the agent with tools to browse Meetup.com, detect new events since the last known record, and return structured event data.',
       'I use it to populate kwik.se/aktiviteter',
     ],
+    demo: null,
     github: 'https://www.npmjs.com/package/@kwiknordic/meetup-events-scraper-mcp',
     screenshot: meetupMCP,
     tools: ['node', 'stdio'],
@@ -31,6 +42,7 @@ let projects = [
     demo: 'https://ivy.app/',
     github: 'https://github.com/Ivy-Interactive/Ivy-Tendril',
     tools: ['.NET'],
+    screenshot: null,
   },
   {
     name: 'kwik.se',
@@ -77,9 +89,12 @@ let projects = [
 ]
 
 // Make tools-array into string with punctuations
-projects = projects.map((project) => {
-  project.tools = formatter.format(project.tools)
-  return project
+type Project = Omit<ProjectInput, 'tools'> & { tools: string }
+const formattedProjects: Project[] = projects.map((project) => {
+  return {
+    ...project,
+    tools: formatter.format(project.tools),
+  }
 })
 
-export { projects }
+export { formattedProjects as projects }

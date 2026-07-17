@@ -1,5 +1,100 @@
 export default [
   {
+    eventId: '4j48483jd',
+    title: 'Solving Startup Problems with Curiosity',
+    date: '2026-07-08',
+    at: 'Reimersholme Hotel',
+    attendees: 30,
+    summary:
+      'Mingel med SKULPT Brand och andra entreprenörer. Snack om varumärkesbyggning; om hur utvecklare är usla på att sätta ett uniformt varumärke',
+    speakers: [
+      {
+        name: 'Freya Lindqvist',
+        position: 'Co-founder',
+        employer: 'SKULPT Brand',
+      },
+      {
+        name: 'Lucia Jueguen',
+        position: 'Co-founder',
+        employer: 'SKULPT Brand',
+      },
+    ],
+  },
+  {
+    eventId: '93h17o9g',
+    title: 'WWDC Watch Party',
+    date: '2026-06-08',
+    at: 'Compileit',
+    attendees: 27,
+    summary:
+      'Vi såg WWDC Keynote tillsammans, fick en första inblick i vad som kommer forma framtidens produkter, appar och användarupplevelser.',
+    speakers: [
+      {
+        name: 'Jonathan Ortheden',
+        position: 'CEO',
+        employer: 'Compileit',
+      },
+    ],
+  },
+  {
+    eventId: '8gc1lzni',
+    title: 'ASTA - Official Launch',
+    date: '2026-07-02',
+    at: 'The Cave',
+    attendees: 151,
+    summary:
+      'An evening of music, a live DJ, artists, real conversations, dancing, drinks, and playful social experiences. All designed to bring people together naturally. Just good energy from golden hour into the night.',
+    speakers: [
+      {
+        name: 'Nicole Wang',
+        position: 'Founder',
+        employer: 'Asta',
+      },
+    ],
+  },
+  {
+    eventId: '314842898',
+    title: 'Functional Programming + AI',
+    date: '2026-06-10',
+    at: 'Embassy House Söder',
+    attendees: 50,
+    summary:
+      'FP Developers share their workflow in using (or not using) AI on a daily basis. It was a great opportunity to hang out with the community, network and share knowledge.',
+    speakers: [
+      {
+        name: 'Max Sörliden Nordlund',
+        position: 'Developer',
+        employer: 'Kivra',
+      },
+      {
+        name: 'Felix Alm ',
+        position: 'Senior Software Developer',
+        employer: 'Multiply',
+      },
+    ],
+  },
+  {
+    eventId: '314270265',
+    title: 'MLOps Summerbash!',
+    date: '2026-06-11',
+    at: 'IBM',
+    attendees: 239,
+    summary:
+      'Roof-top mingle, pizzas baked on site, dub-plates sound-system spinning anything from King Tubby to Storskogen and a a whole bunch of exciting start-ups all pushing the local scene into the future!',
+    speakers: [
+      {
+        name: 'Niels Bosma',
+        position: 'Founder',
+        employer: 'Ivy',
+      },
+      {
+        name: 'Fredrik Geijer Hæggström ',
+        position: 'Co-founder',
+        employer: 'Sentaro',
+      },
+    ],
+  },
+  {
     eventId: '314439389',
     title: 'Token Efficiency & Air-Gapped AI',
     date: '2026-06-03',

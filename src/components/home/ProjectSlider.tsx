@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Carousel, CarouselButton, CarouselContent, CarouselItem } from '@/src/components/ui/carousel'
 import { Dialog, DialogClose, DialogContent, DialogHeader, DialogTitle } from '@/src/components/ui/dialog'
-import { projects } from '../../data/projects.js'
+import { projects } from '../../data/projects'
 import styles from './ProjectSlider.module.css'
 import { SectionHead } from './SectionHead'
 
@@ -28,28 +28,28 @@ export default function ProjectSlider() {
           </div>
         </SectionHead>
         <CarouselContent className={styles['proj-carousel-content']}>
-          {projects.map((project) => (
-            <CarouselItem className={styles['proj-carousel-item']} key={project.name}>
+          {projects.map(({ name, summary, tools, github, demo, screenshot }) => (
+            <CarouselItem className={styles['proj-carousel-item']} key={name}>
               <article className={styles['proj-slide']}>
                 <div className={styles['proj-slide-body']}>
-                  <h3>{project.name}</h3>
-                  <em className={styles['proj-built']}>Byggd med {project.tools}.</em>
+                  <h3>{name}</h3>
+                  <em className={styles['proj-built']}>Byggd med {tools}.</em>
                   <div className={styles['proj-summary']}>
-                    {project.summary.map((summary, index) => <p key={index}>{summary}</p>)}
+                    {summary.map((summary, index) => <p key={index}>{summary}</p>)}
                   </div>
                   <div className={styles['proj-links']}>
-                    {project.demo && (
-                      <a className={styles['proj-link']} href={project.demo} target="_blank" rel="noreferrer">
+                    {demo && (
+                      <a className={styles['proj-link']} href={demo} target="_blank" rel="noreferrer">
                         <i className="pi pi-external-link" aria-hidden="true" /> Live-demo
                       </a>
                     )}
-                    <a className={styles['proj-link']} href={project.github} target="_blank" rel="noreferrer">
+                    {github && <a className={styles['proj-link']} href={github} target="_blank" rel="noreferrer">
                       <i className="pi pi-github" aria-hidden="true" /> GitHub
-                    </a>
-                    {project.screenshot && (
+                    </a>}
+                    {screenshot && (
                       <button
                         className={`${styles['proj-link']} ${styles['proj-link-shot']}`}
-                        onClick={() => setScreenshot({ src: project.screenshot.src, name: project.name })}
+                        onClick={() => setScreenshot({ src: screenshot.src, name: name })}
                       >
                         <i className="pi pi-image" aria-hidden="true" /> Skärmbild
                       </button>
