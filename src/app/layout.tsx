@@ -25,6 +25,10 @@ const patrick = Patrick_Hand({ subsets: ['latin'], weight: '400', variable: '--f
 const fontVars = [bricolage, hanken, newsreader, jetbrains, patrick].map((font) => font.variable).join(' ')
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://kwik.se'),
+  alternates: {
+    canonical: '/',
+  },
   title: Object.assign({
     default: 'Kwik @ Mervin Bratic | Fullstack-utvecklare | TypeScript, Next.js',
     template: '%s | Kwik @ Mervin Bratic',

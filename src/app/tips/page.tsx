@@ -8,6 +8,7 @@ import TipsExplorer from '@/src/components/tips/TipsExplorer'
 import StructuredData from '@/src/components/seo/StructuredData'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/tips' },
   title: 'Tips',
   description: 'Filmerna, böckerna och artiklarna som fastnat.',
 }

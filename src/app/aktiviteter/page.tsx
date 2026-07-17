@@ -6,6 +6,7 @@ import Timeline from '@/src/components/activities/Timeline'
 import StructuredData from '@/src/components/seo/StructuredData'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/aktiviteter' },
   title: 'Aktiviteter',
   description: 'Meetups, mässor och hackkvällar runt om i Stockholm.',
 }

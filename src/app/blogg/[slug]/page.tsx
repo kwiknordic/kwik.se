@@ -18,7 +18,11 @@ export async function generateMetadata({ params }: PageProps<'/blogg/[slug]'>): 
   const { slug } = await params
   const post = getPostBySlug(slug)
   if (!post) return {}
-  return { title: post.title, description: post.excerpt }
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: { canonical: `/blogg/${post.slug}` },
+  }
 }
 
 export default async function PostPage({ params }: PageProps<'/blogg/[slug]'>) {

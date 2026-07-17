@@ -4,6 +4,7 @@ import BlogList, { type BlogListItem } from '@/src/components/blog/BlogList'
 import StructuredData from '@/src/components/seo/StructuredData'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/blogg' },
   title: 'Blogg',
   description: 'Tankar om kod, bygge och allt däremellan.',
 }

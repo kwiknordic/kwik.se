@@ -4,6 +4,7 @@ import galleryUrls from '@/src/data/gallery.json'
 import StructuredData from '@/src/components/seo/StructuredData'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/galleri' },
   title: 'Ögonblick',
   description: 'Ögonblick från resor, träffar, stan och skrivbordet.',
 }
