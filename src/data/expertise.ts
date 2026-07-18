@@ -9,10 +9,11 @@ const paradigms = {
   ],
 }
 
-const network = {
-  label: 'Nätverk',
+const infrastructure = {
+  label: 'Infrastruktur',
   skills: [
     { name: 'AWS', icon: 'fa-brands fa-aws' },
+    { name: 'Cloudflare', icon: 'fa-brands fa-aws' },
     { name: 'Linux', icon: 'fa-brands fa-linux' },
     { name: 'Apache', icon: 'simple-icons:apache', iconify: true },
     { name: 'nginx', icon: 'simple-icons:nginx', iconify: true },
@@ -55,8 +56,8 @@ const db = {
   ],
 }
 
-const infrastructure = {
-  label: 'Infrastruktur',
+const devops = {
+  label: 'DevOps',
   skills: [
     { name: 'Git', icon: 'fa-brands fa-github' },
     { name: 'Docker' },
@@ -89,4 +90,4 @@ const editors = {
   ],
 }
 
-export default [paradigms, network, webdev, llm, editors, infrastructure, db]
+export default [paradigms, devops, webdev, llm, editors, infrastructure, db]

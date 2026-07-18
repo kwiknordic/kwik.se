@@ -18,9 +18,9 @@
   grid-template-areas:
     'webbutveckling'
     'datahantering'
-    'infrastruktur'
+    'devops'
     'llm'
-    'nätverk'
+    'infrastruktur'
     'kodredigerare'
     'paradigm';
   gap: 2rem;
@@ -32,8 +32,8 @@
     grid-template-areas:
       'webbutveckling paradigm'
       'datahantering kodredigerare'
+      'devops kodredigerare'
       'infrastruktur kodredigerare'
-      'nätverk kodredigerare'
       'llm .';
   }
 }
