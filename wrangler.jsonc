@@ -15,4 +15,14 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS",
   },
+  "ratelimits": [
+    {
+      "name": "PUBLIC",
+      "namespace_id": "1",
+      "simple": {
+        "limit": 60,
+        "period": 60,
+      },
+    },
+  ],
 }
