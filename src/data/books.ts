@@ -1,5 +1,40 @@
 export default [
   {
+    title: 'Tidy First? A Personal Exercise in Empirical Software Design',
+    author: ['Kent Beck'],
+    rating: null,
+    wishlist: true,
+  },
+  {
+    title: 'Technology-as-a-Service Playbook',
+    author: ['Thomas Lag', 'J.B. Wood'],
+    rating: null,
+    wishlist: true,
+  },
+  {
+    title:
+      "An Analysis of John Maynard Keyne's The General Theory of Employment, Interest and Money",
+    author: 'John Collins',
+    rating: null,
+    wishlist: true,
+  },
+  {
+    title: 'Sandworm',
+    author: 'Andy Greenberg',
+    rating: 4,
+  },
+  {
+    title: "All the Shah's Men",
+    author: 'Stephen Kinzer',
+    rating: 4,
+  },
+  {
+    title: 'When McKinsey Comes to Town',
+    author: 'Walt Bogdanich',
+    rating: 3,
+  },
+
+  {
     title: 'The Sciences of the Artificial',
     author: 'Herbert Simon',
     rating: null,
@@ -438,8 +473,7 @@ export default [
   {
     title: 'The Making of a Permabear',
     author: 'Jeremy Grantham',
-    rating: null,
-    wishlist: true,
+    rating: 4,
   },
   {
     title: 'The Big Rich',
