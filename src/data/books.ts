@@ -1,7 +1,12 @@
 export default [
   {
+    title: 'Världsreligionernas födelse',
+    author: 'Karen Armstrong',
+    rating: 4,
+  },
+  {
     title: 'Tidy First? A Personal Exercise in Empirical Software Design',
-    author: ['Kent Beck'],
+    author: 'Kent Beck',
     rating: null,
     wishlist: true,
   },
