@@ -2,9 +2,10 @@ import { formatter } from '@/src/lib/listFormatter'
 import kwikScreenshot from '@/src/assets/portfolio/kwik.jpg'
 import flixScreenshot from '@/src/assets/portfolio/kwikflix.jpg'
 import meetupMCP from '@/src/assets/portfolio/meetup-mcp.jpg'
+import { assertUniqueSlugs, slugify } from '@/src/lib/slug'
 import { StaticImageData } from 'next/image'
 
-type ProjectInput = {
+export type ProjectInput = {
   name: string
   summary: string[]
   demo: string | null
@@ -13,7 +14,7 @@ type ProjectInput = {
   screenshot: StaticImageData | null
 }
 
-const projects: ProjectInput[] = [
+const projectInputs: ProjectInput[] = [
   {
     name: 'kwik.se (omdesign)',
     summary: [
@@ -90,11 +91,24 @@ const projects: ProjectInput[] = [
 
 // Make tools-array into string with punctuations
 type Project = Omit<ProjectInput, 'tools'> & { tools: string }
-const formattedProjects: Project[] = projects.map((project) => {
+const formattedProjects: Project[] = projectInputs.map((project) => {
   return {
     ...project,
     tools: formatter.format(project.tools),
   }
 })
+
+export const apiProjects = projectInputs.map((project) => ({
+  id: slugify(project.name),
+  slug: slugify(project.name),
+  name: project.name,
+  summary: project.summary,
+  tools: project.tools,
+  demoUrl: project.demo,
+  githubUrl: project.github,
+  screenshotUrl: project.screenshot?.src ?? null,
+}))
+
+assertUniqueSlugs(apiProjects)
 
 export { formattedProjects as projects }
