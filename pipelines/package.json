@@ -1,0 +1,14 @@
+{
+  "name": "pipelines",
+  "devDependencies": {
+    "typescript": "^5",
+    "wrangler": "^4.113.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1093.0",
+    "fast-xml-parser": "^5.10.1"
+  }
+}
