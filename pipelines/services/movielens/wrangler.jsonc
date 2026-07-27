@@ -1,0 +1,50 @@
+{
+  "name": "kwik-movielens-pipeline",
+  "main": "./index.ts",
+  "compatibility_date": "2026-07-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "triggers": {
+    "crons": ["0 0 * * sun"],
+  },
+  "vars": {
+    "MOVIELENS_RATINGS_EXPORT_URL": "https://movielens.org/api/users/me/movielens-ratings.csv",
+    "MOVIELENS_WISHLIST_EXPORT_URL": "https://movielens.org/api/users/me/movielens-wishlist.csv",
+  },
+  "r2_buckets": [
+    {
+      "binding": "BUCKET",
+      "bucket_name": "kwik-data",
+    },
+  ],
+  "queues": {
+    "producers": [
+      {
+        "binding": "QUEUE",
+        "queue": "movielens-ingestion",
+      },
+    ],
+    "consumers": [
+      {
+        "queue": "movielens-ingestion",
+        "max_batch_size": 5,
+        "max_batch_timeout": 5,
+        "max_retries": 5,
+      },
+    ],
+  },
+  "observability": {
+    "enabled": false,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true,
+      "invocation_logs": true,
+    },
+    "traces": {
+      "enabled": false,
+      "persist": true,
+      "head_sampling_rate": 1,
+    },
+  },
+}

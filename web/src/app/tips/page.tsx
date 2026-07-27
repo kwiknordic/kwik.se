@@ -6,6 +6,7 @@ import podcasts from '@/src/data/podcasts/overcast.json'
 import { normalizePodcastEpisodeTitle, normalizePodcastTitle, splitMovieTitle, type CollectionItem } from '../../lib/collection'
 import TipsExplorer from '@/src/components/tips/TipsExplorer'
 import StructuredData from '@/src/components/seo/StructuredData'
+import type { CollectionType } from '../../lib/collection'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/tips' },
@@ -23,7 +24,7 @@ type RawPodcast = {
   audioUrl?: string
   deleted?: boolean
 }
-export default async function TipsPage() {
+export default async function TipsPage({ initialKind = 'movies' }: { initialKind?: CollectionType }) {
   const books: CollectionItem[] = (booksData as RawBook[]).map((b) => ({
     title: b.title,
     author: Array.isArray(b.author) ? b.author.join(", ") : b.author,
@@ -87,7 +88,7 @@ export default async function TipsPage() {
         </p>
       </div>
 
-      <TipsExplorer movies={movies} books={books} podcasts={podcastEpisodes} articles={[]} />
+      <TipsExplorer movies={movies} books={books} podcasts={podcastEpisodes} articles={[]} initialKind={initialKind} />
     </main>
   )
 }

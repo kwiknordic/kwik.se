@@ -160,7 +160,7 @@ export default function TipsDataTable<T extends TipItem>({
         {search && <> - &quot;{search}&quot;</>}
       </div>
 
-      {filteredItems.length === 0 ? <div className="empty-state"><p className="hand">Inga träffar här…</p><p>Prova en annan sökning.</p></div> : <>
+      {filteredItems.length === 0 ? <div className="empty-state"><p className="hand">Laddar…</p><p>Dröj ett ögonblick.</p></div> : <>
         <div className="items-table-wrap">
           <Table className="items-table">
             <colgroup>

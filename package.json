@@ -1,0 +1,6 @@
+{
+  "name": "kwik.se-monorepo",
+  "workspaces": [
+    "web"
+  ]
+}
