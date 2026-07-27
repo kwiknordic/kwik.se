@@ -8,6 +8,12 @@ Live-demo: https://kwik.se
 
 Personlig hemsida för att visa kompetensområden, projekt, intressen och kontaktinformation.
 
+## Data pipeline (2026)
+
+- Cloudflare workers för att konsumera rådata, göra om till rätt fil (json)
+- Använder schemalagda triggers (per källa) som skickar ett meddelande till var Worker att köra igång sin process
+- Datan sparas i en S3 Bucket
+
 ## Höjdpunkter – ny design (2026)
 
 - Aktiviteter presenterade som en tidslinje med statistik över deltaganden, talare, platser och år i rörelse.
