@@ -22,7 +22,7 @@
     "clsx": "^2.1.1",
     "csv-parse": "^7.0.1",
     "fast-xml-parser": "^5.10.0",
-    "next": "16.2.9",
+    "next": "16.2.11",
     "next-seo": "^7.2.0",
     "oauth-1.0a": "^2.2.6",
     "primeicons": "^7.0.0",
@@ -40,7 +40,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.2.9",
+    "eslint-config-next": "16.2.11",
     "tailwindcss": "^4",
     "typescript": "^5",
     "wrangler": "^4.111.0"

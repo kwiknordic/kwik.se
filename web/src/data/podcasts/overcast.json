@@ -847,6 +847,17 @@
     "deleted": true
   },
   {
+    "id": "319290750630963",
+    "podcastId": "297362",
+    "podcastTitle": "Align Podcast",
+    "title": "“Clinical Depression Isn’t Real” — Dr. Mike Israetel Reacts to Andrew Tate #576",
+    "publishedAt": "2026-01-06T11:56:20-05:00",
+    "audioUrl": "https://pscrb.fm/rss/p/tracking.swap.fm/track/hQzRUk5FlBqiODHZblrZ/traffic.megaphone.fm/SSM6671149866.mp3?updated=1770761965",
+    "progress": 0,
+    "playedAt": "2026-07-19T13:05:15-04:00",
+    "deleted": false
+  },
+  {
     "id": "479401040719888",
     "podcastId": "446477",
     "podcastTitle": "Dan Carlin's Hardcore History",
@@ -1834,6 +1845,17 @@
     "audioUrl": "https://flex2.acast.com/s/sportbladetsplp/u/dd-ab.akamaized.net/ab/vod/2026/05/jtvce4fsq2yxytuuaq4of/podcast_128.mp3",
     "progress": 0,
     "playedAt": "2026-05-22T17:10:59-04:00",
+    "deleted": true
+  },
+  {
+    "id": "4369357467211688",
+    "podcastId": "4069281",
+    "podcastTitle": "The Peter Schiff Show Podcast",
+    "title": "The Fed Admitted It. The Treasury Blew It. The CPI Lied.",
+    "publishedAt": "2026-07-18T21:23:27-04:00",
+    "audioUrl": "https://pdst.fm/e/dts.podtrac.com/redirect.mp3/pscrb.fm/rss/p/clrtpod.com/m/mgln.ai/e/137/arttrk.com/p/ARTS0/audio4.redcircle.com/episodes/0f700427-4cc0-4e33-a371-056cdb416478/stream.mp3",
+    "progress": 0,
+    "playedAt": "2026-07-19T10:47:13-04:00",
     "deleted": true
   },
   {
@@ -3770,6 +3792,17 @@
     "audioUrl": "https://traffic.megaphone.fm/FSI8452544208.mp3",
     "progress": 0,
     "playedAt": "2026-07-15T13:50:51-04:00",
+    "deleted": true
+  },
+  {
+    "id": "5783748307174508",
+    "podcastId": "5386535",
+    "podcastTitle": "Syntax - Tasty Web Development Treats",
+    "title": "1020: Do You Read The Code?",
+    "publishedAt": "2026-07-13T07:00:00-04:00",
+    "audioUrl": "https://traffic.megaphone.fm/FSI4036355847.mp3",
+    "progress": 0,
+    "playedAt": "2026-07-19T10:21:17-04:00",
     "deleted": true
   },
   {
