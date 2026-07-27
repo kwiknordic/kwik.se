@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev",
-    "build": "bun run prepare:data && next build --webpack",
+    "build": "bun run prepare:data && next build",
     "start": "next start",
     "lint": "eslint",
     "fetch:bucket": "bun scripts/fetch-bucket.ts",
