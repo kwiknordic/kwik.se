@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
 import ArticleTable from './ArticleTable'
 import BookTable from './BookTable'
 import MovieTable from './MovieTable'
@@ -15,18 +16,29 @@ const collectionTabs: { kind: CollectionType; label: string; icon: string }[] = 
   { kind: 'podcasts', label: 'Poddar', icon: 'pi-headphones' },
 ]
 
+const tabSlugs: Record<CollectionType, string> = {
+  movies: 'filmer',
+  books: 'bocker',
+  articles: 'artiklar',
+  podcasts: 'podcasts',
+}
+
 export default function TipsExplorer({
   movies,
   books,
   podcasts,
   articles,
+  initialKind = 'movies',
 }: {
   movies: CollectionItem[]
   books: CollectionItem[]
   podcasts: CollectionItem[]
   articles: ArticleItem[]
+  initialKind?: CollectionType
 }) {
-  const [kind, setKind] = useState<CollectionType>('movies')
+  const pathname = usePathname()
+  const router = useRouter()
+  const kind = collectionTabs.find((tab) => `/tips/${tabSlugs[tab.kind]}` === pathname)?.kind ?? initialKind
   const [loadedArticles, setLoadedArticles] = useState(articles)
 
   useEffect(() => {
@@ -46,7 +58,7 @@ export default function TipsExplorer({
   }, [])
 
   const pick = (k: CollectionType) => {
-    setKind(k)
+    router.push(`/tips/${tabSlugs[k]}`)
   }
 
   return (

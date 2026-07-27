@@ -1,0 +1,48 @@
+{
+  "name": "kwik-overcast-pipeline",
+  "main": "./index.ts",
+  "compatibility_date": "2026-07-24",
+  "triggers": {
+    "crons": ["0 0 * * *"],
+  },
+  "vars": {
+    "OVERCAST_EXPORT_URL": "https://overcast.fm/account/export_opml/extended",
+  },
+  "r2_buckets": [
+    {
+      "binding": "BUCKET",
+      "bucket_name": "kwik-data",
+    },
+  ],
+  "queues": {
+    "producers": [
+      {
+        "binding": "QUEUE",
+        "queue": "overcast-ingestion",
+      },
+    ],
+    "consumers": [
+      {
+        "queue": "overcast-ingestion",
+        "max_batch_size": 5,
+        "max_batch_timeout": 5,
+        "max_retries": 5,
+      },
+    ],
+  },
+  "observability": {
+    "enabled": false,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true,
+      "invocation_logs": true,
+    },
+    "traces": {
+      "enabled": false,
+      "persist": true,
+      "head_sampling_rate": 1,
+    },
+  },
+}

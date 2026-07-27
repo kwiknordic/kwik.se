@@ -45,3 +45,8 @@ next-env.d.ts
 
 # ai
 .design
+
+#python
+/pipelines-py
+
+notes.md
