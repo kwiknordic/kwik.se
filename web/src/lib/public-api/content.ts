@@ -4,8 +4,8 @@ import expertise from '@/src/data/expertise'
 import { interests, languages, softSkills, synopsis } from '@/src/data/about'
 import movieRatings from '@/src/data/movies/movielens-ratings.json'
 import movieWishlist from '@/src/data/movies/movielens-wishlist.json'
-import podcasts from '@/src/data/podcasts/overcast.json'
 import { fetchInstapaperArticles, type InstapaperArticle } from '@/src/lib/instapaper'
+import { fetchCachedLatestPodcastFile } from '@/src/lib/podcasts'
 import {
   normalizePodcastEpisodeTitle,
   normalizePodcastTitle,
@@ -23,12 +23,6 @@ type SkillGroup = { label: string; slug?: string; skills: Skill[] }
 type RawBook = { title: string; author: string | string[]; rating: number; wishlist?: boolean }
 type RawMovie = { movie_id: string; title: string; rating: string | null; imdb_id: string }
 type RawWishlistMovie = { movie_id: string; title: string; imdb_id: string }
-type RawPodcast = {
-  title: string
-  podcastTitle?: string
-  publishedAt?: string
-  audioUrl?: string
-}
 
 export function getBackground() {
   const groups = [interests, languages, softSkills] as SkillGroup[]
@@ -138,8 +132,9 @@ function getBooks(): CollectionItem[] {
   }))
 }
 
-function getPodcasts(): CollectionItem[] {
-  return (podcasts as RawPodcast[]).map((podcast) => ({
+async function getPodcasts(): Promise<CollectionItem[]> {
+  const { data } = await fetchCachedLatestPodcastFile()
+  return data.map((podcast) => ({
     title: normalizePodcastEpisodeTitle(podcast.title),
     creators: podcast.podcastTitle ? normalizePodcastTitle(podcast.podcastTitle) : undefined,
     date: podcast.publishedAt,

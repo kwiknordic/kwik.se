@@ -1,5 +1,6 @@
 import { createHmac } from 'node:crypto'
 import OAuth from 'oauth-1.0a'
+import { unstable_cache } from 'next/cache'
 
 type InstapaperBookmark = {
   bookmark_id?: string
@@ -59,7 +60,6 @@ async function fetchFolder(folderId: 'unread' | 'archive'): Promise<InstapaperBo
       'Content-Type': 'application/x-www-form-urlencoded',
     },
     body,
-    cache: 'no-store',
   })
 
   if (!response.ok) {
@@ -75,7 +75,7 @@ async function fetchFolder(folderId: 'unread' | 'archive'): Promise<InstapaperBo
   return Array.isArray(data.bookmarks) ? data.bookmarks : []
 }
 
-export async function fetchInstapaperArticles(): Promise<InstapaperArticle[]> {
+async function fetchInstapaperArticlesUncached(): Promise<InstapaperArticle[]> {
   const [unread, archive] = await Promise.all([fetchFolder('unread'), fetchFolder('archive')])
   const bookmarks = new Map<string, { bookmark: InstapaperBookmark; isArchived: boolean }>()
 
@@ -112,3 +112,10 @@ export async function fetchInstapaperArticles(): Promise<InstapaperArticle[]> {
     }]
   })
 }
+
+/** Cache the combined Instapaper result in OpenNext's persistent cache for 12h. */
+export const fetchInstapaperArticles = unstable_cache(
+  fetchInstapaperArticlesUncached,
+  ['instapaper-articles'],
+  { revalidate: 43200 },
+)

@@ -1,6 +1,5 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import ArticleTable from './ArticleTable'
 import BookTable from './BookTable'
@@ -39,23 +38,6 @@ export default function TipsExplorer({
   const pathname = usePathname()
   const router = useRouter()
   const kind = collectionTabs.find((tab) => `/tips/${tabSlugs[tab.kind]}` === pathname)?.kind ?? initialKind
-  const [loadedArticles, setLoadedArticles] = useState(articles)
-
-  useEffect(() => {
-    const loadArticles = async () => {
-      try {
-        const response = await fetch('/api/tips/articles')
-        if (!response.ok) return
-        const data = await response.json()
-        if (Array.isArray(data)) setLoadedArticles(data)
-      } catch {
-        /* Articles remain empty if the prefetch fails. */
-      }
-    }
-
-    const timer = window.setTimeout(loadArticles, 0)
-    return () => window.clearTimeout(timer)
-  }, [])
 
   const pick = (k: CollectionType) => {
     router.push(`/tips/${tabSlugs[k]}`)
@@ -79,7 +61,7 @@ export default function TipsExplorer({
 
       {kind === 'movies' && <MovieTable items={movies} />}
       {kind === 'books' && <BookTable items={books} />}
-      {kind === 'articles' && <ArticleTable items={loadedArticles} />}
+      {kind === 'articles' && <ArticleTable items={articles} />}
       {kind === 'podcasts' && <PodcastTable items={podcasts} />}
     </>
   )

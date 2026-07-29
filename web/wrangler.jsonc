@@ -15,6 +15,18 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS",
   },
+  "r2_buckets": [
+    {
+      "binding": "BUCKET",
+      "bucket_name": "kwik-data",
+      "remote": true,
+    },
+    {
+      "binding": "NEXT_INC_CACHE_R2_BUCKET",
+      "bucket_name": "kwik-data",
+      "remote": true,
+    },
+  ],
   "ratelimits": [
     {
       "name": "PUBLIC",
