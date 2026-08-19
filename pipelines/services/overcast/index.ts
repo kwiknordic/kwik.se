@@ -102,6 +102,19 @@ export default {
 
         console.log('Success: ' + transform.key)
 
+        await env.BUCKET.put(
+          'transform/overcast/latest.json',
+          JSON.stringify({
+            key: transform.key,
+            modifiedAt: transform.uploaded.toISOString(),
+          }),
+          {
+            httpMetadata: {
+              contentType: 'application/json; charset=utf-8',
+            },
+          },
+        )
+
         message.ack()
       } catch (error) {
         console.error('Overcast queue message failed', error)
