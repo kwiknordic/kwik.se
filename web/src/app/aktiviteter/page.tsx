@@ -11,9 +11,11 @@ export const metadata: Metadata = {
   description: 'Meetups, mässor och hackkvällar runt om i Stockholm.',
 }
 
-export default function ActivitiesPage() {
+export default async function ActivitiesPage({ searchParams }: PageProps<'/aktiviteter'>) {
+  const { page: pageParam } = await searchParams
   const list = activities as ActivityEvent[]
   const stats = computeActivityStats(list)
+  const page = typeof pageParam === 'string' ? Number.parseInt(pageParam, 10) : 1
 
   return (
     <main className="page">
@@ -46,7 +48,7 @@ export default function ActivitiesPage() {
       </div>
 
       <StatsBand stats={stats} />
-      <Timeline activities={list} />
+      <Timeline activities={list} page={Number.isFinite(page) ? page : 1} />
     </main>
   )
 }
