@@ -7,6 +7,7 @@
   },
   "vars": {
     "OVERCAST_EXPORT_URL": "https://overcast.fm/account/export_opml/extended",
+    "OVERCAST_COOKIE_KEY": "o",
   },
   "r2_buckets": [
     {
