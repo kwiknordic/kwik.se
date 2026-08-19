@@ -1,37 +1,24 @@
-'use client'
-
-import { useMemo, useRef, useState } from 'react'
+import Link from 'next/link'
 import EventCard from './EventCard'
-import Pager from '../ui/Pager'
-import { scrollToRef } from '../../lib/scroll'
 import type { ActivityEvent } from '../../lib/activities'
 import styles from './Timeline.module.css'
+import pagerStyles from '../ui/Pager.module.css'
 
 const PAGE_SIZE = 8
 
-/* Paginated, year-grouped timeline of events (newest first).
-   Pagination is the only interactive bit, so this is a client island. */
-export default function Timeline({ activities }: { activities: ActivityEvent[] }) {
-  const [page, setPage] = useState(1)
-  const topRef = useRef<HTMLDivElement>(null)
-
-  const sorted = useMemo(
-    () => [...activities].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()),
-    [activities],
-  )
+/* Paginated, year-grouped timeline of events (newest first). */
+export default function Timeline({ activities, page }: { activities: ActivityEvent[]; page: number }) {
+  const sorted = [...activities].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
   // Total events per year (independent of paging) for the year marker count.
-  const yearTotals = useMemo(() => {
-    const m = new Map<number, number>()
-    for (const a of sorted) {
-      const y = new Date(a.date).getUTCFullYear()
-      m.set(y, (m.get(y) || 0) + 1)
-    }
-    return m
-  }, [sorted])
+  const yearTotals = new Map<number, number>()
+  for (const a of sorted) {
+    const y = new Date(a.date).getUTCFullYear()
+    yearTotals.set(y, (yearTotals.get(y) || 0) + 1)
+  }
 
   const pageCount = Math.max(1, Math.ceil(sorted.length / PAGE_SIZE))
-  const safePage = Math.min(page, pageCount)
+  const safePage = Math.min(Math.max(page, 1), pageCount)
   const pageItems = sorted.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE)
 
   // Group just the current page's events by year, newest first.
@@ -43,14 +30,20 @@ export default function Timeline({ activities }: { activities: ActivityEvent[] }
   }
   const orderedGroups = [...groups.entries()].sort((a, b) => b[0] - a[0])
 
-  const goPage = (p: number) => {
-    setPage(p)
-    scrollToRef(topRef)
+  const pageHref = (p: number) => (p === 1 ? '/aktiviteter' : `/aktiviteter?page=${p}`)
+
+  const nums: (number | '…')[] = []
+  for (let i = 1; i <= pageCount; i++) {
+    if (i === 1 || i === pageCount || (i >= safePage - 1 && i <= safePage + 1)) {
+      nums.push(i)
+    } else if (nums[nums.length - 1] !== '…') {
+      nums.push('…')
+    }
   }
 
   return (
     <>
-      <div className={styles.timeline} ref={topRef}>
+      <div className={styles.timeline} id="timeline">
         {orderedGroups.map(([year, evs]) => {
           const total = yearTotals.get(year) ?? evs.length
           return (
@@ -73,7 +66,39 @@ export default function Timeline({ activities }: { activities: ActivityEvent[] }
           )
         })}
       </div>
-      <Pager page={safePage} pageCount={pageCount} onChange={goPage} />
+      {pageCount > 1 && (
+        <nav className={pagerStyles.pager} aria-label="Sidnavigering">
+          {safePage === 1 ? (
+            <span className={pagerStyles['pager-arrow']} aria-disabled="true">
+              <i className="pi pi-chevron-left" aria-hidden="true" />
+            </span>
+          ) : (
+            <Link className={pagerStyles['pager-arrow']} href={`${pageHref(safePage - 1)}#timeline`} aria-label="Föregående sida">
+              <i className="pi pi-chevron-left" aria-hidden="true" />
+            </Link>
+          )}
+          <div className={pagerStyles['pager-nums']}>
+            {nums.map((n, i) =>
+              n === '…' ? (
+                <span className={pagerStyles['pager-gap']} key={`gap-${i}`}>…</span>
+              ) : n === safePage ? (
+                <span className={`${pagerStyles['pager-num']} ${pagerStyles.active}`} aria-current="page" key={n}>{n}</span>
+              ) : (
+                <Link className={pagerStyles['pager-num']} href={`${pageHref(n)}#timeline`} key={n}>{n}</Link>
+              ),
+            )}
+          </div>
+          {safePage === pageCount ? (
+            <span className={pagerStyles['pager-arrow']} aria-disabled="true">
+              <i className="pi pi-chevron-right" aria-hidden="true" />
+            </span>
+          ) : (
+            <Link className={pagerStyles['pager-arrow']} href={`${pageHref(safePage + 1)}#timeline`} aria-label="Nästa sida">
+              <i className="pi pi-chevron-right" aria-hidden="true" />
+            </Link>
+          )}
+        </nav>
+      )}
     </>
   )
 }
