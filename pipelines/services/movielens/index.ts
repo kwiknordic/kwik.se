@@ -14,14 +14,8 @@ export default {
 
   async scheduled(controller: ScheduledController, env: Env) {
     const windowEnd = new Date(controller.scheduledTime)
-
-    // check the last windowStart in db, and tell the worker to only fetch from this point
     const windowStart = new Date(controller.scheduledTime)
-
-    await env.QUEUE.send({
-      windowStart: windowStart.toISOString(),
-      windowEnd: windowEnd.toISOString(),
-    })
+    await env.QUEUE.send({ windowStart: windowStart.toISOString(), windowEnd: windowEnd.toISOString() })
   },
 
   async queue(batch, env: Env) {
@@ -37,122 +31,26 @@ export default {
 
     for (const message of batch.messages) {
       try {
-        // raw step
-        const csvRatings = await fetchMovielens({
-          url: ratingUrl,
-          key: cookieKey,
-          value: cookieValue,
+        const [csvRatings, csvWishlist] = await Promise.all([
+          fetchMovielens({ url: ratingUrl, key: cookieKey, value: cookieValue }),
+          fetchMovielens({ url: wishlistUrl, key: cookieKey, value: cookieValue }),
+        ])
+
+        await ingestMovieList({
+          bucket: env.BUCKET,
+          csv: csvRatings,
+          kind: 'ratings',
+          sourceEndpoint: env.MOVIELENS_RATINGS_EXPORT_URL,
+          ingestedAt: message.timestamp.toISOString(),
         })
-        const { checksum: rawRatingsFileName, checksumBuffer: rawRatingsBuffer } =
-          await createChecksum(csvRatings)
-        const existingRatings = await env.BUCKET.head(rawRatingsFileName)
-
-        const csvWishlist = await fetchMovielens({
-          url: wishlistUrl,
-          key: cookieKey,
-          value: cookieValue,
+        await ingestMovieList({
+          bucket: env.BUCKET,
+          csv: csvWishlist,
+          kind: 'wishlist',
+          sourceEndpoint: env.MOVIELENS_WISHLIST_EXPORT_URL,
+          ingestedAt: message.timestamp.toISOString(),
         })
-        const { checksum: rawWishlistFileName, checksumBuffer: rawWishlistBuffer } =
-          await createChecksum(csvWishlist)
-        const existingWishlist = await env.BUCKET.head(rawWishlistFileName)
-
-        if (existingRatings) {
-          console.log(`Skipping previously ingested ratings: ${csvRatings}.`)
-        } else {
-          const raw = await env.BUCKET.put(
-            `raw/movielens/ratings/${rawRatingsFileName}.csv`,
-            csvRatings,
-            {
-              httpMetadata: {
-                contentType: 'text/csv; charset=utf-8',
-              },
-              customMetadata: {
-                source: 'movielens',
-                source_endpoint: env.MOVIELENS_RATINGS_EXPORT_URL,
-                ingested_at: message.timestamp.toISOString(),
-                ChecksumSHA256: rawRatingsFileName,
-              },
-              sha256: rawRatingsBuffer,
-            },
-          )
-
-          console.log('Success: ' + raw.key)
-
-          // stage step
-          const parsed = parseCsvFile(csvRatings, {
-            columns: true,
-            skip_empty_lines: true,
-          })
-          const json = JSON.stringify(parsed)
-          const { checksum: stagingFileName, checksumBuffer: stagingBuffer } =
-            await createChecksum(json)
-          const staging = await env.BUCKET.put(
-            `staging/movielens/ratings/${stagingFileName}.json`,
-            json,
-            {
-              httpMetadata: {
-                contentType: 'application/json; charset=utf-8',
-              },
-              customMetadata: {
-                source: 'movielens',
-                source_endpoint: env.MOVIELENS_RATINGS_EXPORT_URL,
-                ChecksumSHA256: stagingFileName,
-              },
-              sha256: stagingBuffer,
-            },
-          )
-
-          console.log('Success: ' + staging.key)
-        }
-
-        if (existingWishlist) {
-          console.log(`Skipping previously ingested wishlist: ${csvWishlist}.`)
-        } else {
-          const raw = await env.BUCKET.put(
-            `raw/movielens/wishlist/${rawWishlistFileName}.csv`,
-            csvWishlist,
-            {
-              httpMetadata: {
-                contentType: 'text/csv; charset=utf-8',
-              },
-              customMetadata: {
-                source: 'movielens',
-                source_endpoint: env.MOVIELENS_WISHLIST_EXPORT_URL,
-                ingested_at: message.timestamp.toISOString(),
-                ChecksumSHA256: rawWishlistFileName,
-              },
-              sha256: rawWishlistBuffer,
-            },
-          )
-
-          console.log('Success: ' + raw.key)
-
-          // stage step
-          const parsed = parseCsvFile(csvWishlist, {
-            columns: true,
-            skip_empty_lines: true,
-          })
-          const json = JSON.stringify(parsed)
-          const { checksum: stagingFileName, checksumBuffer: stagingBuffer } =
-            await createChecksum(json)
-          const staging = await env.BUCKET.put(
-            `staging/movielens/wishlist/${stagingFileName}.json`,
-            json,
-            {
-              httpMetadata: {
-                contentType: 'application/json; charset=utf-8',
-              },
-              customMetadata: {
-                source: 'movielens',
-                source_endpoint: env.MOVIELENS_RATINGS_EXPORT_URL,
-                ChecksumSHA256: stagingFileName,
-              },
-              sha256: stagingBuffer,
-            },
-          )
-
-          console.log('Success: ' + staging.key)
-        }
+        message.ack()
       } catch (error) {
         console.error('Movielens queue message failed', error)
         message.retry()
@@ -160,3 +58,78 @@ export default {
     }
   },
 } satisfies ExportedHandler<Env, Queue<MovielensJob>>
+
+async function ingestMovieList({
+  bucket,
+  csv,
+  kind,
+  sourceEndpoint,
+  ingestedAt,
+}: {
+  bucket: R2Bucket
+  csv: string
+  kind: 'ratings' | 'wishlist'
+  sourceEndpoint: string
+  ingestedAt: string
+}) {
+  const { checksum: rawChecksum, checksumBuffer: rawBuffer } = await createChecksum(csv)
+  const rawKey = `raw/movielens/${kind}/${rawChecksum}.csv`
+  const existingRaw = await bucket.head(rawKey)
+
+  if (!existingRaw) {
+    const raw = await bucket.put(rawKey, csv, {
+      httpMetadata: { contentType: 'text/csv; charset=utf-8' },
+      customMetadata: {
+        source: 'movielens',
+        source_endpoint: sourceEndpoint,
+        ingested_at: ingestedAt,
+        ChecksumSHA256: rawChecksum,
+      },
+      sha256: rawBuffer,
+    })
+    console.log('Success: ' + raw.key)
+  } else {
+    console.log(`Skipping previously ingested ${kind}: ${rawKey}.`)
+  }
+
+  const parsed = parseCsvFile(csv, { columns: true, skip_empty_lines: true })
+  const json = JSON.stringify(parsed)
+  const { checksum: transformChecksum, checksumBuffer: transformBuffer } = await createChecksum(json)
+  const stagingKey = 'staging/movielens/' + kind + '/' + transformChecksum + '.json'
+  if (!(await bucket.head(stagingKey))) {
+    const staging = await bucket.put(stagingKey, json, {
+      httpMetadata: { contentType: 'application/json; charset=utf-8' },
+      customMetadata: {
+        source: 'movielens',
+        source_endpoint: sourceEndpoint,
+        ChecksumSHA256: transformChecksum,
+      },
+      sha256: transformBuffer,
+    })
+    console.log('Success: ' + staging.key)
+  }  const transformKey = `transform/movielens/${kind}/${transformChecksum}.json`
+  let transform = await bucket.head(transformKey)
+
+  if (!transform) {
+    transform = await bucket.put(transformKey, json, {
+      httpMetadata: { contentType: 'application/json; charset=utf-8' },
+      customMetadata: {
+        source: 'movielens',
+        source_endpoint: sourceEndpoint,
+        ChecksumSHA256: transformChecksum,
+      },
+      sha256: transformBuffer,
+    })
+    console.log('Success: ' + transform.key)
+  } else {
+    console.log(`Skipping previously transformed ${kind}: ${transformKey}.`)
+  }
+
+  const latestKey = `transform/movielens/${kind}/latest.json`
+  await bucket.put(
+    latestKey,
+    JSON.stringify({ key: transformKey, modifiedAt: transform.uploaded.toISOString() }),
+    { httpMetadata: { contentType: 'application/json; charset=utf-8' } },
+  )
+  console.log(`Published ${latestKey} -> ${transformKey}`)
+}

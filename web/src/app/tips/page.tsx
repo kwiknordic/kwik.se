@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import booksData from '../../data/books'
-import movieRatings from '@/src/data/movies/movielens-ratings.json'
-import movieWishlist from '@/src/data/movies/movielens-wishlist.json'
+import { fetchCachedLatestMovieFiles } from '@/src/lib/movies'
 import { fetchCachedLatestPodcastFile, type RawPodcast } from '@/src/lib/podcasts'
 import { normalizePodcastEpisodeTitle, normalizePodcastTitle, splitMovieTitle, type ArticleItem, type CollectionItem, type CollectionType } from '../../lib/collection'
 import TipsExplorer from '@/src/components/tips/TipsExplorer'
@@ -16,8 +15,8 @@ export const metadata: Metadata = {
 }
 
 type RawBook = { title: string; author: string | string[]; rating: number; wishlist?: boolean }
-type RawMovie = { movie_id: string; title: string; rating: string | null; imdb_id: string }
-type RawWishlistMovie = { movie_id: string; title: string; imdb_id: string }
+
+
 
 export type TipsSearchParams = Record<string, string | string[] | undefined>
 
@@ -43,12 +42,15 @@ export default async function TipsPage({ initialKind = 'movies', basePath = '/ti
     wishlist: book.wishlist,
   }))
 
+  const { ratings: ratingsFile, wishlist: wishlistFile } = await fetchCachedLatestMovieFiles()
+  const movieRatings = ratingsFile.data
+  const movieWishlist = wishlistFile.data
   const moviesById = new Map<string, CollectionItem>()
-  for (const movie of movieRatings as RawMovie[]) {
+  for (const movie of movieRatings) {
     const { title, year } = splitMovieTitle(movie.title)
     moviesById.set(movie.movie_id, { title, year, imdb: movie.imdb_id, rating: Number(movie.rating) })
   }
-  for (const movie of movieWishlist as RawWishlistMovie[]) {
+  for (const movie of movieWishlist) {
     const existing = moviesById.get(movie.movie_id)
     if (existing) existing.wishlist = true
     else {

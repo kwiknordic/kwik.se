@@ -2,8 +2,7 @@ import booksData from '@/src/data/books'
 import { apiProjects } from '@/src/data/projects'
 import expertise from '@/src/data/expertise'
 import { interests, languages, softSkills, synopsis } from '@/src/data/about'
-import movieRatings from '@/src/data/movies/movielens-ratings.json'
-import movieWishlist from '@/src/data/movies/movielens-wishlist.json'
+import { fetchCachedLatestMovieFiles } from '@/src/lib/movies'
 import { fetchInstapaperArticles, type InstapaperArticle } from '@/src/lib/instapaper'
 import { fetchCachedLatestPodcastFile } from '@/src/lib/podcasts'
 import {
@@ -21,8 +20,6 @@ export type TipsCategory = (typeof tipsCategories)[number]
 type Skill = { name: string }
 type SkillGroup = { label: string; slug?: string; skills: Skill[] }
 type RawBook = { title: string; author: string | string[]; rating: number; wishlist?: boolean }
-type RawMovie = { movie_id: string; title: string; rating: string | null; imdb_id: string }
-type RawWishlistMovie = { movie_id: string; title: string; imdb_id: string }
 
 export function getBackground() {
   const groups = [interests, languages, softSkills] as SkillGroup[]
@@ -96,10 +93,13 @@ export function isTipsCategory(value: string): value is TipsCategory {
   return tipsCategories.includes(value as TipsCategory)
 }
 
-function getMovies(): CollectionItem[] {
+async function getMovies(): Promise<CollectionItem[]> {
+  const { ratings: ratingsFile, wishlist: wishlistFile } = await fetchCachedLatestMovieFiles()
+  const movieRatings = ratingsFile.data
+  const movieWishlist = wishlistFile.data
   const moviesById = new Map<string, CollectionItem>()
 
-  for (const movie of movieRatings as RawMovie[]) {
+  for (const movie of movieRatings) {
     const { title, year } = splitMovieTitle(movie.title)
     moviesById.set(movie.movie_id, {
       title,
@@ -109,7 +109,7 @@ function getMovies(): CollectionItem[] {
     })
   }
 
-  for (const movie of movieWishlist as RawWishlistMovie[]) {
+  for (const movie of movieWishlist) {
     const existing = moviesById.get(movie.movie_id)
     if (existing) {
       existing.wishlist = true
