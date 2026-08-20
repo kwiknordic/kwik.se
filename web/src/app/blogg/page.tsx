@@ -9,7 +9,8 @@ export const metadata: Metadata = {
   description: 'Tankar om kod, bygge och allt däremellan.',
 }
 
-export default function BlogPage() {
+export default async function BlogPage({ searchParams }: PageProps<'/blogg'>) {
+  const params = await searchParams
   // Only the metadata the list needs — bodies stay on the server.
   const posts: BlogListItem[] = getAllPosts().map((p, i) => ({
     slug: p.slug,
@@ -51,7 +52,9 @@ export default function BlogPage() {
         </p>
       </div>
 
-      <BlogList posts={posts} />
+      <BlogList posts={posts} lang={typeof params.lang === 'string' ? params.lang : 'alla'} query={typeof params.q === 'string' ? params.q : ''} page={Number(params.page) || 1} />
     </main>
   )
 }
+
+

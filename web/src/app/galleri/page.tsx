@@ -9,7 +9,10 @@ export const metadata: Metadata = {
   description: 'Ögonblick från resor, träffar, stan och skrivbordet.',
 }
 
-export default function GalleryPage() {
+export default async function GalleryPage({ searchParams }: PageProps<'/galleri'>) {
+  const params = await searchParams
+  const tag = typeof params.tag === 'string' ? params.tag : 'Alla'
+  const page = Number(params.page) || 1
   return (
     <main className="page">
       <StructuredData
@@ -35,7 +38,9 @@ export default function GalleryPage() {
         </p>
       </div>
 
-      <GalleryGrid />
+      <GalleryGrid tag={tag} page={page} />
     </main >
   )
 }
+
+
