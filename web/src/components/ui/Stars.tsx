@@ -1,5 +1,3 @@
-'use client'
-
 import { useId } from 'react'
 import styles from './Stars.module.css'
 
