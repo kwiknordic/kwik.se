@@ -891,9 +891,6 @@ h1 {
   vertical-align: middle;
   white-space: nowrap;
 }
-@media (max-width: 700px) {
-  .compact-hidden { display: none; }
-}
 
 .tbl-row--wishlist td {
   color: var(--ink-faint);
