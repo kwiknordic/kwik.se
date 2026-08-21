@@ -1,5 +1,20 @@
 export default [
   {
+    eventId: '315988781',
+    title: 'MLOps Fallbash!',
+    date: '2026-08-20',
+    at: 'IBM',
+    attendees: 255,
+    summary:
+      "It's once again time for another Stockholm MLOps Fallbash!!! For those of you who have been around for a while, you know that we always try to give local start-ups some exposure as we kick things off for the fall.",
+    speakers: [
+      {
+        name: 'Patrick Couch',
+        position: 'Organizer',
+      },
+    ],
+  },
+  {
     eventId: '4j48483jd',
     title: 'Solving Startup Problems with Curiosity',
     date: '2026-07-08',

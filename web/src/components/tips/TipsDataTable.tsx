@@ -1,20 +1,16 @@
+"use client"
+
 import Link from 'next/link'
 import { StarGlyph } from '../ui/Stars'
 import ServerPager from '../ui/ServerPager'
+import { useEffect, useState } from 'react'
+import { flexRender, getCoreRowModel, useReactTable, type ColumnDef, type PaginationState, type VisibilityState } from '@tanstack/react-table'
+import type { PreparedTipsTable } from './tipsTable.server'
 
 const PAGE_SIZE = 25
 
 type TipItem = { title: string; wishlist?: boolean }
-
-export type TipsColumn<T> = {
-  id: string
-  header: string
-  render: (item: T) => React.ReactNode
-  cellClassName?: string
-  headerClassName?: string
-  width?: string
-  compactHidden?: boolean
-}
+type ColumnStyles = { cellClassName?: string; headerClassName?: string }
 
 export type TipsFilters = {
   q?: string
@@ -24,7 +20,7 @@ export type TipsFilters = {
 }
 
 type TipsDataTableProps<T extends TipItem> = {
-  columns: TipsColumn<T>[]
+  columns: ColumnDef<T>[]
   items: T[]
   unit: string
   viewLabel: string
@@ -34,6 +30,27 @@ type TipsDataTableProps<T extends TipItem> = {
   getRating?: (item: T) => number
   filters?: TipsFilters
   basePath: string
+  prepared: PreparedTipsTable<any>
+  compactColumnVisibility?: VisibilityState
+}
+
+function useViewportQuery(query: string) {
+  const [matches, setMatches] = useState(false)
+  useEffect(() => {
+    const media = window.matchMedia(query)
+    const update = () => setMatches(media.matches)
+    update()
+    media.addEventListener('change', update)
+    return () => media.removeEventListener('change', update)
+  }, [query])
+  return matches
+}
+
+function columnWidth(id: string) {
+  if (id === 'rating') return '15ch'
+  if (id === 'source') return '6rem'
+  if (id === 'date' || id === 'time') return '16ch'
+  return undefined
 }
 
 function pageNumber(value: string | undefined) {
@@ -50,7 +67,7 @@ function classNames(...values: (string | false | undefined)[]) {
   return values.filter(Boolean).join(' ')
 }
 
-/** Shared server-rendered table behavior for the tips collections. */
+/** Shared client table shell. Filtering, sorting and pagination are prepared by the server. */
 export default function TipsDataTable<T extends TipItem>({
   columns,
   items,
@@ -62,27 +79,29 @@ export default function TipsDataTable<T extends TipItem>({
   getRating,
   filters = {},
   basePath,
+  prepared,
+  compactColumnVisibility = {},
 }: TipsDataTableProps<T>) {
   const search = filters.q?.trim() || ''
   const view = filters.status === 'wishlist' ? 'wishlist' : 'rated'
   const stars = selectedStars(filters.stars)
-  const hasWishlist = items.some((item) => item.wishlist)
-  const ratedItems = items.filter((item) => !item.wishlist)
-  const wishlistItems = items.filter((item) => item.wishlist)
-  const query = search.toLowerCase()
+  const hasWishlist = prepared.wishlistCount > 0
+  const page = prepared.page
+  const pageCount = prepared.pageCount
+  const pageItems = prepared.items
+  const filteredItems = prepared.total === 0 ? [] : pageItems
+  const isCompactViewport = useViewportQuery('(max-width: 700px)')
+  const columnVisibility = isCompactViewport ? compactColumnVisibility : {}
 
-  const filteredItems = items
-    .filter((item) => {
-      if (view === 'wishlist' && !item.wishlist) return false
-      if (view === 'rated' && item.wishlist) return false
-      if (getRating && view === 'rated' && stars.size > 0 && !stars.has(Math.round(getRating(item)))) return false
-      return !query || getSearchText(item).toLowerCase().includes(query)
-    })
-    .sort(compareItems)
-
-  const pageCount = Math.max(1, Math.ceil(filteredItems.length / PAGE_SIZE))
-  const page = Math.min(pageNumber(filters.page), pageCount)
-  const pageItems = filteredItems.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
+  const table = useReactTable({
+    data: pageItems,
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+    manualSorting: true,
+    manualPagination: true,
+    pageCount,
+    state: { columnVisibility, pagination: { pageIndex: page - 1, pageSize: PAGE_SIZE } satisfies PaginationState },
+  })
 
   function hrefFor(next: Partial<TipsFilters> = {}) {
     const params = new URLSearchParams()
@@ -111,17 +130,17 @@ export default function TipsDataTable<T extends TipItem>({
         <div className="filter-row" style={{ margin: 0 }}>
           <span className="filter-label">Status</span>
           <Link className={'chip' + (view === 'rated' ? ' active' : '')} href={hrefFor({ status: '', stars: '', page: '1' })} aria-current={view === 'rated' ? 'page' : undefined}>
-            {viewLabel} <span className="chip-count">{ratedItems.length}</span>
+            {viewLabel} <span className="chip-count">{prepared.ratedCount}</span>
           </Link>
           {hasWishlist && <Link className={'chip chip--wishlist' + (view === 'wishlist' ? ' active' : '')} href={hrefFor({ status: 'wishlist', stars: '', page: '1' })} aria-current={view === 'wishlist' ? 'page' : undefined}>
-            På önskelistan <span className="chip-count">{wishlistItems.length}</span>
+            På önskelistan <span className="chip-count">{prepared.wishlistCount}</span>
           </Link>}
         </div>
         {getRating && view === 'rated' && <div className="filter-row" style={{ margin: 0 }}>
           <span className="filter-label">Betyg</span>
-          <Link className={'chip' + (stars.size === 0 ? ' active' : '')} href={hrefFor({ stars: '', page: '1' })} aria-current={stars.size === 0 ? 'page' : undefined}>Alla <span className="chip-count">{ratedItems.length}</span></Link>
+          <Link className={'chip' + (stars.size === 0 ? ' active' : '')} href={hrefFor({ stars: '', page: '1' })} aria-current={stars.size === 0 ? 'page' : undefined}>Alla <span className="chip-count">{prepared.ratedCount}</span></Link>
           {[5, 4, 3, 2, 1].map((star) => <Link key={star} className={'chip' + (stars.has(star) ? ' active' : '')} href={starHref(star)} aria-current={stars.has(star) ? 'page' : undefined}>
-            {star} <StarGlyph filled={!stars.has(star)} /> <span className="chip-count">{ratedItems.filter((item) => Math.round(getRating(item)) === star).length}</span>
+            {star} <StarGlyph filled={!stars.has(star)} /> <span className="chip-count">{prepared.starCounts[star] || 0}</span>
           </Link>)}
         </div>}
       </div>
@@ -135,7 +154,7 @@ export default function TipsDataTable<T extends TipItem>({
         {stars.size > 0 && <input type="hidden" name="stars" value={[...stars].sort((a, b) => b - a).join(',')} />}
       </form>
       <div className="result-count">
-        Visar <b>{filteredItems.length}</b> {view === 'wishlist' ? <span className="result-wishlist">på önskelistan</span> : unit}
+        Visar <b>{prepared.total}</b> {view === 'wishlist' ? <span className="result-wishlist">på önskelistan</span> : unit}
         {view === 'rated' && stars.size > 0 && <> · {[...stars].sort((a, b) => b - a).join(', ')}★</>}
         {search && <> - &quot;{search}&quot;</>}
       </div>
@@ -143,10 +162,10 @@ export default function TipsDataTable<T extends TipItem>({
       {filteredItems.length === 0 ? <div className="empty-state"><p className="hand">Inget hittades</p><p>Prova att ändra dina filter.</p></div> : <>
         <div className="items-table-wrap">
           <table className="items-table text-sm">
-            <colgroup>{columns.map((column) => <col key={column.id} style={{ width: column.width }} />)}</colgroup>
-            <thead><tr>{columns.map((column) => <th key={column.id} className={classNames('tbl-th text-left', column.headerClassName, column.compactHidden && 'compact-hidden')}><span className="tbl-th-inner">{column.header}</span></th>)}</tr></thead>
-            <tbody>{pageItems.map((item, index) => <tr key={`${item.title}-${index}`} className={'tbl-row' + (item.wishlist ? ' tbl-row--wishlist' : '')}>
-              {columns.map((column) => <td key={column.id} className={classNames(column.cellClassName, column.compactHidden && 'compact-hidden')}>{column.render(item)}</td>)}
+            <colgroup>{table.getVisibleLeafColumns().map((column) => <col key={column.id} style={{ width: columnWidth(column.id) }} />)}</colgroup>
+            <thead><tr>{table.getHeaderGroups()[0].headers.map((header) => { const styles = header.column.columnDef.meta as ColumnStyles | undefined; return <th key={header.id} className={classNames('tbl-th text-left', styles?.headerClassName)}><span className="tbl-th-inner">{flexRender(header.column.columnDef.header, header.getContext())}</span></th> })}</tr></thead>
+            <tbody>{table.getRowModel().rows.map((row) => <tr key={row.id} className={'tbl-row' + (row.original.wishlist ? ' tbl-row--wishlist' : '')}>
+              {row.getVisibleCells().map((cell) => { const styles = cell.column.columnDef.meta as ColumnStyles | undefined; return <td key={cell.id} className={styles?.cellClassName}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</td> })}
             </tr>)}</tbody>
           </table>
         </div>

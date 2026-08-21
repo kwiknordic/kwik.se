@@ -7,6 +7,7 @@ import TipsExplorer from '@/src/components/tips/TipsExplorer'
 import StructuredData from '@/src/components/seo/StructuredData'
 import { fetchInstapaperArticles } from '@/src/lib/instapaper'
 import type { TipsFilters } from '@/src/components/tips/TipsDataTable'
+import { prepareTipsTable } from '@/src/components/tips/tipsTable.server'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/tips' },
@@ -83,6 +84,8 @@ export default async function TipsPage({ initialKind = 'movies', basePath = '/ti
     stars: paramValue(searchParams.stars),
     page: paramValue(searchParams.page),
   }
+  const tableItems = initialKind === 'movies' ? [...moviesById.values()] : initialKind === 'books' ? books : initialKind === 'articles' ? articles : podcastEpisodes
+  const prepared = prepareTipsTable(initialKind, tableItems as any, filters)
 
   return (
     <main className="page">
@@ -100,7 +103,7 @@ export default async function TipsPage({ initialKind = 'movies', basePath = '/ti
         <h1 className="page-title">Tips</h1>
         <p className="page-sub">Filmerna, böckerna och artiklarna som fastnat.</p>
       </div>
-      <TipsExplorer movies={[...moviesById.values()]} books={books} podcasts={podcastEpisodes} articles={articles} initialKind={initialKind} basePath={basePath} filters={filters} />
+      <TipsExplorer movies={[...moviesById.values()]} books={books} podcasts={podcastEpisodes} articles={articles} initialKind={initialKind} basePath={basePath} filters={filters} prepared={prepared} />
     </main>
   )
 }
