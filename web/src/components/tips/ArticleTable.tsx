@@ -1,13 +1,15 @@
-"use client"
-import type { ColumnDef } from '@tanstack/react-table'
 import { formatDateSv } from '../../lib/format'
 import { COLLECTION_CONFIG, type ArticleItem } from '../../lib/collection'
 import { truncateTitle } from '@/src/lib/truncateTitle'
-import TipsDataTable, { type TipsFilters } from './TipsDataTable'
-import type { PreparedTipsTable } from './tipsTable.server'
-const columns: ColumnDef<ArticleItem>[] = [
- {accessorKey:'title',header:'Titel',cell:({row})=><span className="tbl-title" title={row.original.title}>{truncateTitle(row.original.title)}</span>,meta:{cellClassName:'tbl-title-cell'}},
- {id:'source',header:'Länk',cell:({row})=>row.original.url?<a className="tbl-source-link" href={row.original.url} target="_blank" rel="noreferrer"><i className="pi pi-external-link" aria-hidden="true" /></a>:null},
- {id:'time',header:'Datum',cell:({row})=>formatDateSv(row.original.time?new Date(row.original.time*1000).toISOString():undefined),meta:{cellClassName:'tbl-date-cell',headerClassName:'tbl-date-cell'}},
+import TipsDataTable, { type TipsTableColumn } from './TipsDataTable'
+import type { PreparedTipsTable, TipsFilters } from './tipsTable.server'
+
+const columns: TipsTableColumn<ArticleItem>[] = [
+  { id: 'title', header: 'Titel', className: 'tbl-title-cell', render: (article) => <span className="tbl-title" title={article.title}>{truncateTitle(article.title)}</span> },
+  { id: 'source', header: 'Länk', width: '4rem', render: (article) => article.url ? <a className="tbl-source-link" href={article.url} target="_blank" rel="noreferrer"><i className="pi pi-external-link" aria-hidden="true" /></a> : null },
+  { id: 'time', header: 'Datum', width: '16ch', className: 'tbl-date-cell', hideOnCompact: true, render: (article) => formatDateSv(article.time ? new Date(article.time * 1000).toISOString() : undefined) },
 ]
-export default function ArticleTable({items,filters,basePath,prepared}:{items:ArticleItem[];filters:TipsFilters;basePath:string;prepared:PreparedTipsTable<ArticleItem>}){return <TipsDataTable columns={columns} items={items} {...COLLECTION_CONFIG.articles} filters={filters} basePath={basePath} prepared={prepared} compactColumnVisibility={{time:false}} getSearchText={i=>`${i.title} ${i.source} ${i.category||''}`} compareItems={()=>0}/>} 
+
+export default function ArticleTable({ filters, basePath, prepared }: { filters: TipsFilters; basePath: string; prepared: PreparedTipsTable<ArticleItem> }) {
+  return <TipsDataTable columns={columns} {...COLLECTION_CONFIG.articles} filters={filters} basePath={basePath} prepared={prepared} />
+}

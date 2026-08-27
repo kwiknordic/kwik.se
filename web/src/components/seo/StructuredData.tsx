@@ -1,7 +1,9 @@
 import { JsonLdScript } from 'next-seo'
 
+type JsonLdValue = string | number | boolean | null | JsonLdValue[] | { [key: string]: JsonLdValue }
+
 type StructuredDataProps = {
-  data: Record<string, unknown>
+  data: { [key: string]: JsonLdValue }
   id: string
 }
 

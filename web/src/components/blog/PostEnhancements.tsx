@@ -22,7 +22,9 @@ export default function PostEnhancements() {
 
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
-      const btn = (e.target as HTMLElement).closest('.code-copy') as HTMLElement | null
+      // SAFETY: click targets are DOM nodes for MouseEvent instances.
+      const target = e.target as HTMLElement
+      const btn = target.closest('.code-copy')
       if (!btn) return
       const id = btn.getAttribute('data-target')
       const pre = id ? document.getElementById(id) : null

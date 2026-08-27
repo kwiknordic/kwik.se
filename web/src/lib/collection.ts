@@ -9,12 +9,12 @@ export type CollectionItem = {
   title: string
   rating: number
   author?: string // books
-	year?: number // movies
+  year?: number // movies
   imdb?: string // movies
   creators?: string // podcasts
   date?: string // podcasts
   audioUrl?: string // podcasts
-	wishlist?: boolean
+  wishlist?: boolean
 }
 
 export type ArticleItem = {
@@ -33,7 +33,7 @@ export type CollectionConfig = {
   searchPlaceholder: string
 }
 
-export const COLLECTION_CONFIG: Record<CollectionType, CollectionConfig> = {
+export const COLLECTION_CONFIG = {
   movies: {
     unit: 'filmer',
     viewLabel: 'Sett',
@@ -54,10 +54,12 @@ export const COLLECTION_CONFIG: Record<CollectionType, CollectionConfig> = {
     viewLabel: 'Läst',
     searchPlaceholder: 'Sök titel eller källa…',
   },
-}
+} satisfies Record<CollectionType, CollectionConfig>
 
 /** Movie titles arrive as "Heat (1995)" — split the trailing year out. */
-export function splitMovieTitle(raw: string): { title: string; year?: number } {
+type SplitMovieTitle = { title: string; year?: number }
+
+export function splitMovieTitle(raw: string): SplitMovieTitle {
   const m = raw.match(/^(.*?)\s*\((\d{4})\)\s*$/)
   if (m) return { title: m[1], year: Number(m[2]) }
   return { title: raw }

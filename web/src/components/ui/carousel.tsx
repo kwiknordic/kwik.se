@@ -26,11 +26,13 @@ function useCarousel() {
 
 function getScrollStep(viewport: HTMLDivElement) {
   const content = viewport.firstElementChild
-  const firstItem = content?.firstElementChild as HTMLElement | null
-  const secondItem = content?.children[1] as HTMLElement | undefined
+  const firstItem = content?.firstElementChild
+  const secondItem = content?.children[1]
 
-  if (!firstItem) return viewport.clientWidth
-  return secondItem ? secondItem.offsetLeft - firstItem.offsetLeft : firstItem.offsetWidth
+  if (!(firstItem instanceof HTMLElement)) return viewport.clientWidth
+  return secondItem instanceof HTMLElement
+    ? secondItem.offsetLeft - firstItem.offsetLeft
+    : firstItem.offsetWidth
 }
 
 function Carousel({ className, children }: { className?: string; children: ReactNode }) {

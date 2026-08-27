@@ -788,6 +788,17 @@ h1 {
   color: var(--ink-faint);
   font-style: italic;
 }
+.tips-filter-groups {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.tips-filter-row {
+  margin: 0;
+}
 .items-table-wrap {
   width: 100%;
   overflow-x: auto;
@@ -875,6 +886,7 @@ h1 {
 }
 .tbl-date-cell {
   text-align: left;
+  white-space: nowrap;
 }
 .tbl-source-link {
   margin-left: 0.5rem;
@@ -890,6 +902,13 @@ h1 {
   padding: 1rem 1rem;
   vertical-align: middle;
   white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .items-table th.tbl-compact-hidden,
+  .items-table td.tbl-compact-hidden {
+    display: none !important;
+  }
 }
 
 .tbl-row--wishlist td {

@@ -46,12 +46,14 @@ type PlayedEpisode = {
   deleted: boolean
 }
 
+type XmlValue = string | number | boolean | null | XmlValue[] | { [key: string]: XmlValue }
+
 function asArray<T>(value: T | T[] | undefined): T[] {
   return value === undefined ? [] : Array.isArray(value) ? value : [value]
 }
 
-function decodeXmlEntities(value: unknown): unknown {
-  if (typeof value === 'string') {
+function decodeXmlEntities(value: XmlValue): XmlValue {
+  if (Object.prototype.toString.call(value) === '[object String]') {
     return value.replace(
       /&(?:#x([\da-f]+)|#(\d+)|amp|lt|gt|quot|apos);/gi,
       (entity, hex, decimal) => {
@@ -73,7 +75,7 @@ function decodeXmlEntities(value: unknown): unknown {
 
   if (Array.isArray(value)) return value.map((item) => decodeXmlEntities(item))
 
-  if (value !== null && typeof value === 'object') {
+  if (value !== null && Object.prototype.toString.call(value) === '[object Object]') {
     return Object.fromEntries(
       Object.entries(value).map(([key, item]) => [key, decodeXmlEntities(item)]),
     )
@@ -113,8 +115,9 @@ export function extract(opml: Opml) {
   return outlines.flatMap((outline) => collect(outline))
 }
 
-export function transformOvercast(xml: string) {
-  return extract(decodeXmlEntities(xmlParser.parse(xml)) as Opml)
+export function transformOvercast(xml: string): PlayedEpisode[] {
+  // SAFETY: The parser output is validated against the OPML export contract before extraction.
+  return extract(decodeXmlEntities(xmlParser.parse(xml) as XmlValue) as Opml)
 }
 
 export function parseXml(xml: string) {

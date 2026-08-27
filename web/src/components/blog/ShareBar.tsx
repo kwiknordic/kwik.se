@@ -9,7 +9,7 @@ import styles from './ShareBar.module.css'
 export default function ShareBar({ title, lang }: { title: string; lang: 'sv' | 'en' }) {
   const [copied, setCopied] = useState(false)
   const t = (sv: string, en: string) => (lang === 'sv' ? sv : en)
-  const url = () => (typeof window !== 'undefined' ? window.location.href.split('#')[0] : '')
+  const url = () => window.location.href.split('#')[0]
 
   const open = (href: string) => window.open(href, '_blank', 'noopener')
   const shareLinkedIn = () => open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url())}`)

@@ -81,6 +81,7 @@ export default {
         console.log('Success: ' + staging.key)
 
         // transform step
+        // SAFETY: The staging payload was produced by this worker's OPML parser.
         const episodes = JSON.stringify(extract(parsed as Opml))
         const { checksum: transformFileName, checksumBuffer: transformBuffer } =
           await createChecksum(episodes)
