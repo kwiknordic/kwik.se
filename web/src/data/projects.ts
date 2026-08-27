@@ -16,6 +16,17 @@ export type ProjectInput = {
 
 const projectInputs: ProjectInput[] = [
   {
+    name: 'AI-made podcast',
+    summary: [
+      'Skapade en AI-podcast (Kako to znaš) på kroatiska för att föräldrarna ska ha intressanta ämnen att lyssna på.',
+      'Podcasten är gjord på transkiberad engelsk text och omvandlad till en givande diskussion på kroatiska. Finns tillgänglig på alla Podcast-appar att lyssna på.',
+    ],
+    demo: 'https://podcasts.apple.com/se/podcast/kako-to-zna%C5%A1/id6805007253',
+    github: null,
+    tools: ['Gemini', 'Typescript', 'Github Actions', 'Headless browser'],
+    screenshot: null,
+  },
+  {
     name: 'kwik.se (omdesign)',
     summary: [
       'Personlig hemsida för kontaktinformation med ny omdesign.',
