@@ -2,5 +2,12 @@
   "name": "kwik.se-monorepo",
   "workspaces": [
     "web"
-  ]
+  ],
+  "scripts": {
+    "lint": "oxlint --config oxlint.config.ts ."
+  },
+  "devDependencies": {
+    "@oxlint/plugins": "^1.80.0",
+    "oxlint": "^1.80.0"
+  }
 }
