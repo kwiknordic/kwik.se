@@ -42,6 +42,7 @@ export async function fetchLatestPodcastFile(bucket: R2Bucket): Promise<LatestPo
 const fetchCachedPodcastTransform = unstable_cache(
   async (key: string): Promise<RawPodcast[] | null> => {
     const { env } = await getCloudflareContext({ async: true })
+    // SAFETY: OpenNext supplies the project's Cloudflare bindings at runtime.
     const object = await (env as AppCloudflareEnv).BUCKET.get(key)
     return object ? object.json<RawPodcast[]>() : null
   },
@@ -52,5 +53,6 @@ const fetchCachedPodcastTransform = unstable_cache(
 /** Resolve the current pointer on every request; the immutable payload is cached above. */
 export async function fetchCachedLatestPodcastFile(): Promise<LatestPodcastFile> {
   const { env } = await getCloudflareContext({ async: true })
+  // SAFETY: OpenNext supplies the project's Cloudflare bindings at runtime.
   return fetchLatestPodcastFile((env as AppCloudflareEnv).BUCKET)
 }

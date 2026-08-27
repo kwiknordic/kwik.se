@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import GalleryGrid from '@/src/components/gallery/GalleryGrid'
 import galleryUrls from '@/src/data/gallery.json'
 import StructuredData from '@/src/components/seo/StructuredData'
+import { firstSearchParam, positivePageParam } from '@/src/lib/searchParams'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/galleri' },
@@ -11,8 +12,8 @@ export const metadata: Metadata = {
 
 export default async function GalleryPage({ searchParams }: PageProps<'/galleri'>) {
   const params = await searchParams
-  const tag = typeof params.tag === 'string' ? params.tag : 'Alla'
-  const page = Number(params.page) || 1
+  const tag = firstSearchParam(params.tag, 'Alla')
+  const page = positivePageParam(params.page)
   return (
     <main className="page">
       <StructuredData

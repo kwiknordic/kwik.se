@@ -6,8 +6,11 @@ import { normalizePodcastEpisodeTitle, normalizePodcastTitle, splitMovieTitle, t
 import TipsExplorer from '@/src/components/tips/TipsExplorer'
 import StructuredData from '@/src/components/seo/StructuredData'
 import { fetchInstapaperArticles } from '@/src/lib/instapaper'
-import type { TipsFilters } from '@/src/components/tips/TipsDataTable'
-import { prepareTipsTable } from '@/src/components/tips/tipsTable.server'
+import { prepareTipsTable, type TipsFilters } from '@/src/components/tips/tipsTable.server'
+import MovieTable from '@/src/components/tips/MovieTable'
+import BookTable from '@/src/components/tips/BookTable'
+import ArticleTable from '@/src/components/tips/ArticleTable'
+import PodcastTable from '@/src/components/tips/PodcastTable'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/tips' },
@@ -16,8 +19,6 @@ export const metadata: Metadata = {
 }
 
 type RawBook = { title: string; author: string | string[]; rating: number; wishlist?: boolean }
-
-
 
 export type TipsSearchParams = Record<string, string | string[] | undefined>
 
@@ -36,6 +37,7 @@ export default async function TipsPage({ initialKind = 'movies', basePath = '/ti
     }
   }
 
+  // SAFETY: The bundled books data is authored against the RawBook contract.
   const books: CollectionItem[] = (booksData as RawBook[]).map((book) => ({
     title: book.title,
     author: Array.isArray(book.author) ? book.author.join(', ') : book.author,
@@ -43,20 +45,20 @@ export default async function TipsPage({ initialKind = 'movies', basePath = '/ti
     wishlist: book.wishlist,
   }))
 
-  const { ratings: ratingsFile, wishlist: wishlistFile } = await fetchCachedLatestMovieFiles()
-  const movieRatings = ratingsFile.data
-  const movieWishlist = wishlistFile.data
   const moviesById = new Map<string, CollectionItem>()
-  for (const movie of movieRatings) {
-    const { title, year } = splitMovieTitle(movie.title)
-    moviesById.set(movie.movie_id, { title, year, imdb: movie.imdb_id, rating: Number(movie.rating) })
-  }
-  for (const movie of movieWishlist) {
-    const existing = moviesById.get(movie.movie_id)
-    if (existing) existing.wishlist = true
-    else {
+  if (initialKind === 'movies') {
+    const { ratings, wishlist } = await fetchCachedLatestMovieFiles()
+    for (const movie of ratings.data) {
       const { title, year } = splitMovieTitle(movie.title)
-      moviesById.set(movie.movie_id, { title, year, imdb: movie.imdb_id, rating: 0, wishlist: true })
+      moviesById.set(movie.movie_id, { title, year, imdb: movie.imdb_id, rating: Number(movie.rating) })
+    }
+    for (const movie of wishlist.data) {
+      const existing = moviesById.get(movie.movie_id)
+      if (existing) existing.wishlist = true
+      else {
+        const { title, year } = splitMovieTitle(movie.title)
+        moviesById.set(movie.movie_id, { title, year, imdb: movie.imdb_id, rating: 0, wishlist: true })
+      }
     }
   }
 
@@ -84,8 +86,26 @@ export default async function TipsPage({ initialKind = 'movies', basePath = '/ti
     stars: paramValue(searchParams.stars),
     page: paramValue(searchParams.page),
   }
-  const tableItems = initialKind === 'movies' ? [...moviesById.values()] : initialKind === 'books' ? books : initialKind === 'articles' ? articles : podcastEpisodes
-  const prepared = prepareTipsTable(initialKind, tableItems as any, filters)
+  const table = (() => {
+    switch (initialKind) {
+      case 'movies': {
+        const prepared = prepareTipsTable(initialKind, [...moviesById.values()], filters)
+        return <MovieTable filters={filters} basePath={basePath} prepared={prepared} />
+      }
+      case 'books': {
+        const prepared = prepareTipsTable(initialKind, books, filters)
+        return <BookTable filters={filters} basePath={basePath} prepared={prepared} />
+      }
+      case 'articles': {
+        const prepared = prepareTipsTable(initialKind, articles, filters)
+        return <ArticleTable filters={filters} basePath={basePath} prepared={prepared} />
+      }
+      case 'podcasts': {
+        const prepared = prepareTipsTable(initialKind, podcastEpisodes, filters)
+        return <PodcastTable filters={filters} basePath={basePath} prepared={prepared} />
+      }
+    }
+  })()
 
   return (
     <main className="page">
@@ -103,7 +123,7 @@ export default async function TipsPage({ initialKind = 'movies', basePath = '/ti
         <h1 className="page-title">Tips</h1>
         <p className="page-sub">Filmerna, böckerna och artiklarna som fastnat.</p>
       </div>
-      <TipsExplorer movies={[...moviesById.values()]} books={books} podcasts={podcastEpisodes} articles={articles} initialKind={initialKind} basePath={basePath} filters={filters} prepared={prepared} />
+      <TipsExplorer kind={initialKind}>{table}</TipsExplorer>
     </main>
   )
 }

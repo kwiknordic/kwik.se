@@ -40,6 +40,7 @@ async function fetchLatestMovieFile<T>(bucket: R2Bucket, latestKey: string): Pro
 const fetchCachedMovieTransform = unstable_cache(
   async <T>(key: string): Promise<T | null> => {
     const { env } = await getCloudflareContext({ async: true })
+    // SAFETY: OpenNext supplies the project's Cloudflare bindings at runtime.
     const object = await (env as AppCloudflareEnv).BUCKET.get(key)
     return object ? object.json<T>() : null
   },
@@ -49,6 +50,7 @@ const fetchCachedMovieTransform = unstable_cache(
 
 export async function fetchCachedLatestMovieFiles() {
   const { env } = await getCloudflareContext({ async: true })
+  // SAFETY: OpenNext supplies the project's Cloudflare bindings at runtime.
   const bucket = (env as AppCloudflareEnv).BUCKET
   const [ratings, wishlist] = await Promise.all([
     fetchLatestMovieFile<RawMovie[]>(bucket, MOVIE_RATINGS_LATEST_KEY),

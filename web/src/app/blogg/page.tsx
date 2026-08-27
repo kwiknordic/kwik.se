@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { getAllPosts } from '@/src/lib/posts'
 import BlogList, { type BlogListItem } from '@/src/components/blog/BlogList'
 import StructuredData from '@/src/components/seo/StructuredData'
+import { firstSearchParam, positivePageParam } from '@/src/lib/searchParams'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/blogg' },
@@ -52,7 +53,7 @@ export default async function BlogPage({ searchParams }: PageProps<'/blogg'>) {
         </p>
       </div>
 
-      <BlogList posts={posts} lang={typeof params.lang === 'string' ? params.lang : 'alla'} query={typeof params.q === 'string' ? params.q : ''} page={Number(params.page) || 1} />
+      <BlogList posts={posts} lang={firstSearchParam(params.lang, 'alla')} query={firstSearchParam(params.q)} page={positivePageParam(params.page)} />
     </main>
   )
 }

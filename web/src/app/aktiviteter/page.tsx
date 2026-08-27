@@ -4,6 +4,7 @@ import { computeActivityStats, type ActivityEvent } from '@/src/lib/activities'
 import StatsBand from '@/src/components/activities/StatsBand'
 import Timeline from '@/src/components/activities/Timeline'
 import StructuredData from '@/src/components/seo/StructuredData'
+import { positivePageParam } from '@/src/lib/searchParams'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/aktiviteter' },
@@ -13,9 +14,10 @@ export const metadata: Metadata = {
 
 export default async function ActivitiesPage({ searchParams }: PageProps<'/aktiviteter'>) {
   const { page: pageParam } = await searchParams
+  // SAFETY: The generated activities data conforms to the ActivityEvent contract.
   const list = activities as ActivityEvent[]
   const stats = computeActivityStats(list)
-  const page = typeof pageParam === 'string' ? Number.parseInt(pageParam, 10) : 1
+  const page = positivePageParam(pageParam)
 
   return (
     <main className="page">

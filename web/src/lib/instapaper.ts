@@ -66,6 +66,7 @@ async function fetchFolder(folderId: 'unread' | 'archive'): Promise<InstapaperBo
     throw new Error(`Instapaper request failed with ${response.status}`)
   }
 
+  // SAFETY: The Instapaper endpoint is the source contract for this response shape.
   const data = (await response.json()) as InstapaperResponse
 
   // The bookmarks/list endpoint returns an array of bookmark records. Keep the

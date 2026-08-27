@@ -50,6 +50,7 @@ function makeExcerpt(body: string): string {
 
 function readPost(source: (typeof POST_SOURCES)[number]): Post {
   const { fileName, data } = source
+  // SAFETY: POST_SOURCES is generated from validated post JSON with these fields.
   const typedData = data as {
     title: string
     language: 'sv' | 'en'

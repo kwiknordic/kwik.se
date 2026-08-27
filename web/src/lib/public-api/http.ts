@@ -19,7 +19,7 @@ export function optionsResponse(): Response {
   return new Response(null, { status: 204, headers: corsHeaders })
 }
 
-export function apiJson(data: unknown, init: ResponseInit = {}): Response {
+export function apiJson<T>(data: T, init: ResponseInit = {}): Response {
   const headers = new Headers(init.headers)
   headers.set('Access-Control-Allow-Origin', '*')
   headers.set('Cache-Control', 'public, max-age=0, s-maxage=300, stale-while-revalidate=86400')
@@ -39,6 +39,7 @@ async function hash(value: string): Promise<string> {
 
 export async function enforcePublicRateLimit(request: Request): Promise<Response | undefined> {
   const { env } = await getCloudflareContext({ async: true })
+  // SAFETY: Cloudflare's runtime context exposes env with the project's bindings.
   const limiter = (env as PublicApiEnv).PUBLIC
 
   // `next dev` may run without Wrangler's local bindings. Production always

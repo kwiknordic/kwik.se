@@ -1,11 +1,7 @@
 import { useId } from 'react'
 import styles from './Stars.module.css'
 
-/* ============================================================
-   Read-only star rating (supports halves), ported from the
-   design. A single SVG star path filled gold / half-gold / faint.
-   Used inside the (client) Tips tables, so it lives client-side.
-   ============================================================ */
+/** Read-only star rating that supports full, half, and empty stars. */
 
 const STAR_PATH = 'M12 2.4l2.95 5.98 6.6.96-4.78 4.66 1.13 6.57L12 17.5l-5.9 3.1 1.13-6.57L2.45 9.34l6.6-.96L12 2.4z'
 const GOLD = 'var(--gold)'

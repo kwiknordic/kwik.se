@@ -22,6 +22,7 @@ type SkillGroup = { label: string; slug?: string; skills: Skill[] }
 type RawBook = { title: string; author: string | string[]; rating: number; wishlist?: boolean }
 
 export function getBackground() {
+  // SAFETY: These imported data modules share the SkillGroup shape.
   const groups = [interests, languages, softSkills] as SkillGroup[]
 
   return {
@@ -38,6 +39,7 @@ export function getBackground() {
 }
 
 export function getExpertise() {
+  // SAFETY: The generated expertise data conforms to the SkillGroup shape.
   const groups = expertise as SkillGroup[]
   const result = groups.map((group) => ({
     id: slugify(group.label),
@@ -90,7 +92,7 @@ export function getBlogPost(slug: string) {
 }
 
 export function isTipsCategory(value: string): value is TipsCategory {
-  return tipsCategories.includes(value as TipsCategory)
+  return tipsCategories.some((category) => category === value)
 }
 
 async function getMovies(): Promise<CollectionItem[]> {
@@ -124,6 +126,7 @@ async function getMovies(): Promise<CollectionItem[]> {
 }
 
 function getBooks(): CollectionItem[] {
+  // SAFETY: The bundled books data is authored against the RawBook contract.
   return (booksData as RawBook[]).map((book) => ({
     title: book.title,
     author: Array.isArray(book.author) ? book.author.join(', ') : book.author,

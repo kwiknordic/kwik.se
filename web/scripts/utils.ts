@@ -5,7 +5,7 @@ export function dataPath(filePath: string) {
   return path.join(process.cwd(), 'src/data', filePath)
 }
 
-export async function writeJson(filePath: string, data: unknown) {
+export async function writeJson<T>(filePath: string, data: T) {
   await fs.writeFile(filePath, `${JSON.stringify(data, null, 2)}\n`, 'utf8')
 }
 

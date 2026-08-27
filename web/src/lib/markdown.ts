@@ -50,11 +50,11 @@ export function renderMarkdown(md: string): string {
     const line = lines[i]
 
     // fenced code block ``` ```
-    if (/^```/.test(line.trim())) {
+    if (line.trim().startsWith('```')) {
       const lang = line.trim().slice(3).trim() || 'plaintext'
       const code: string[] = []
       i++
-      while (i < lines.length && !/^```/.test(lines[i].trim())) {
+      while (i < lines.length && !lines[i].trim().startsWith('```')) {
         code.push(lines[i])
         i++
       }
