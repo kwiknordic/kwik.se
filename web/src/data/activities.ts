@@ -4,7 +4,7 @@ export default [
     title: 'Data & AI in a Regulated Industry',
     date: '2026-08-26',
     at: 'Svedea',
-    attendees: 62,
+    attendees: 120,
     summary:
       'Rasmus shares how his team approaches building data platforms and AI capabilities in an environment where governance, security, ownership, and compliance are not obstacles to innovation—they are what make innovation possible. How Svedea balances building versus buying, why understanding data ownership accelerates decision-making, and what it means to become AI-ready rather than simply chasing the latest AI trends.',
     speakers: [
