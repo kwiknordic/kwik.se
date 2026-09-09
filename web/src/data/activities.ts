@@ -1,5 +1,14 @@
 export default [
   {
+    eventId: 'mint',
+    title: 'Sensommarkväll med Mint',
+    date: '2026-09-08',
+    at: 'Mint',
+    attendees: 30,
+    summary: 'Afterwork-mingel med Mint & Friends.',
+    speakers: [],
+  },
+  {
     eventId: 'cpUX4t',
     title: 'Data & AI in a Regulated Industry',
     date: '2026-08-26',
