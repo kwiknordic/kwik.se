@@ -1,5 +1,31 @@
 export default [
   {
+    eventId: 'fm2jecsd',
+    title: 'Seedance 2.5 @ Stockholm',
+    date: '2026-09-09',
+    at: 'AtSix',
+    attendees: 105,
+    summary:
+      'Dinner with ByteDance (TikTok) talking about their new generative model for video creation. Amazing night!',
+    speakers: [
+      {
+        name: 'Thomas Campbell',
+        position: 'Head of marketing',
+        employer: 'ByteDance',
+      },
+      {
+        name: 'Simon Håkansson',
+        position: 'Co-founder',
+        employer: 'Plenty Labs',
+      },
+      {
+        name: 'Rafal Tromcynski',
+        position: 'CEO',
+        employer: 'Dfirst AI',
+      },
+    ],
+  },
+  {
     eventId: 'mint',
     title: 'Sensommarkväll med Mint',
     date: '2026-09-08',
