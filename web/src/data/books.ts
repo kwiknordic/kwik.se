@@ -5,6 +5,12 @@ export default [
     rating: 4,
   },
   {
+    title: 'Observability Engineering',
+    author: ['Charity Majors', 'Liz Fong-Jones', 'George Miranda', 'Austin Parker'],
+    rating: null,
+    wishlist: true,
+  },
+  {
     title: 'Tidy First? A Personal Exercise in Empirical Software Design',
     author: 'Kent Beck',
     rating: null,
