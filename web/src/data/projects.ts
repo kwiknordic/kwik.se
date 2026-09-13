@@ -2,6 +2,7 @@ import { formatter } from '@/src/lib/listFormatter'
 import kwikScreenshot from '@/src/assets/portfolio/kwik.jpg'
 import flixScreenshot from '@/src/assets/portfolio/kwikflix.jpg'
 import meetupMCP from '@/src/assets/portfolio/meetup-mcp.jpg'
+import kakoToZnas from '@/src/assets/portfolio/kako-to-znas.jpg'
 import { assertUniqueSlugs, slugify } from '@/src/lib/slug'
 import { StaticImageData } from 'next/image'
 
@@ -23,8 +24,8 @@ const projectInputs: ProjectInput[] = [
     ],
     demo: 'https://podcasts.apple.com/se/podcast/kako-to-zna%C5%A1/id6805007253',
     github: null,
-    tools: ['Gemini', 'Typescript', 'Github Actions', 'Headless browser'],
-    screenshot: null,
+    tools: ['Gemini', 'Typescript', 'Github Actions', 'rss'],
+    screenshot: kakoToZnas,
   },
   {
     name: 'kwik.se (omdesign)',
