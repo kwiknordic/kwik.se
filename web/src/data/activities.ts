@@ -1,5 +1,24 @@
 export default [
   {
+    eventId: '316301304',
+    title: 'Grafana & Friends',
+    date: '2026-09-15',
+    at: 'Magello',
+    attendees: 57,
+    summary:
+      'Measuring what matters and setting the right expectations as a SRE, and a Hands-On session on contributing to Open Source.',
+    speakers: [
+      {
+        name: 'Alex Ewerlöf',
+      },
+      {
+        name: 'Imma Valls',
+        position: 'Maintainer',
+        employer: 'OpenTelemetry',
+      },
+    ],
+  },
+  {
     eventId: 'fm2jecsd',
     title: 'Seedance 2.5 @ Stockholm',
     date: '2026-09-09',
