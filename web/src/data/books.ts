@@ -1,5 +1,11 @@
 export default [
   {
+    title: 'Continuous Discovery Habits',
+    author: 'Teresa Torres',
+    rating: null,
+    wishlist: true,
+  },
+  {
     title: 'Världsreligionernas födelse',
     author: 'Karen Armstrong',
     rating: 4,
