@@ -1,4 +1,8 @@
 import type { NextConfig } from 'next'
+import { initOpenNextCloudflareForDev } from '@opennextjs/cloudflare'
+import path from 'node:path'
+
+initOpenNextCloudflareForDev()
 
 const nextConfig: NextConfig = {
   async redirects() {
@@ -29,7 +33,7 @@ const nextConfig: NextConfig = {
     ]
   },
   turbopack: {
-    root: __dirname,
+    root: path.join(__dirname, '..'),
   },
   devIndicators: false,
   images: {

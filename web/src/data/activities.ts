@@ -1,5 +1,20 @@
 export default [
   {
+    eventId: '316456150',
+    title: 'OWASP: Hacker techniques meet modern AI',
+    date: '2026-09-16',
+    at: 'Detectify',
+    attendees: 73,
+    summary:
+      'AI has become a serious force multiplier for offensive security, making it possible to rediscover old attack techniques and turn them into modern tools at incredible speed. At the center is TTY/PTY hijacking: techniques that let an attacker interfere with active terminal sessions, inject commands, capture sensitive input and potentially take control of trusted SSH sessions. Also a live demonstration of how AI helps take these largely forgotten ideas from research and raw bugs to working offensive tools, and how to relax LLM guardrails.',
+    speakers: [
+      {
+        name: 'David Jacoby',
+        position: 'Hacker',
+      },
+    ],
+  },
+  {
     eventId: '316301304',
     title: 'Grafana & Friends',
     date: '2026-09-15',
