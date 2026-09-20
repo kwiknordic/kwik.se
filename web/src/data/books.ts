@@ -691,12 +691,6 @@ export default [
     wishlist: true,
   },
   {
-    title: 'The Wager',
-    author: 'David Grann',
-    rating: null,
-    wishlist: true,
-  },
-  {
     title: "Caro's LBJ Series",
     author: 'Robert A. Caro',
     rating: null,
