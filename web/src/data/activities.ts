@@ -1,5 +1,37 @@
 export default [
   {
+    eventId: '316655866',
+    title: 'Navigating the future of software engineering',
+    date: '2026-10-01',
+    at: 'Umain',
+    attendees: 91,
+    summary:
+      'We talked about navigating and surviving uncertainty in the AI era, and what the future of software engineering might look like.',
+    speakers: [
+      {
+        name: 'Julia Granström',
+        position: 'COO',
+        employer: 'SALT',
+      },
+    ],
+  },
+  {
+    eventId: '315082806',
+    title: 'Contract-first APIs',
+    date: '2026-09-28',
+    at: 'Tobii Dynavox',
+    attendees: 62,
+    summary:
+      'We looked at a contract-first approach for building REST APIs with ASP.NET Core Minimal APIs, where the OpenAPI document becomes the source of truth rather than a by-product. We explored what this changes in the development workflow, how strongly typed contracts can help keep implementation and specification aligned, and what trade-offs come with moving the API contract to the center of the design process.',
+    speakers: [
+      {
+        name: 'Renato Golia',
+        position: 'Software Architect',
+        employer: 'Tobii Dynavox',
+      },
+    ],
+  },
+  {
     eventId: '316456150',
     title: 'OWASP: Hacker techniques meet modern AI',
     date: '2026-09-16',
@@ -149,6 +181,22 @@ export default [
         name: 'Nicole Wang',
         position: 'Founder',
         employer: 'Asta',
+      },
+    ],
+  },
+  {
+    eventId: 'lqycpvy6',
+    title: 'GitHub Dev Days',
+    date: '2026-09-23',
+    at: 'Embassy House Söder',
+    attendees: 49,
+    summary:
+      'We demo:ed the Copilot app to show off its capabilities and then proceeded with a hands-on workshop / hackathon where we use Copilot to build cool stuff.',
+    speakers: [
+      {
+        name: 'Christoffer Ekeroth',
+        position: 'Co-founder & Developer',
+        employer: 'Functional Software',
       },
     ],
   },
