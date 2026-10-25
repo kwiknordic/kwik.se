@@ -1,5 +1,132 @@
 export default [
   {
+    eventId: 'dataai-lq64',
+    title: 'Data & AI Stockholm Summit',
+    date: '2026-10-14',
+    at: 'Space Stockholm',
+    attendees: 300,
+    summary:
+      'The premier gathering for senior leaders, decision-makers, and practitioners shaping the future of data and artificial intelligence across the Nordics.',
+    speakers: [
+      {
+        name: 'Akanksha Bhagwanani',
+        position: 'EMEA Solutions Specialist - Data Analytics',
+        employer: 'Google',
+      },
+      {
+        name: 'Alysha Adams',
+        position: 'AI Transformation Consultant',
+        employer: 'CDW & Ossa',
+      },
+      {
+        name: 'Armin Catovic',
+        position: 'Director Data and AI',
+        employer: 'Funnel',
+      },
+      {
+        name: 'Baaba Bonuedie',
+        position: 'Senior Data Governance Expert',
+        employer: 'Nordea',
+      },
+      {
+        name: 'Ekaterina Garbaruk Monnot',
+        position: 'General Manager (Studio Lead)',
+        employer: 'Spotify',
+      },
+      {
+        name: 'Erik Nielsen',
+        position: 'Principal Product Designer',
+        employer: 'Simployer',
+      },
+      {
+        name: 'Gabriel Moosman',
+        position: 'Business Intelligence Manager',
+        employer: 'Acast',
+      },
+      {
+        name: 'John Wernfeldt',
+        position: 'Managing Director',
+        employer: 'Northridge Analytics',
+      },
+      {
+        name: 'Jonas Björk',
+        position: 'Head of Data & Insights',
+        employer: 'Lovable',
+      },
+      {
+        name: 'Karima Makrof',
+        position: 'Founder & Chief Adviser, Data Governance',
+        employer: 'Aklyon',
+      },
+      {
+        name: 'Karin Håkansson',
+        position: 'Head of Data',
+        employer: 'Adapteo Group',
+      },
+      {
+        name: 'Kofi Ankomah',
+        position: 'Large Enterprise Lead, UKI & Europe North',
+        employer: 'OpenAI',
+      },
+      {
+        name: 'Luis Martinez',
+        position: 'AI Governance and Compliance Expert',
+        employer: 'TeleTid Consulting',
+      },
+      {
+        name: 'Neelima Misra',
+        position: 'CEO & Co-founder',
+        employer: 'DaasTek',
+      },
+      {
+        name: 'Robert Sahlin',
+        position: 'Founder',
+        employer: 'Supercargo',
+      },
+      {
+        name: 'Sanna Kuoppamäki',
+        position: 'Associate Professor',
+        employer: 'KTH',
+      },
+      {
+        name: 'Varun Atrey',
+        position: 'Product Marketing Director',
+        employer: 'Legora',
+      },
+    ],
+  },
+  {
+    eventId: 'z50zltlx',
+    title: 'DAIS VIP Dinner at Google',
+    date: '2026-10-13',
+    at: 'Google',
+    attendees: 52,
+    summary:
+      'Our speakers, volunteers, partners, and DAIS team share a special VIP dinner at Google’s Stockholm offices on the evening before the Summit.',
+    speakers: [],
+  },
+  {
+    eventId: '316097488',
+    title: 'AI Builders and Databases Stockholm',
+    date: '2026-10-08',
+    at: 'Mentimeter',
+    attendees: 189,
+    summary:
+      'An evening dedicated to real-time analytics at scale.',
+    speakers: [
+      {
+        name: 'Magnus Pierre',
+        position: 'Solutions Architect',
+        employer: 'ClickHouse',
+      },
+      {
+        name: 'Andrew',
+        position: 'Product Advocate',
+        employer: 'Metabase',
+      },
+    ],
+  },
+  {
     eventId: '316655866',
     title: 'Navigating the future of software engineering',
     date: '2026-10-01',
