@@ -3,6 +3,7 @@ import kwikScreenshot from '@/src/assets/portfolio/kwik.jpg'
 import flixScreenshot from '@/src/assets/portfolio/kwikflix.jpg'
 import meetupMCP from '@/src/assets/portfolio/meetup-mcp.jpg'
 import kakoToZnas from '@/src/assets/portfolio/kako-to-znas.jpg'
+import velora from '@/src/assets/portfolio/velora.png'
 import { assertUniqueSlugs, slugify } from '@/src/lib/slug'
 import { StaticImageData } from 'next/image'
 
@@ -16,6 +17,16 @@ export type ProjectInput = {
 }
 
 const projectInputs: ProjectInput[] = [
+  {
+    name: 'Bokningsflöde för Velora',
+    summary: [
+      'Byggde en bättre version av Veloras bokningsflöde. Fokus på på happy path och design.',
+    ],
+    demo: 'https://velora.kwik.se',
+    github: null,
+    tools: ['Codex', 'Vue'],
+    screenshot: velora,
+  },
   {
     name: 'AI-made podcast',
     summary: [
