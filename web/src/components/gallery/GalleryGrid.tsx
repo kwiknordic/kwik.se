@@ -4,10 +4,7 @@ import galleryUrls from '../../data/gallery.json'
 import ServerPager from '../ui/ServerPager'
 import styles from './GalleryGrid.module.css'
 
-type GalleryImage = { src: string; tag: string }
-
-// SAFETY: gallery.json is maintained as a list of GalleryImage records.
-const GALLERY = galleryUrls as GalleryImage[]
+const GALLERY = galleryUrls
 const PAGE_SIZE = 12
 
 export default function GalleryGrid({ tag = 'Alla', page = 1 }: { tag?: string; page?: number }) {
@@ -29,7 +26,7 @@ export default function GalleryGrid({ tag = 'Alla', page = 1 }: { tag?: string; 
   return <>
     <div className="filter-row reveal"><span className="filter-label">Motiv</span>{tags.map((item) => <Link key={item} className={'chip' + (activeTag === item ? ' active' : '')} href={hrefFor(1, item)} aria-current={activeTag === item ? 'page' : undefined}>{item}{item !== 'Alla' && <span className="chip-count">{GALLERY.filter((shot) => shot.tag === item).length}</span>}</Link>)}</div>
     {activeTag !== 'Alla' && <p className="result-count reveal"><b>{filtered.length}</b> {filtered.length === 1 ? 'bild' : 'bilder'}</p>}
-    <div className={`${styles['gallery-grid']} reveal`}>{shown.map((shot) => <figure className={styles.card} key={shot.src}><div className={styles['image-frame']}><Image src={shot.src} alt="Ögonblick från Mervin Bratic" fill loading="lazy" className={styles.image} /></div></figure>)}</div>
+    <div className={`${styles['gallery-grid']} reveal`}>{shown.map((shot) => <figure className={styles.card} key={shot.src}><div className={styles['image-frame']}><Image src={shot.src} alt={shot.alt} fill loading="lazy" className={styles.image} /></div></figure>)}</div>
     <ServerPager page={safePage} pageCount={pageCount} hrefForPage={(nextPage) => hrefFor(nextPage)} />
   </>
 }

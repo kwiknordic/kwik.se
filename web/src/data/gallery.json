@@ -1,157 +1,194 @@
 [
   {
+    "src": "https://media.kwik.se/gallery/events/DAIS%20101.jpg",
+    "tag": "Events",
+    "uploadedAt": "2026-10-25T07:39:17.378Z",
+    "alt": "Mervin Bratic på scenen tillsammans med volontärerna på Data & AI Stockholm."
+  },
+  {
     "src": "https://media.kwik.se/gallery/events/WhatsApp%20Image%202026-09-18%20at%2012.57.29.jpeg",
     "tag": "Events",
-    "uploadedAt": "2026-09-18T10:59:07.374Z"
+    "uploadedAt": "2026-09-18T10:59:07.374Z",
+    "alt": "Föredrag på en utvecklarträff där Mervin Bratic deltog, med kod på projektorduken och deltagare som följer presentationen."
   },
   {
     "src": "https://media.kwik.se/gallery/events/WhatsApp%20Image%202026-09-15%20at%2019.55.42.jpeg",
     "tag": "Events",
-    "uploadedAt": "2026-09-15T17:57:47.496Z"
+    "uploadedAt": "2026-09-15T17:57:47.496Z",
+    "alt": "Talare och publik på en utvecklarträff där Mervin Bratic deltog, med OpenTelemetry och observabilitet på programmet."
   },
   {
     "src": "https://media.kwik.se/gallery/events/1789032023216.jpg",
     "tag": "Events",
-    "uploadedAt": "2026-09-10T19:26:14.270Z"
+    "uploadedAt": "2026-09-10T19:26:14.270Z",
+    "alt": "Konferenspresentation som Mervin Bratic närvarade vid om IKEA:s ”Smart Starts Here”, med BytePlus på den stora scenskärmen."
   },
   {
     "src": "https://media.kwik.se/gallery/city/ahmed-standup.jpeg",
     "tag": "City",
-    "uploadedAt": "2026-09-10T19:26:01.911Z"
+    "uploadedAt": "2026-09-10T19:26:01.911Z",
+    "alt": "Utomhusstandup som Mervin Bratic besökte, inför en stor publik i en grönskande park under klarblå himmel."
   },
   {
     "src": "https://media.kwik.se/gallery/city/hogalid%20(2).jpeg",
     "tag": "City",
-    "uploadedAt": "2026-09-10T19:25:37.398Z"
+    "uploadedAt": "2026-09-10T19:25:37.398Z",
+    "alt": "Högalidskyrkans två torn mellan träden i Högalidsparken, med rosa och orange kvällshimmel."
   },
   {
     "src": "https://media.kwik.se/gallery/events/tv.jpeg",
     "tag": "Events",
-    "uploadedAt": "2026-08-27T09:47:07.972Z"
+    "uploadedAt": "2026-08-27T09:47:07.972Z",
+    "alt": "Mervin Bratic framför en lysande skärm med rubriken ”Alignment Chart” på Svedea."
   },
   {
     "src": "https://media.kwik.se/gallery/events/svedea.jpeg",
     "tag": "Events",
-    "uploadedAt": "2026-08-27T09:46:30.127Z"
+    "uploadedAt": "2026-08-27T09:46:30.127Z",
+    "alt": "Talare presenterar framför en skärm på en teknikträff där Mervin Bratic deltog, med sittande publik."
   },
   {
     "src": "https://media.kwik.se/gallery/community/w1.jpeg",
     "tag": "Community",
-    "uploadedAt": "2026-07-31T21:34:01.993Z"
+    "uploadedAt": "2026-07-31T21:34:01.993Z",
+    "alt": "Svartvitt porträtt av Mervin Bratic i solglasögon och ljus skjorta, med ett glas i handen."
   },
   {
     "src": "https://media.kwik.se/gallery/city/w2.jpeg",
     "tag": "City",
-    "uploadedAt": "2026-07-31T21:32:58.201Z"
+    "uploadedAt": "2026-07-31T21:32:58.201Z",
+    "alt": "Mervin Bratic sedd bakifrån vid en grönskande strand, med vatten och en bågbro i bakgrunden."
   },
   {
     "src": "https://media.kwik.se/gallery/city/WhatsApp%20Image%202026-07-16%20at%2017.23.21.jpeg",
     "tag": "City",
-    "uploadedAt": "2026-07-16T19:08:08.378Z"
+    "uploadedAt": "2026-07-16T19:08:08.378Z",
+    "alt": "Mervin Bratic i solglasögon på ett segelfartygs däck, med Stockholms bebyggelse på andra sidan vattnet."
   },
   {
     "src": "https://media.kwik.se/gallery/events/WhatsApp%20Image%202026-07-16%20at%2018.33.54.jpeg",
     "tag": "Events",
-    "uploadedAt": "2026-07-16T19:07:58.361Z"
+    "uploadedAt": "2026-07-16T19:07:58.361Z",
+    "alt": "Publik följer en presentation på en utvecklarkonferens som Mervin Bratic besökte, med två skärmar längst fram i salen."
   },
   {
     "src": "https://media.kwik.se/gallery/city/WhatsApp%20Image%202026-07-16%20at%2018.56.33.jpeg",
     "tag": "City",
-    "uploadedAt": "2026-07-16T19:07:40.692Z"
+    "uploadedAt": "2026-07-16T19:07:40.692Z",
+    "alt": "Mervin Bratic blickar ut över Stockholms vatten och bebyggelse från en högt belägen utsiktsplats."
   },
   {
     "src": "https://media.kwik.se/gallery/city/WhatsApp%20Image%202026-07-16%20at%2018.33.05.jpeg",
     "tag": "City",
-    "uploadedAt": "2026-07-16T19:07:29.039Z"
+    "uploadedAt": "2026-07-16T19:07:29.039Z",
+    "alt": "Mervin Bratic i solglasögon och solstol på en stadsgata kantad av flerbostadshus."
   },
   {
     "src": "https://media.kwik.se/gallery/food/WhatsApp%20Image%202026-07-16%20at%2018.39.40.jpeg",
     "tag": "Food",
-    "uploadedAt": "2026-07-16T19:07:18.331Z"
+    "uploadedAt": "2026-07-16T19:07:18.331Z",
+    "alt": "Två våffelstrutar med rosa och mörk glass på en träbänk framför glassdiskens metallbehållare."
   },
   {
     "src": "https://media.kwik.se/gallery/events/WhatsApp%20Image%202026-07-16%20at%2018.53.59.jpeg",
     "tag": "Events",
-    "uploadedAt": "2026-07-16T19:06:56.848Z"
+    "uploadedAt": "2026-07-16T19:06:56.848Z",
+    "alt": "JavaScript-föredrag som Mervin Bratic närvarade vid, med kodexempel om Proxy, Reflect och Map på en stor projektorduk inför publik."
   },
   {
     "src": "https://media.kwik.se/gallery/events/WhatsApp%20Image%202026-07-16%20at%2018.51.39.jpeg",
     "tag": "Events",
-    "uploadedAt": "2026-07-16T19:06:46.247Z"
+    "uploadedAt": "2026-07-16T19:06:46.247Z",
+    "alt": "Mingel i blått ljus på en teknikträff där Mervin Bratic deltog, med en deltagare som bär en handskriven skylt på ryggen."
   },
   {
     "src": "https://media.kwik.se/gallery/city/WhatsApp%20Image%202026-07-16%20at%2018.51.03.jpeg",
     "tag": "City",
-    "uploadedAt": "2026-07-16T19:06:19.600Z"
+    "uploadedAt": "2026-07-16T19:06:19.600Z",
+    "alt": "Stockholms stadshus på kvällen, sett genom ett fönster med blå och lila ljusreflexer."
   },
   {
     "src": "https://media.kwik.se/gallery/tinkering/WhatsApp%20Image%202026-07-16%20at%2018.41.30.jpeg",
     "tag": "Tinkering",
-    "uploadedAt": "2026-07-16T19:06:08.205Z"
+    "uploadedAt": "2026-07-16T19:06:08.205Z",
+    "alt": "Mervin Bratic sitter barfota på golvet med en laptop i knät, i ljuset från en skärm."
   },
   {
     "src": "https://media.kwik.se/gallery/city/hogalid.jpeg",
     "tag": "City",
-    "uploadedAt": "2026-07-15T20:03:14.241Z"
+    "uploadedAt": "2026-07-15T20:03:14.241Z",
+    "alt": "Solbelyst balkong med bord och stolar, sedd genom ett öppet fönster med utsikt mot Högalidskyrkan."
   },
   {
     "src": "https://media.kwik.se/gallery/events/WhatsApp%20Image%202026-07-14%20at%2009.50.07.jpeg",
     "tag": "Events",
-    "uploadedAt": "2026-07-15T20:03:06.311Z"
+    "uploadedAt": "2026-07-15T20:03:06.311Z",
+    "alt": "Föredrag om FUSE och virtuella filsystem som Mervin Bratic närvarade vid, med talare, presentationsskärm och sittande åhörare."
   },
   {
     "src": "https://media.kwik.se/gallery/events/WhatsApp%20Image%202026-07-14%20at%2009.48.51.jpeg",
     "tag": "Events",
-    "uploadedAt": "2026-07-15T20:03:06.183Z"
+    "uploadedAt": "2026-07-15T20:03:06.183Z",
+    "alt": "Publik på ”AI Labs Live x AWS”, där Mervin Bratic deltog, med projektorduk och AWS-logotyp längst fram i lokalen."
   },
   {
     "src": "https://media.kwik.se/gallery/events/WhatsApp%20Image%202026-07-14%20at%2009.48.36.jpeg",
     "tag": "Events",
-    "uploadedAt": "2026-07-15T20:03:06.113Z"
+    "uploadedAt": "2026-07-15T20:03:06.113Z",
+    "alt": "Presentation som Mervin Bratic närvarade vid om hur kontext förbättrar AI-assistenter för programmering, inför sittande publik."
   },
   {
     "src": "https://media.kwik.se/gallery/events/WhatsApp%20Image%202026-07-14%20at%2009.47.34.jpeg",
     "tag": "Events",
-    "uploadedAt": "2026-07-15T20:03:06.076Z"
+    "uploadedAt": "2026-07-15T20:03:06.076Z",
+    "alt": "Föredrag som Mervin Bratic närvarade vid, inför publik i en lokal upplyst av lila och rosa lampor."
   },
   {
     "src": "https://media.kwik.se/gallery/tinkering/gps-tracker.jpeg",
     "tag": "Tinkering",
-    "uploadedAt": "2026-07-15T20:01:56.940Z"
+    "uploadedAt": "2026-07-15T20:01:56.940Z",
+    "alt": "Öppnad GPS-spårare med grönt kretskort, GPS-antenn och anslutna kablar i ett svart plasthölje."
   },
   {
     "src": "https://media.kwik.se/gallery/community/467b84917045ad648ba28777487f4ebf.jpg",
     "tag": "Community",
-    "uploadedAt": "2026-07-15T20:01:42.135Z"
+    "uploadedAt": "2026-07-15T20:01:42.135Z",
+    "alt": "Mervin Bratic äter tillsammans med sällskap vid ett dukat bord på en uteplats."
   },
   {
     "src": "https://media.kwik.se/gallery/food/1f5ed7dccfd1c41efa1088da083c97d1.jpg",
     "tag": "Food",
-    "uploadedAt": "2026-07-15T20:01:34.156Z"
+    "uploadedAt": "2026-07-15T20:01:34.156Z",
+    "alt": "Kaffe i en presskanna, koppar och två tårtbitar på ett dukat kafébord."
   },
   {
     "src": "https://media.kwik.se/gallery/travel/1d7891efa8d41965e3ade889b6e6ade3.jpg",
     "tag": "Travel",
-    "uploadedAt": "2026-07-15T20:00:46.391Z"
+    "uploadedAt": "2026-07-15T20:00:46.391Z",
+    "alt": "Resenärer går över en snötäckt flygplatsplatta mot ett Finnair-plan i mörkret."
   },
   {
     "src": "https://media.kwik.se/gallery/tinkering/771be16c0960e8c7bded947a1cf12d7e.jpg",
     "tag": "Tinkering",
-    "uploadedAt": "2026-07-15T20:00:16.689Z"
+    "uploadedAt": "2026-07-15T20:00:16.689Z",
+    "alt": "Svartvit närbild av en kartong med äldre mobiltelefoner, kablar och inpackad elektronik."
   },
   {
     "src": "https://media.kwik.se/gallery/ecommerce/6a9df880ce7a666f68050ea6245bd57b.jpg",
     "tag": "Ecommerce",
-    "uploadedAt": "2026-07-15T19:59:34.650Z"
+    "uploadedAt": "2026-07-15T19:59:34.650Z",
+    "alt": "Produktbild av Doblère snäcka och dess röda förpackning under redigering i Photoshop på en MacBook."
   },
   {
     "src": "https://media.kwik.se/gallery/ecommerce/0a5367f68d14410bee5737daf5627698.jpg",
     "tag": "Ecommerce",
-    "uploadedAt": "2026-07-15T19:58:31.674Z"
+    "uploadedAt": "2026-07-15T19:58:31.674Z",
+    "alt": "Mervin Bratic med köpare vid ett packbord med öppna kartonger och produkter i en lagerlokal."
   },
   {
     "src": "https://media.kwik.se/gallery/ecommerce/5b1e4908910704b27b3255c5ccff7331.jpg",
     "tag": "Ecommerce",
-    "uploadedAt": "2026-07-15T19:58:24.563Z"
+    "uploadedAt": "2026-07-15T19:58:24.563Z",
+    "alt": "PostNords blå postsäckar bredvid rullburar fyllda med paket i en lagerlokal."
   }
 ]

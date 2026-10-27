@@ -20,7 +20,7 @@ const projectInputs: ProjectInput[] = [
   {
     name: 'Bokningsflöde för Velora',
     summary: [
-      'Byggde en bättre version av Veloras bokningsflöde. Fokus på på happy path och design.',
+      'Byggde en bättre version av Veloras bokningsflöde. Fokus på happy path och design.',
     ],
     demo: 'https://velora.kwik.se',
     github: null,

@@ -1,4 +1,5 @@
 import { ListObjectsV2Command, S3Client } from '@aws-sdk/client-s3'
+import galleryDescriptions from '../src/data/gallery-desc.json'
 import { writeJson, dataPath } from './utils'
 
 const bucket = process.env.R2_BUCKET_NAME
@@ -18,7 +19,8 @@ const client = new S3Client({
   },
 })
 
-type GalleryImage = { src: string; tag: string; uploadedAt: string }
+type GalleryImage = { src: string; tag: string; uploadedAt: string; alt: string }
+const descriptions = new Map(Object.entries(galleryDescriptions))
 const images: GalleryImage[] = []
 let continuationToken: string | undefined
 
@@ -37,10 +39,13 @@ do {
 
     const [, tag] = key.split('/')
     const encodedKey = key.split('/').map(encodeURIComponent).join('/')
+    const alt = descriptions.get(key)?.alt.trim()
+    if (!alt) console.warn(`Missing Swedish gallery description: ${key}`)
     images.push({
       src: `${publicBaseUrl.replace(/\/$/, '')}/${encodedKey}`,
       tag: tag.at(0)?.toUpperCase() + tag.substring(1) || 'uncategorized',
       uploadedAt: object.LastModified?.toISOString() ?? '',
+      alt: alt || 'Ögonblick från Mervin Bratic',
     })
   }
 
