@@ -18,6 +18,16 @@ export type ProjectInput = {
 
 const projectInputs: ProjectInput[] = [
   {
+    name: 'Eventplanering för Proposales',
+    summary: [
+      'Skapade en prototyp på ett efterfrågat förslag för Proposales. Använder Jev som klassifiseringsmodell.',
+    ],
+    demo: 'https://proposales.kwik.se',
+    github: null,
+    tools: ['Next.js', 'Jev', 'Serverless'],
+    screenshot: null,
+  },
+  {
     name: 'Bokningsflöde för Velora',
     summary: [
       'Byggde en bättre version av Veloras bokningsflöde. Fokus på happy path och design.',

@@ -1,5 +1,36 @@
 export default [
   {
+    eventId: '316461144',
+    title: 'Func Prog Sweden 2026 at Kivra',
+    date: '2026-11-10',
+    at: 'HIQ',
+    attendees: 86,
+    summary:
+      'An engaging discussion on CRO, software security, and AI automation with practical insights and real-world examples.',
+    speakers: [
+      {
+        name: 'Marianne Stjernvall',
+        position: 'Co-founder',
+        employer: "ConversionHub"
+      },
+    ],
+  },
+  {
+    eventId: '316293102',
+    title: 'Func Prog Sweden 2026 at Kivra',
+    date: '2026-11-10',
+    at: 'Kivra',
+    attendees: 58,
+    summary:
+      'We looked at Roc’s features and an Elm-like full-stack web framework called Joy, which already powers real web apps in the wild.',
+    speakers: [
+      {
+        name: 'Niclas Ahden',
+        position: 'CTO',
+      },
+    ],
+  },
+  {
     eventId: 'dataai-lq64',
     title: 'Data & AI Stockholm Summit',
     date: '2026-10-14',
