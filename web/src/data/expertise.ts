@@ -63,6 +63,7 @@ const devops = {
     { name: 'Docker' },
     { name: 'GitHub Actions', icon: 'fa-brands fa-github' },
     { name: 'Cloudflare Tunnels' },
+    { name: 'Microsoft Power Automate' },
   ],
 }
 
@@ -73,8 +74,9 @@ const llm = {
     { name: 'OpenAI SDK' },
     { name: 'LangChain' },
     { name: 'RAG' },
-    { name: 'Embedding' },
+    { name: 'Embeddings' },
     { name: 'Ollama' },
+    { name: 'Skills' },
   ],
 }
 
@@ -87,6 +89,8 @@ const editors = {
     { name: 'Codex CLI' },
     { name: 'OpenCode' },
     { name: 'Ivy Tendril' },
+    { name: 'Herdr' },
+    { name: 'Hunk' },
   ],
 }
 

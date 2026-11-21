@@ -1,8 +1,8 @@
 export default [
   {
     eventId: '316461144',
-    title: 'Func Prog Sweden 2026 at Kivra',
-    date: '2026-11-10',
+    title: 'The benefits of A/B testing',
+    date: '2026-11-11',
     at: 'HIQ',
     attendees: 86,
     summary:
